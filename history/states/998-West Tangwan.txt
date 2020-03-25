@@ -1,0 +1,24 @@
+state={
+	id=998
+	name="STATE_998"
+	resources={
+		steel=4.000
+	}
+	state_category = rural
+
+	history={
+		owner = TRS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+
+		}
+		add_core_of = TRS
+
+	}
+	provinces={
+		13250 13251 13252 13253 13254 13255 13256 13257 13258 13259 
+	}
+	manpower= 3566481
+	buildings_max_level_factor=1.000
+}

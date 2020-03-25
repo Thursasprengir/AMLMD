@@ -1,0 +1,10 @@
+################
+##### FMU ######
+################
+
+FMU_immigration = {
+	icon = category_generic_formable_nations
+	allowed = {
+		original_tag = FMU
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=1031
+	name="STATE_1031"
+	resources={
+		steel=4.000
+	}
+	state_category = rural
+
+	history={
+		owner = CLA
+		add_core_of = CLA
+		victory_points = {
+			14619 3 
+		}
+
+	}
+		
+	provinces={ 
+		14261 14613 14616 14617 14618 14619 14620 
+	}
+	manpower=978489
+	buildings_max_level_factor=1.000
+}

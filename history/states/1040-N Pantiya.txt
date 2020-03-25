@@ -1,0 +1,21 @@
+state={
+	id=1040
+	name="STATE_1040"
+	state_category = small_island
+
+	history={
+		owner = FRA
+		add_core_of = PTY
+		
+		victory_points = {
+			14324 3 
+		}
+
+	}
+	provinces={
+		14322 14323 14324 
+		14971 14972 14973 14974 14975 14982 14983 14984 14985 14986 14987
+	}
+	manpower=986589
+	buildings_max_level_factor=1.000
+}

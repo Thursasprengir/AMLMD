@@ -1,0 +1,21 @@
+state={
+	id=1038
+	name="STATE_1038"
+	state_category = metropolis
+
+	history={
+		owner = SND
+		add_core_of = SND
+		
+		victory_points = {
+			14682 3 
+		}
+
+	}
+	
+	provinces={ 
+		14656 14674 14675 14676 14682 14684 14686 14687 14688 
+	}
+	manpower=2779139
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,32 @@
+state={
+	id=944
+	name="STATE_944" #Atlantis Southwest
+
+	history={
+		owner = ATL
+		buildings = {
+			infrastructure = 7
+			arms_factory = 4
+			industrial_complex = 2
+			dockyard = 1
+			anti_air_building = 1
+			14190 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = ATL
+		victory_points = {
+			14190 30 #Burmiunean
+		}
+
+	}
+	
+	provinces={
+		14190 14191 14192 14193 14194 14195 14196 
+	}
+	manpower= 8322041
+	state_category = metropolis
+	resources = {steel = 40 aluminium = 10 oil = 12}
+
+	buildings_max_level_factor=1.000
+}

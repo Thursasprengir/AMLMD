@@ -1,0 +1,26 @@
+
+state={
+	id=972
+	name="STATE_972"
+
+	history={
+		owner = RTR
+		add_core_of = RTR
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			14721 3 
+		}
+
+	}
+
+	provinces={
+		 8528 8573 14721 14722 14723 14724 14725 14729 14730 
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

@@ -1,0 +1,26 @@
+state={
+	id=1043
+	name="STATE_1043"
+	state_category = large_city
+
+	history={
+		owner = KBS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+
+		}
+		
+		victory_points = {
+			2905 3 
+		}
+		add_core_of = KBS
+
+	}
+	provinces={
+		2905 2953 
+		14905 14906 14907 14908 14909 14910 14911 14912 14913 14914 14916 14923 
+	}
+	manpower=1698542
+	buildings_max_level_factor=1.000
+}

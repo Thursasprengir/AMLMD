@@ -1,0 +1,25 @@
+
+state={
+	id=1029
+	name="STATE_1029"
+
+	history={
+		owner = KLK
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			8925 3 
+		}
+
+	}
+
+	provinces={
+		8875 8925 14574 14575 14576 14577 14578 14579 14580 14581 14582 14583 14588 14589 
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

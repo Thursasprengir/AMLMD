@@ -1,0 +1,27 @@
+
+state={
+	id=1035
+	name="STATE_1035"
+
+	history={
+		owner = UTU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		
+		victory_points = {
+			14646 3 
+		}
+		add_core_of = UTU
+
+	}
+
+	provinces={
+		14645 14646 14647 14648 
+	}
+	manpower=898745
+	buildings_max_level_factor=1.000
+	state_category=small_island
+}

@@ -1,0 +1,32 @@
+state={
+	id=997
+	name="STATE_997"
+	resources={
+		rubber=1.000
+	}
+	state_category = small_island
+
+	history={
+		owner = TRS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+			13241 = {
+				naval_base = 3
+			}
+
+		}
+		add_core_of = TRS
+		victory_points = {
+			13241 4 
+		}
+
+	}
+	provinces={
+		13239 13240 13241 14292 14293 14294 
+		14295 14296   
+	}
+	manpower= 865388
+	buildings_max_level_factor=1.000
+}

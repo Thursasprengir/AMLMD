@@ -1,0 +1,24 @@
+state={
+	id=1048
+	name="STATE_1048"
+	state_category = metropolis
+
+	history={
+		owner = MCT
+		buildings = {
+			infrastructure = 2
+
+		}
+		
+		victory_points = {
+			14852 3 
+		}
+		add_core_of = MCT
+	}
+	provinces={
+		14335 
+		14851 14852 14853 14854 14855 14857 14858 14859 14860 14861 
+	}
+	manpower=968958
+	buildings_max_level_factor=1.000
+}

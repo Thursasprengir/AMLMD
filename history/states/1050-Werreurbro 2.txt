@@ -1,0 +1,26 @@
+
+state={
+	id=1050
+	name="STATE_1050"
+
+	history={
+		owner = BLM
+		add_core_of = BLM
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			5346 3 
+		}
+
+	}
+
+	provinces={ 
+		5346 14817 14818 14819 14820 14821 14822 
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

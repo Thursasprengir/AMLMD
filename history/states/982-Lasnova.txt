@@ -1,0 +1,25 @@
+
+state={
+	id=982
+	name="STATE_982"
+
+	history={
+		owner = LSN
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			14559 3 
+		}
+
+	}
+
+	provinces={
+		8922 14556 14557 14558 14559 14560 14561 14562 14566
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

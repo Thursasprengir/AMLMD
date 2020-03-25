@@ -1,0 +1,157 @@
+﻿division_template = {
+	name = "Infantry Division"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Division"  
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }
+	}
+}
+division_template = {
+	name = "Garrison Brigade" 		
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }	
+		infantry = { x = 1 y = 0 }	
+		infantry = { x = 1 y = 1 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+
+units = {
+	### Army High Command ###
+	division = {
+		name = "1st Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2nd Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "3rd Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "4th Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "5th Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "6th Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "7th Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "8th Division"
+		location = 5254
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1st Cavalry Division"
+		location = 5254
+		division_template = "Cavalry Division"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	fleet = {
+		name = "Deutschesmu Marine"		
+		naval_base = 5254
+		task_force = {
+			name = "Battle Fleet"
+			location = 5254
+			ship = {name = "Pitkairn" definition = heavy_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = FMU version_name = "Holtzendorff Class" } } }
+			ship = {name = "Königshafen" definition = heavy_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = FMU version_name = "Holtzendorff Class" } } }
+			ship = {name = "Kriegsengel" pride_of_the_fleet = yes definition = battle_cruiser start_experience_factor = 0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = FMU version_name = "Derfflinger Class" } } }
+		}
+		task_force = {
+			name = "Scout Fleet"
+			location = 5254
+			ship = {name = "Reichhaltige" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = FMU version_name = "Freya Class" } } }
+			ship = {name = "Karlsbaden" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = FMU version_name = "Freya Class" } } }
+			ship = {name = "Silberne Straße" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = FMU version_name = "Siegfried Class" } } }
+			ship = {name = "Süßwasser" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = FMU version_name = "Siegfried Class" } } }
+			ship = {name = "Edwardsberg" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = FMU version_name = "Siegfried Class" } } }
+			ship = {name = "Schöner Strand" definition = light_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FMU version_name = "Schwarzenberg Class" } } }
+			ship = {name = "Blaueswasser" definition = light_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FMU version_name = "Schwarzenberg Class" } } }
+			ship = {name = "Blaueswasser" definition = light_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FMU version_name = "Schwarzenberg Class" } } }
+		}
+	}
+}
+
+## STARTING PRODUCTION ##
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FMU"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=973
+	name="STATE_973"
+
+	history={
+		owner = LKR
+		add_core_of = LKR
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			14699 3 
+		}
+
+	}
+
+	provinces={
+		 8575 8678 14699 14700 14701 14702 14703 14704 14705 14706 14707 14708 14711 
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

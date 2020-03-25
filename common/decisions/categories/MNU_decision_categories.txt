@@ -1,0 +1,17 @@
+################
+##### MNU ######
+################
+
+MNU_revolution = {
+	
+	allowed = {
+		original_tag = MNU
+	}
+}
+
+GEQ_fascist_coring = {
+	
+	allowed = {
+		original_tag = GEQ
+	}
+}

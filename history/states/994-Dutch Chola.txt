@@ -1,0 +1,26 @@
+state={
+	id=994
+	name="STATE_994"
+	state_category = city
+
+	history={
+		owner = INS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		
+		victory_points = {
+			14265 3 
+		}
+		add_core_of = INS
+
+	}
+	provinces={
+		9018 14265
+		14604 14605 14606 14607 14608 14609 14610
+	}
+	manpower=1325685
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,150 @@
+﻿division_template = {
+	name = "Navuqushqurum"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	support = {
+       	artillery = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "Vatpagchisaelaz Navuqushqurum"
+		location = 13837
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Zochtlaz Navuqushqurum"
+		location = 13853
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Labnaz Navuqushqurum"
+		location = 13868
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Qna'az Navuqushqurum"
+		location = 13756
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Q'tiraz Navuqushqurum"
+		location = 13766
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Inirliqaz Navuqushqurum"
+		location = 13773
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Muguraqaz Navuqushqurum"
+		location = 13835
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Asetalaz Navuqushqurum"
+		location = 13822
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Virqqaz Navuqushqurum"
+		location = 13821
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Nejaz Navuqushqurum"
+		location = 13808
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Jurqaz Navuqushqurum"
+		location = 13808
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Yohotllaz Navuqushqurum"
+		location = 13808
+		division_template = "Navuqushqurum"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	fleet = {
+		name = "Hadu Defense Command"			
+		naval_base = 13837
+		task_force = {
+			name = "Hadu Sea Fleet"
+			location = 13837
+			ship = {name = "LM Gamaq" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = MUU version_name = "Taraqlusustalloj Class" } } }
+			ship = {name = "LM Ashtuchet" definition = destroyer start_experience_factor = 0 equipment = { ship_hull_light_1 = { amount = 1 owner = MUU version_name = "Taraqlusustalloj Class" } } }
+			ship = {name = "LM Vojjeq" definition = light_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MUU version_name = "Qruzuranguri Class" } } }
+			ship = {name = "LM Zefarjja" definition = light_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MUU version_name = "Qruzuranguri Class" } } }
+			ship = {name = "LM Navganara" definition = heavy_cruiser start_experience_factor = 0 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MUU version_name = "Qruzurðurdi Class" } } }
+		}
+	}
+}
+air_wings = {
+	880 = { 
+		fighter_equipment_0 =  {
+			owner = "MUU" 
+			amount = 40
+		}
+	}
+}
+## STARTING PRODUCTION ##
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MUU"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+}

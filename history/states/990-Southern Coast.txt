@@ -1,0 +1,26 @@
+
+state={
+	id=990
+	name="STATE_990"
+
+	history={
+		owner = BLM
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			14463 3 
+		}
+
+	}
+
+	provinces={
+		8624  
+		14461 14462 14463 14464 14465 14466 14467 14484
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

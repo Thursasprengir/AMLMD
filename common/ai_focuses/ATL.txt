@@ -1,0 +1,11 @@
+
+ai_historical_focus_list_ATL = {
+	ai_national_focuses = {
+		ATL_mil_main
+		ATL_main
+		ATL_deimila
+		ATL_attack_kaprastiak
+		ATL_attack_all
+		ATL_karistig
+	}
+}

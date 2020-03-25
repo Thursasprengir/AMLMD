@@ -1,0 +1,25 @@
+
+state={
+	id=971
+	name="STATE_971"
+
+	history={
+		owner = MKU
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			14783 3 
+		}
+
+	}
+
+	provinces={
+		4470 14777 14778 14779 14780 14781 14782 14783 14784 14785 
+	}
+	manpower=12510
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}
