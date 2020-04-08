@@ -1,0 +1,1108 @@
+﻿2000.1.1 = {
+	add_ideas = {
+		#pop_050
+		#Mass_Media
+		christian
+		negligible_corruption
+		gdp_9
+		EU_member
+		stable_growth
+		defence_01
+		edu_05
+		health_05
+		social_05
+		bureau_02
+		police_01
+		partial_draft_army
+		volunteer_women
+		intervention_limited_interventionism
+		NATO_member
+		western_country
+		large_far_right_movement
+		labour_unions
+		landowners
+		industrial_conglomerates
+		#civil_law
+		#tax_cost_46
+	}
+
+	capital = 4
+	oob = "DEN_2000"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "DEN_2000_naval_mtg"
+		else = {
+			set_naval_oob = "DEN_2000_naval_legacy"
+		}
+	}
+	set_convoys = 40
+
+	set_research_slots = 3
+
+	add_ideas = {
+		gdp_8
+		#pop_050
+		christian
+		EU_member
+		defence_01
+		edu_05
+		health_05
+		social_05
+		bureau_02
+		police_01
+		partial_draft_army
+		volunteer_women
+		intervention_limited_interventionism
+		NATO_member
+		western_country
+		labour_unions
+		landowners
+		industrial_conglomerates
+		#civil_law
+		#tax_cost_32
+	}
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 150 }
+	add_to_array = { influence_array = FRA.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 35 }
+	add_to_array = { influence_array = SWE.id }
+	add_to_array = { influence_array_val = 25 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 15 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 35 }
+	add_to_array = { influence_array = HOL.id }
+	add_to_array = { influence_array_val = 10 }
+	startup_influence = yes
+
+	set_country_flag = positive_labour_unions
+	set_country_flag = positive_landowners
+	set_country_flag = indifferent__industrial_conglomerates
+
+	set_variable = { var = debt value = 126 }
+	set_variable = { var = treasury value = 23 }
+	set_variable = { var = tax_rate value = 32 }
+	set_variable = { var = int_investments value = 0 }
+	#initial_money_setup = yes
+
+	add_opinion_modifier = { target = BEL modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = BEL modifier = EU_member_opinion }
+	add_opinion_modifier = { target = FRA modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = FRA modifier = EU_member_opinion }
+	add_opinion_modifier = { target = AUS modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = AUS modifier = EU_member_opinion }
+
+	#2000 NATO Relations
+	add_opinion_modifier = { target = BEL modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = BEL modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = FRA modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = FRA modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = GER modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = GER modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = ITA modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = ITA modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = ENG modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = ENG modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = GRE modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = GRE modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = POR modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = POR modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = SPR modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = SPR modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = NOR modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = NOR modifier = NATO_member_modifier }
+
+	add_opinion_modifier = { target = SWE modifier = arctic_council }
+	reverse_add_opinion_modifier = { target = SWE modifier = arctic_council }
+	add_opinion_modifier = { target = NOR modifier = arctic_council }
+	reverse_add_opinion_modifier = { target = NOR modifier = arctic_council }
+	add_opinion_modifier = { target = FIN modifier = arctic_council }
+	reverse_add_opinion_modifier = { target = FIN modifier = arctic_council }
+
+	#maritime dispute, also set for russia in their file
+	add_opinion_modifier = { target = CAN modifier = maritime_border_dispute }
+	reverse_add_opinion_modifier = { target = CAN modifier = maritime_border_dispute }
+
+	#Nordic good relations
+	add_opinion_modifier = { target = SWE modifier = nordic }
+	add_opinion_modifier = { target = ICE modifier = nordic }
+	add_opinion_modifier = { target = NOR modifier = nordic }
+	add_opinion_modifier = { target = FIN modifier = nordic }
+
+	add_opinion_modifier = { target = GER modifier = large_commercial_relations }
+	add_opinion_modifier = { target = USA modifier = large_commercial_relations }
+	add_opinion_modifier = { target = HOL modifier = large_commercial_relations }
+
+	#NATO military access
+	diplomatic_relation = {
+		country = BEL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = CAN
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = CZE
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = FRA
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = GER
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = GRE
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = HUN
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ICE
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ITA
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = LUX
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = HOL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = NOR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = POL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = POR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = SPR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = TUR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ENG
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = USA
+		relation = military_access
+		active = yes
+	}
+
+	set_technology = {
+		legacy_doctrines = 1
+		modern_blitzkrieg = 1
+		forward_defense = 1
+		encourage_nco_iniative = 1
+		air_land_battle = 1
+		#For templates
+		infantry_weapons = 1
+		diesel_attack_submarine_1 = 1
+
+		combat_eng_equipment = 1
+		land_Drone_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		artillery_0 = 1
+		SP_arty_0 = 1
+		Anti_Air_0 = 1
+		SP_Anti_Air_0 = 1
+		Early_APC = 1
+		APC_1 = 1
+		IFV_1 = 1
+		MBT_1 = 1
+		util_vehicle_0 = 1
+		ENGI_MBT_1 = 1
+
+		#Iver Huitfeldt class
+		frigate_1 = 1
+		frigate_2 = 1
+		missile_frigate_1 = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+		night_vision_3 = 1
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
+
+		landing_craft = 1
+
+		body_armor_1980 = 1
+		body_armor_2000 = 1
+		camouflage = 1
+		camouflage2 = 1
+		
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+		radar = 1
+		internet1 = 1 	#1G
+		internet2 = 1 	#2G
+		gprs = 1
+	}
+
+
+	set_popularities = {
+		democratic = 78.7
+		communism = 2.4
+		fascism = 0.0
+		neutrality = 6.4
+		nationalist = 12.5
+	}
+	set_politics = {
+
+		ruling_party = democratic
+		last_election = "1998.3.11"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	set_variable = { election_threshold = 0.02 }
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.132 } #conservatism
+	set_variable = { party_pop_array^2 = 0.312 } #liberalism
+	set_variable = { party_pop_array^3 = 0.291 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.024 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0.052 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.064 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.12 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0.005 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	add_to_array = { ruling_party = 3 }
+	add_to_array = { gov_coalition_array = 14 } #Neutral_conservatism
+	add_to_array = { gov_coalition_array = 16 } #Neutral_Libertarian
+
+	###1998 election results###
+	set_variable = { party_pop_elect_array^1 = 0.089 } #conservatism
+	set_variable = { party_pop_elect_array^2 = 0.240 } #liberalism
+	set_variable = { party_pop_elect_array^3 = 0.402 } #socialism
+	set_variable = { party_pop_elect_array^5 = 0.027 } #anarchist_communism
+	set_variable = { party_pop_elect_array^14 = 0.025 } #Neutral_conservatism
+	set_variable = { party_pop_elect_array^16 = 0.039 } #Neutral_Libertarian
+	set_variable = { party_pop_elect_array^18 = 0.076 } #neutral_Social
+	set_variable = { party_pop_elect_array^20 = 0.075 } #Nat_Populism
+	set_variable = { party_pop_elect_array^21 = 0.024 } #Nat_Populism
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Poul Nyrup Rasmussen"
+		picture = "Poul_Nyrup_Rasmussen.dds"
+		ideology = socialism
+		traits = {
+			western_socialism
+		}
+	}
+
+	create_field_marshal = {
+		name = "Bjørn Ingemann Bisserup"
+		picture = "Portrait_Bjoern_Bisserup.dds"
+		traits = { old_guard organisational_leader }
+		id = 16800
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+	}
+
+	create_field_marshal = {
+		name = "Peter Bartram"
+		picture = "Portrait_Peter_Bartram.dds"
+		traits = { old_guard inspirational_leader }
+		id = 16801
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+	}
+
+	create_field_marshal = {
+		name = "Per Ludvigsen"
+		picture = "Portrait_Per_Ludvigsen.dds"
+		traits = { thorough_planner }
+		id = 16802
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_field_marshal = {
+		name = "Hans-Christian Mathiesen"
+		picture = "Portrait_Hans-Christian_Mathiesen.dds"
+		traits = { fast_planner }
+		id = 16803
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Flemming Lentfer"
+		picture = "Portrait_Fleming_Lentfer.dds"
+		traits = { offensive_doctrine }
+		id = 16804
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Flemming Mathiasen"
+		picture = "Portrait_Fleming_Mathiasen.dds"
+		traits = { panzer_leader }
+		id = 16805
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Henning Bæk"
+		picture = "Portrait_Henning_Baek.dds"
+		traits = {  }
+		id = 16806
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Jørgen Høll"
+		picture = "Portrait_Joergen_Hoell.dds"
+		traits = { commando ranger }
+		id = 16807
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Kim Jesper Jørgensen"
+		picture = "Portrait_Kim_Joergensen.dds"
+		traits = { commando winter_specialist }
+		id = 16808
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Finn Winkler"
+		picture = "Portrait_Finn_Winkler.dds"
+		traits = { urban_assault_specialist }
+		id = 16809
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Max ALT Nielsen"
+		picture = "Portrait_Max_Nielsen.dds"
+		traits = {  }
+		id = 16810
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Christian Lippert"
+		picture = "Portrait_Christian_Lippert.dds"
+		traits = { trait_engineer }
+		id = 16811
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Lennie Fredskov Hansen"
+		picture = "Portrait_Lennie_Fredskov.dds"
+		traits = { ranger urban_assault_specialist }
+		id = 16812
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Jørn E. Rasmussen"
+		picture = "Portrait_Joern_Rasmussen.dds"
+		traits = { jungle_rat desert_fox }
+		id = 16813
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Per Orluff Knudsen"
+		picture = "Portrait_Per_Knudsen.dds"
+		traits = { panzer_leader }
+		id = 16814
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Jens Ole Rossen-Jørgensen"
+		picture = "Portrait_Jens_Joergensen.dds"
+		traits = { ranger }
+		id = 16815
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Lasse Harkjær"
+		picture = "Portrait_Lasse_Harkjaer.dds"
+		traits = { urban_assault_specialist }
+		id = 16816
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Søren Andersen"
+		picture = "Portrait_Soeren_Andersen.dds"
+		traits = { trickster }
+		id = 16817
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Bjarne Højgaard Jensen"
+		picture = "Portrait_Bjarne_Jensen.dds"
+		traits = { ranger }
+		id = 16818
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Anne-Cathrine Ribnietzky"
+		picture = "Portrait_Anne-Cathrine_Ribnietzky.dds"
+		traits = {  }
+		id = 16819
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Lars R. Møller"
+		picture = "Portrait_Lars_Moeller.dds"
+		traits = { trickster }
+		id = 16820
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Per Hinrichsen"
+		picture = "Portrait_Per_Hinrichsen.dds"
+		traits = { ranger }
+		id = 16821
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Jess Møller Nielsen"
+		picture = "Portrait_Jess_Nielsen.dds"
+		traits = { urban_assault_specialist }
+		id = 16822
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Henrik Holm"
+		picture = "Portrait_Henrik_Holm.dds"
+		traits = { trait_engineer }
+		id = 16823
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Birger Mejlholm"
+		picture = "Portrait_Birger_Mejlholm.dds"
+		traits = { bearer_of_artillery }
+		id = 16824
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Christian Arildsen"
+		picture = "Portrait_Christian_Arildsen.dds"
+		traits = { trait_engineer }
+		id = 16825
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Kåre Jakobsen"
+		picture = "Portrait_Kare_Jakobsen.dds"
+		traits = { commando ranger }
+		id = 16826
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Stig Østergaard Nielsen"
+		picture = "Portrait_Stig_Nielsen.dds"
+		traits = { commando winter_specialist }
+		id = 16827
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Jens Bach"
+		picture = "Portrait_Jens_Bach.dds"
+		traits = { commando naval_invader }
+		id = 16828
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Michael Løllesgaard"
+		picture = "Portrait_Michael_Lollesgaard.dds"
+		traits = { commando desert_fox }
+		id = 16829
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Steen Kobberø-Hansen"
+		picture = "Portrait_Steen_Hansen.dds"
+		traits = { spotter }
+		id = 16830
+	}
+
+	create_navy_leader = {
+		name = "Frank Trojahn"
+		picture = "Portrait_Frank_Trojahn.dds"
+		traits = { old_guard_navy superior_tactician }
+		id = 16831
+	}
+
+	create_navy_leader = {
+		name = "Aage Buur Jensen"
+		picture = "Portrait_Aage_Jensen.dds"
+		traits = { superior_tactician }
+		id = 16832
+	}
+
+	create_navy_leader = {
+		name = "Finn Hansen"
+		picture = "Portrait_Finn_Hansen.dds"
+		traits = { blockade_runner }
+		id = 16833
+	}
+
+	create_navy_leader = {
+		name = "Peter Stamp"
+		picture = "Portrait_Peter_Stamp.dds"
+		traits = { seawolf }
+		id = 16834
+	}
+
+	create_navy_leader = {
+		name = "Carsten Fjord-Larsen"
+		picture = "Portrait_Carsten_Fjord-Larsen.dds"
+		traits = { seawolf }
+		id = 16835
+	}
+
+	create_navy_leader = {
+		name = "Anders Friis"
+		picture = "Portrait_Anders_Friis.dds"
+		traits = { ironside }
+		id = 16836
+	}
+
+	create_navy_leader = {
+		name = "Torben Mikkelsen"
+		picture = "Portrait_Torben_Mikkelsen.dds"
+		traits = { fly_swatter }
+		id = 16837
+	}
+
+	create_navy_leader = {
+		name = "Henrik Ryberg"
+		picture = "Portrait_Henrik_Ryberg.dds"
+		traits = { air_controller }
+		id = 16838
+	}
+
+}
+2017.1.1 = {
+	capital = 4
+	oob = "DEN_2017"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "DEN_2017_naval_mtg"
+		else = {
+			set_naval_oob = "DEN_2017_naval_legacy"
+		}
+	}
+
+	add_ideas = {
+		#pop_050
+		#Mass_Media
+		christian
+		negligible_corruption
+		gdp_9
+		EU_member
+		stable_growth
+		defence_01
+		edu_05
+		health_05
+		social_06
+		bureau_02
+		police_01
+		partial_draft_army
+		volunteer_women
+		intervention_limited_interventionism
+		NATO_member
+		western_country
+		large_far_right_movement
+		labour_unions
+		landowners
+		industrial_conglomerates
+		#civil_law
+		#tax_cost_46
+	}
+
+	#set_country_flag = gdp_9
+	set_country_flag = enthusiastic_labour_unions
+	set_country_flag = positive_landowners
+	set_country_flag = enthusiastic_industrial_conglomerates
+
+	set_variable = { var = debt value = 118  }
+	set_variable = { var = treasury value = 64 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 46 }
+
+	#set_variable = { var = size_modifier value = 0.74 } #6 CIC
+	#initial_money_setup = yes
+
+	set_country_flag = military_advisors_IRQ
+	IRQ = { add_to_variable = { foreign_advisors = 1 } }
+
+	add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SOV modifier = minor_sanctions }
+	set_country_flag = sanctions_against_SOV_flag
+
+	#NATO military access
+	diplomatic_relation = {
+		country = ALB
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = BEL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = BUL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = CAN
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = CRO
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = CZE
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = EST
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = FRA
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = GER
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = GRE
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = HUN
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ICE
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ITA
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = LAT
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = LIT
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = LUX
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = HOL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = NOR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = POL
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = POR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ROM
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = SLO
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = SLV
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = SPR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = TUR
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ENG
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = USA
+		relation = military_access
+		active = yes
+	}
+
+	#Nat focus
+
+
+
+
+
+
+
+	set_technology = {
+		command_control_equipment3 = 1
+		missile_frigate_2 = 1
+		missile_frigate_3 = 1
+		missile_frigate_4 = 1
+
+		body_armor_2010 = 1
+		
+		computing3 = 1
+		decryption3 = 1
+		encryption3 = 1
+		computing4 = 1
+		decryption4 = 1
+		encryption4 = 1
+		computing5 = 1
+		decryption5 = 1
+		encryption5 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		machine_learning = 1
+		sociable_machines = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
+		genetically_modified_crops = 1
+		gene_targeting_pesticides = 1
+		human_genome_project = 1
+		crispr = 1
+		cas9_gene_editing = 1
+		wifi = 1
+		internet3 = 1	#3G
+		edge = 1
+		umts = 1
+		hsupa = 1
+		internet4 = 1	#4G
+		lte = 1
+	}
+
+	set_popularities = {
+		democratic = 48.1
+		communism = 9.2
+		fascism = 0.0
+		neutrality = 23.1
+		nationalist = 19.6
+	}
+	set_politics = {
+
+		ruling_party = democratic
+		last_election = "2015.6.18"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+	#based on recent 2019 election polling
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.048 } #conservatism
+	set_variable = { party_pop_array^2 = 0.184 } #liberalism
+	set_variable = { party_pop_array^3 = 0.249 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.092 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.041 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0.084 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.034 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.072 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.136 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0.060 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	add_to_array = { ruling_party = 2 }
+	add_to_array = { gov_coalition_array = 20 } #conservatism
+	add_to_array = { gov_coalition_array = 1 } #conservatism
+	add_to_array = { gov_coalition_array = 14 } #Neutral_conservatism
+
+	###2015 election results###
+	set_variable = { party_pop_elect_array^1 = 0.034 } #conservatism
+	set_variable = { party_pop_elect_array^2 = 0.195 } #liberalism
+	set_variable = { party_pop_elect_array^3 = 0.263 } #socialism
+	set_variable = { party_pop_elect_array^5 = 0.078 } #anarchist_communism
+	set_variable = { party_pop_elect_array^14 = 0.075 } #Neutral_conservatism
+	set_variable = { party_pop_elect_array^16 = 0.046 } #Neutral_Libertarian
+	set_variable = { party_pop_elect_array^17 = 0.048 } #Neutral_green
+	set_variable = { party_pop_elect_array^18 = 0.042 } #neutral_Social
+	set_variable = { party_pop_elect_array^20 = 0.211 } #Nat_Populism
+	set_variable = { party_pop_elect_array^21 = 0 } #Nat_Fascism
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Lars Løkke Rasmussen"
+		picture = "lars_loekke_rasmussen.dds"
+		ideology = liberalism
+		traits = {
+			western_liberalism
+		}
+	}
+
+}

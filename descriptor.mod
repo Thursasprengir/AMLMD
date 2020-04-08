@@ -1,4 +1,5 @@
 version="0.1"
+dependencies = { "Millennium Dawn: Modern Day Mod" }
 tags={
 	"Alternative History"
 	"Events"
@@ -8,4 +9,4 @@ tags={
 	"Technologies"
 }
 name="AML + Millennium Dawn"
-supported_version="1.9.0"
+supported_version="1.9.1"

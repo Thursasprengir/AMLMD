@@ -1,0 +1,470 @@
+#written by ahmeteris #Tweaked by Bird/Turtle
+#needed for PKK attack and counter terrorism effects
+
+add_1_popularity = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.01
+		}
+	}
+	recalculate_party = yes 
+}
+
+add_2_popularity = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+	}
+	recalculate_party = yes 
+}
+
+add_5_popularity = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+	}
+	recalculate_party = yes 
+}
+
+add_10_popularity = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_1 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.01
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.01
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_2 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.02
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.02
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_2_5 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.025
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.025
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.025
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.025
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.025
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_3 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.03
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.03
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.03
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_4 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.04
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.04
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.04
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.04
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.04
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_5 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.05
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_10 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.10
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.10
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.10
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.10
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.10
+		}
+	}
+	recalculate_party = yes 
+}
+
+decrease_popularity_20 = {
+	if = {
+		limit = { has_government = democratic }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.20
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.20
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.20
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.20
+		}
+	}
+	else_if = {
+		limit = { has_government = nationalist }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.20
+		}
+	}
+	recalculate_party = yes 
+}

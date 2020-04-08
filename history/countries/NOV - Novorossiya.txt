@@ -1,0 +1,762 @@
+﻿2000.1.1 = {
+	capital = 693
+	oob = "NOV_2000"
+	set_convoys = 10
+	add_ideas = {
+		#pop_050
+		unrestrained_corruption
+		orthodox_christian
+		Non_State_Actor
+		gdp_3
+		stable_growth
+		defence_06
+		edu_02
+		health_02
+		social_02
+		bureau_03
+		police_03
+		volunteer_army
+		volunteer_women
+		the_military
+		intelligence_community
+		oligarchs
+		#civil_law
+	}
+
+	set_technology = {
+		legacy_doctrines = 1
+		armoured_mass_assault = 1
+		deep_echelon_advance = 1
+		army_group_operational_freedom = 1
+		massed_artillery = 1
+
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
+
+		#2005
+
+		combat_eng_equipment = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+		night_vision_3 = 1 #1985
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
+
+		land_Drone_equipment = 1
+
+		Early_APC = 1 #Vehicle Design
+
+		APC_1 = 1
+		APC_2 = 1
+		APC_3 = 1
+		APC_4 = 1
+
+		Air_APC_1 = 1 #1965
+		Air_APC_2 = 1 #1975
+		Air_APC_3 = 1
+		Air_APC_4 = 1
+
+		IFV_1 = 1
+		IFV_2 = 1
+		IFV_3 = 1
+		IFV_4 = 1
+
+		Air_IFV_1 = 1
+		Air_IFV_2 = 1
+		Air_IFV_3 = 1
+		Air_IFV_4 = 1
+
+		MBT_1 = 1
+		MBT_2 = 1
+		MBT_3 = 1
+		MBT_4 = 1
+
+		ENGI_MBT_1 = 1
+		ENGI_MBT_2 = 1
+		ENGI_MBT_3 = 1
+		ENGI_MBT_4 = 1
+
+		Rec_tank_0 = 1 #1965
+		Rec_tank_1 = 1 #1985
+
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+
+		artillery_0 = 1
+		Arty_upgrade_1 = 1
+		SP_arty_0 = 1
+		SP_R_arty_0 = 1
+		artillery_1 = 1
+		SP_arty_1 = 1
+		SP_R_arty_1 = 1
+		SP_R_arty_2 = 1
+		Arty_upgrade_3 = 1
+
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		AT_upgrade_1 = 1
+		AT_upgrade_2 = 1
+		Anti_tank_1 = 1
+		Heavy_Anti_tank_1 = 1
+		Heavy_Anti_tank_2 = 1
+		Anti_tank_2 = 1
+
+		Anti_Air_0 = 1
+		SP_Anti_Air_0 = 1
+		AA_upgrade_1 = 1
+		Anti_Air_1 = 1
+		SP_Anti_Air_1 = 1
+		AA_upgrade_2 = 1
+		Anti_Air_2 = 1
+		SP_Anti_Air_2 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1
+		internet1 = 1 	#1G
+	}
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 40 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 130 }
+	add_to_array = { influence_array = UKR.id }
+	add_to_array = { influence_array_val = 10 }
+	startup_influence = yes
+
+	set_popularities = {
+		democratic = 0.0
+		communism = 100.0
+		fascism = 0.0
+		neutrality = 0.0
+		nationalist = 0.0
+	}
+	set_politics = {
+
+		ruling_party = communism
+		last_election = "2016.12.11"
+		election_frequency = 60
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0 } #conservatism
+	set_variable = { party_pop_array^2 = 0 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 1.0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 7 }
+
+	startup_politics = yes
+
+	create_field_marshal = {
+		name = "Alexander Zakharchenko"
+		picture = "generals/Portrait_Alexander_Zakharchenko.dds"
+		traits = { organisational_leader }
+		id = 44700
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Sergey Kozlov"
+		picture = "generals/Portrait_Sergey_Kozlov.dds"
+		traits = {  }
+		id = 44701
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Igor Plotnitsky"
+		picture = "generals/Portrait_Igor_Plotnitsky.dds"
+		traits = {  }
+		id = 44702
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Igor Strelkov"
+		picture = "generals/Portrait_Igor_Strelkov.dds"
+		traits = {  }
+		id = 44703
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Oleg Bugrov"
+		picture = "generals/Portrait_Oleg_Bugrov.dds"
+		traits = {  }
+		id = 44704
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Vladimir Kononov"
+		picture = "generals/Portrait_Vladimir_Kononov.dds"
+		traits = {  }
+		id = 44705
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Akhra Avidzba"
+		picture = "generals/Portrait_Akhra_Avidzba.dds"
+		traits = {  }
+		id = 44706
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Aleksey Mozgovoy"
+		picture = "generals/Portrait_Aleksey_Mozgovoy.dds"
+		traits = {  }
+		id = 44707
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Alexander Bednov"
+		picture = "generals/Portrait_Alexander_Bednov.dds"
+		traits = {  }
+		id = 44708
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Alexander Khodakovsky"
+		picture = "generals/Portrait_Alexander_Khodakovsky.dds"
+		traits = {  }
+		id = 44709
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Botsman"
+		picture = "generals/Portrait_Botsman.dds"
+		traits = {  }
+		id = 44710
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Eduard Basurin"
+		picture = "generals/Portrait_Eduard_Basurin.dds"
+		traits = {  }
+		id = 44711
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Givi"
+		picture = "generals/Portrait_Givi.dds"
+		traits = {  }
+		id = 44712
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Igor Bezler"
+		picture = "generals/Portrait_Igor_Bezler.dds"
+		traits = {  }
+		id = 44713
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Konstantin Kuzmin"
+		picture = "generals/Portrait_Konstantin_Kuzmin.dds"
+		traits = {  }
+		id = 44714
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Motorola"
+		picture = "generals/Portrait_Motorola.dds"
+		traits = {  }
+		id = 44715
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Nikolai Kozytsin"
+		picture = "generals/Portrait_Nikolai_Kozytsin.dds"
+		traits = {  }
+		id = 44716
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Pavel Dryomov"
+		picture = "generals/Portrait_Pavel_Dryomov.dds"
+		traits = {  }
+		id = 44717
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Pavel Gubarev"
+		picture = "generals/Portrait_Pavel_Gubarev.dds"
+		traits = {  }
+		id = 44718
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Romashka"
+		picture = "generals/Portrait_Romashka.dds"
+		traits = {  }
+		id = 44719
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Sergei Petrovskiy"
+		picture = "generals/Portrait_Sergei_Petrovskiy.dds"
+		traits = {  }
+		id = 44720
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Valery Bolotov"
+		picture = "generals/Portrait_Valery_Bolotov.dds"
+		traits = {  }
+		id = 44721
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Yuri Shevchenko"
+		picture = "generals/Portrait_Yuri_Shevchenko.dds"
+		traits = {  }
+		id = 44722
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Alexander Matyushin"
+		picture = "generals/Portrait_Alexander_Matyushin.dds"
+		traits = {  }
+		id = 44723
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Alexander Nemogay"
+		picture = "generals/Portrait_Alexander_Nemogay.dds"
+		traits = {  }
+		id = 44724
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Alexey Karyakin"
+		picture = "generals/Portrait_Alexey_Karyakin.dds"
+		traits = {  }
+		id = 44725
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Igor Iwanow"
+		picture = "generals/Portrait_Igor_Iwanow.dds"
+		traits = {  }
+		id = 44726
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Igor Kornet"
+		picture = "generals/Portrait_Igor_Kornet.dds"
+		traits = {  }
+		id = 44727
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Ivan Kondrashov"
+		picture = "generals/Portrait_Ivan_Kondrashov.dds"
+		traits = {  }
+		id = 44728
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Mikhail Verin"
+		picture = "generals/Portrait_Mihail_Verin.dds"
+		traits = {  }
+		id = 44729
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Mikhail Shatohin"
+		picture = "generals/Portrait_Mikhail_Shatohin.dds"
+		traits = {  }
+		id = 44730
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Sergey Fomchenkov"
+		picture = "generals/Portrait_Sergey_Fomchenkov.dds"
+		traits = {  }
+		id = 44731
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Sergey Zavdoveev"
+		picture = "generals/Portrait_Sergey_Zavdoveev.dds"
+		traits = {  }
+		id = 44732
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Yuri Safonenko"
+		picture = "generals/Portrait_Yuri_Safonenko.dds"
+		traits = {  }
+		id = 44733
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Alexander Zakharchenko"
+		picture = "admirals/Portrait_Alexander_Zakharchenko_navy.dds"
+		traits = {  }
+		id = 44734
+	}
+
+	create_navy_leader = {
+		name = "Igor Plotnitsky"
+		picture = "admirals/Portrait_Igor_Plotnitsky_navy.dds"
+		traits = {  }
+		id = 44735
+	}
+
+	create_navy_leader = {
+		name = "Sergey Kozlov"
+		picture = "admirals/Portrait_Sergey_Kozlov_navy.dds"
+		traits = {  }
+		id = 44736
+	}
+}
+
+2017.1.1 = {
+	capital = 693
+	oob = "NOV_2017"
+	set_convoys = 10
+
+	#set_country_flag = gdp_3
+
+	#Nat focus
+
+
+
+
+	diplomatic_relation = {
+		country = SOV
+		relation = military_access
+		active = yes
+	}
+
+	add_opinion_modifier = { target = UKR modifier = hostile_status }
+	add_opinion_modifier = { target = PMR modifier = russian_proficient }
+	reverse_add_opinion_modifier = { target = PMR modifier = russian_proficient }
+	add_opinion_modifier = { target = SOO modifier = russian_proficient }
+	reverse_add_opinion_modifier = { target = SOO modifier = russian_proficient }
+	add_opinion_modifier = { target = ABK modifier = russian_proficient }
+	reverse_add_opinion_modifier = { target = ABK modifier = russian_proficient }
+
+	add_ideas = {
+		#pop_050
+		unrestrained_corruption
+		orthodox_christian
+		gdp_3
+		stable_growth
+		defence_06
+		edu_02
+		health_02
+		social_02
+		bureau_03
+		police_03
+		volunteer_army
+		volunteer_women
+		the_military
+		intelligence_community
+		oligarchs
+		#civil_law
+	}
+
+	# Starting tech
+	set_technology = {
+		legacy_doctrines = 1
+		modern_blitzkrieg = 1
+		forward_defense = 1
+		encourage_nco_iniative = 1
+		air_land_battle = 1
+		night_vision_1 = 1
+
+		#For templates
+		infantry_weapons = 1
+
+		combat_eng_equipment = 1
+		command_control_equipment = 1
+		land_Drone_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		artillery_0 = 1
+		SP_arty_0 = 1
+		SP_R_arty_0 = 1
+		Anti_Air_0 = 1
+		Early_APC = 1
+		APC_1 = 1
+		IFV_1 = 1
+		util_vehicle_0 = 1
+		Rec_tank_0 = 1
+		MBT_1 = 1
+		ENGI_MBT_1 = 1
+
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+		computing3 = 1
+		decryption3 = 1
+		encryption3 = 1
+		DNA_fingerprinting = 1
+
+		internet2 = 1 	#2G
+		gprs = 1
+		internet3 = 1
+		wifi = 1
+	}
+
+	set_popularities = {
+		democratic = 0.0
+		communism = 100.0
+		fascism = 0.0
+		neutrality = 0.0
+		nationalist = 0.0
+	}
+	set_politics = {
+
+		ruling_party = communism
+		last_election = "2016.12.11"
+		election_frequency = 60
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0 } #conservatism
+	set_variable = { party_pop_array^2 = 0 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 1.0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 7 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Oleg Tsaryov"
+		picture = "oleg_tsaryov.dds"
+		ideology = Autocracy
+		traits = {
+			emerging_Autocracy
+		}
+	}
+}

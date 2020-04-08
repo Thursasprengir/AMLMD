@@ -1,0 +1,464 @@
+﻿2000.1.1 = {
+	add_ideas = {
+		#pop_050
+		rampant_corruption
+		gdp_3
+		rio_pact_member
+		christian
+		stable_growth
+		defence_01
+		edu_02
+		health_03
+		social_01
+		bureau_01
+		police_03
+		volunteer_army
+		volunteer_women
+		landowners
+		small_medium_business_owners
+		international_bankers
+		#civil_law
+		cartels_4
+		#tax_cost_15
+	}
+
+	capital = 843
+	oob = "ELS_2000"
+	set_convoys = 5
+	
+	add_ideas = {
+		gdp_3
+		#pop_050
+		christian
+		stable_growth
+		defence_01
+		edu_02
+		health_03
+		social_01
+		bureau_01
+		police_03
+		landowners
+		small_medium_business_owners
+		international_bankers
+		#civil_law
+		cartels_4
+		#tax_cost_11
+	}
+		
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 40 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 80 }
+	add_to_array = { influence_array = TAI.id }
+	add_to_array = { influence_array_val = 20 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = MEX.id }
+	add_to_array = { influence_array_val = 18 }
+	add_to_array = { influence_array = GUA.id }
+	add_to_array = { influence_array_val = 25 }
+	add_to_array = { influence_array = CUB.id }
+	add_to_array = { influence_array_val = 4 }
+	startup_influence = yes
+	
+	set_country_flag = negative_landowners
+	set_country_flag = negative_small_medium_business_owners
+
+	set_variable = { var = debt value = 5 }
+	set_variable = { var = treasury value = 3 }
+	set_variable = { var = tax_rate value = 11 }
+	set_variable = { var = int_investments value = 0 }
+	#initial_money_setup = yes
+	
+	
+	add_opinion_modifier = { target = NIC modifier = spanish_speaking }
+	reverse_add_opinion_modifier = { target = NIC modifier = spanish_speaking }
+	add_opinion_modifier = { target = COS modifier = spanish_speaking }
+	reverse_add_opinion_modifier = { target = COS modifier = spanish_speaking }
+	add_opinion_modifier = { target = CUB modifier = spanish_speaking }
+	reverse_add_opinion_modifier = { target = CUB modifier = spanish_speaking }
+	add_opinion_modifier = { target = PAN modifier = spanish_speaking }
+	reverse_add_opinion_modifier = { target = PAN modifier = spanish_speaking }
+	add_opinion_modifier = { target = URG modifier = spanish_speaking }
+	reverse_add_opinion_modifier = { target = URG modifier = spanish_speaking }
+	
+	set_technology = { 
+		
+		#VCTA2
+		util_vehicle_0 = 1
+
+		#Basic Rifles
+		infantry_weapons = 1
+		#Old Radios
+		command_control_equipment = 1
+		
+		#Old artillery
+		artillery_0 = 1
+		
+		#Needed for SPAA template
+		Anti_Air_0 = 1
+		
+		#Needed for Mech/Arm Inf/Arm templates
+		Early_APC = 1
+		APC_1 = 1
+		Rec_tank_0 = 1
+		
+		#Needed for HAT and HIW
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		
+		combat_eng_equipment = 1
+		
+		body_armor_1980 = 1
+		camouflage = 1
+		camouflage2 = 1
+		
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		radar = 1
+		internet1 = 1 	#1G
+	}
+	
+	set_popularities = {
+		democratic = 11.2
+		communism = 38.9
+		fascism = 0.0
+		neutrality = 49.9
+		nationalist = 0.0
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1999.6.13"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.02 } #conservatism
+	set_variable = { party_pop_array^2 = 0.072 } #liberalism
+	set_variable = { party_pop_array^3 = 0.02 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.352 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.037 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.085 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.36 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.054 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+	add_to_array = { ruling_party = 14 }
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Francisco Flores Pérez"
+		picture = "fracisco_perez.dds"
+		ideology = Neutral_conservatism
+		traits = {
+			neutrality_Neutral_conservatism
+		}
+	}
+	
+	create_field_marshal = {
+		name = "David Munguia Payes"
+		picture = "generals/Portrait_David_Payes.dds"
+		traits = { old_guard defensive_doctrine }
+		id = 19500
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Carlos Jaime Mena Torres"
+		picture = "generals/Portrait_Carlos_Mena.dds"
+		traits = { thorough_planner }
+		id = 19501
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Alirio Garcia Flamenco Sevilla"
+		picture = "generals/Portrait_Alirio_Garcia.dds"
+		traits = { logistics_wizard }
+		id = 19502
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Félix Edgardo Nunez Escobar"
+		picture = "generals/Portrait_Felix_Nunez.dds"
+		traits = { organisational_leader }
+		id = 19503
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Guillermo Adolfo Herrador Peña"
+		picture = "generals/Portrait_Guillermo_Herrador.dds"
+		traits = { panzer_leader }
+		id = 19504
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Elmer Alonso Martinez Molina"
+		picture = "generals/Portrait_Elmer_Martinez.dds"
+		traits = { trait_engineer }
+		id = 19505
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Rigoberto Escobar Galdámez"
+		picture = "generals/Portrait_Rigoberto_Escobar.dds"
+		traits = { jungle_rat }
+		id = 19506
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Domingo A. Monterrosa"
+		picture = "generals/Portrait_Domingo_Monterrosa.dds"
+		traits = { trickster }
+		id = 19507
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Juan de Jésus Guzmán Morales"
+		picture = "generals/Portrait_Juan_Guzman.dds"
+		traits = { bearer_of_artillery }
+		id = 19508
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Edwin Ernesto Juárez Monterrosa"
+		picture = "generals/Portrait_Edwin_Juarez.dds"
+		traits = { hill_fighter }
+		id = 19509
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Manuel de Jesús Romero"
+		picture = "generals/Portrait_Manuel_Romero.dds"
+		traits = { ranger }
+		id = 19510
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "David Munguia Payes"
+		picture = "admirals/Portrait_David_Payes.dds"
+		traits = {  }
+		id = 19511
+	}
+
+}
+
+2017.1.1 = {
+	capital = 843
+	oob = "ELS_2017"
+	set_convoys = 5
+
+	add_ideas = {
+		#pop_050
+		rampant_corruption
+		gdp_3
+		rio_pact_member
+		christian
+		stable_growth
+		defence_01
+		edu_02
+		health_03
+		social_01
+		bureau_01
+		police_03
+		volunteer_army
+		volunteer_women
+		landowners
+		small_medium_business_owners
+		international_bankers
+		#civil_law
+		cartels_4
+		#tax_cost_15
+	}
+	
+	#set_country_flag = gdp_3
+	set_country_flag = negative_landowners
+	set_country_flag = negative_small_medium_business_owners
+	
+	set_variable = { var = debt value = 17 }
+	set_variable = { var = treasury value = 3 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 15 }
+	
+	#set_variable = { var = size_modifier value = 0.14 } #2 CIC
+	#initial_money_setup = yes
+
+	#Nat focus
+	
+	
+
+	# Starting tech
+	set_technology = { 
+		legacy_doctrines = 1 
+		modern_blitzkrieg = 1 
+		forward_defense = 1 
+		encourage_nco_iniative = 1 
+		air_land_battle = 1
+		night_vision_1 = 1
+		
+		#VCTA2
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+		util_vehicle_4 = 1
+		util_vehicle_5 = 1
+
+		#Basic Rifles
+		infantry_weapons = 1
+		#Old Radios
+		command_control_equipment = 1
+		
+		#Old artillery
+		artillery_0 = 1
+		
+		#Needed for SPAA template
+		Anti_Air_0 = 1
+		
+		#Needed for Mech/Arm Inf/Arm templates
+		Early_APC = 1
+		APC_1 = 1
+		Rec_tank_0 = 1
+		
+		#Needed for HAT and HIW
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		
+		combat_eng_equipment = 1
+		
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+		internet2 = 1 	#2G
+		gprs = 1
+		wifi = 1
+		internet3 = 1	#3G
+	}
+
+	set_popularities = {
+		democratic = 15.4
+		communism = 38.9
+		fascism = 0.0
+		neutrality = 45.7
+		nationalist = 0.0
+	}
+	set_politics = {
+		
+		ruling_party = communism
+		last_election = "2014.3.9"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.11 } #conservatism
+	set_variable = { party_pop_array^2 = 0.028 } #liberalism
+	set_variable = { party_pop_array^3 = 0.016 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.389 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.068 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.389 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+	add_to_array = { ruling_party = 5 }
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Salvador Sánchez Cerén"
+		picture = "ELS_Salvador_Sanchez_Ceren.dds"
+		ideology = anarchist_communism
+		traits = {
+			emerging_anarchist_communism
+		}
+	}
+}

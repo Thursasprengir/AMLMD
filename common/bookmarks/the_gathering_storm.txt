@@ -1,545 +1,440 @@
 bookmarks = {
 	bookmark = {
-		name = "GATHERING_STORM_NAME"
-		desc = "GATHERING_STORM_DESC"
-		date = 1936.1.1.12
-		picture = "GFX_select_date_1936"
-		default_country = "GER"
+		name = "MODERN_DAY_NAME"
+		desc = "MODERN_DAY_DESC"
+		date = 2017.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "USA"
 		default = yes
-		
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { NOT = { has_dlc = "La Resistance" } }
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_france_leads
-			}
-		}
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { has_dlc = "La Resistance" } 
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = {
-				FRA_invite_communist_ministers
-				FRA_utilize_the_leagues
-				FRA_je_suis_la_deluge
-			}
-		}
-		"USA"={
-			history = "USA_GATHERING_STORM_DESC"
+
+		"USA" = {
+			history = "USA_MODERN_DAY_DESC"
 			ideology = democratic
 			ideas = {
-				home_of_the_free
-				great_depression
-				undisturbed_isolation
+				christian
+				land_of_the_free
+				p5_member
 			}
 			focuses = {
-				USA_war_plan_black
-				USA_limited_intervention
-				USA_reestablish_the_gold_standard
+				USA_cautious_southern_policy
+				USA_continue_space_efforts
+				USA_withdraw_tpp
 			}
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
+		"ENG" = {
+			history = "ENG_MODERN_DAY_DESC"
 			ideology = democratic
-			available = { has_dlc = "Man the Guns" }
 			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
+				pluralist
+				EU_member
+				g7_member
 			}
 			focuses = {
-				ENG_imperial_federation
-				ENG_the_kings_party
-				ENG_organize_the_blackshirts
+				ENG_the_future_of_britain
+				ENG_brexit_referendum
+				ENG_vitalize_westminster
 			}
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
+		"FRA" = {
+			history = "FRA_MODERN_DAY_DESC"
 			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
 			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
+				pluralist
+				Migrant_Crisis_Europe
+				g7_member
 			}
 			focuses = {
-				tizard_mission_focus
-				ENG_war_with_germany
-				ENG_war_with_italy
+				FRA_fraternity
+				FRA_equality
+				FRA_liberty
 			}
 		}
-		"GER"={
-			history = "GER_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { has_dlc = "Waking the Tiger" }
+		"GER" = {
+			history = "GER_MODERN_DAY_DESC"
+			ideology = democratic
 			ideas = {
-				sour_loser
-				general_staff
-				GER_mefo_bills_1
+				christian
+				german_legacy
+				EU_member
 			}
 			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
-				GER_revive_the_kaiserreich
+				GER_automotive_investments_in_europe
+				GER_infrastructural_reform
+				GER_pan_european_efforts
 			}
 		}
-		"GER"={
-			history = "GER_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { NOT = { has_dlc = "Waking the Tiger" } }
+		"JAP" = {
+			history = "JAP_MODERN_DAY_DESC"
+			ideology = democratic
 			ideas = {
-				sour_loser
-				general_staff
-				GER_mefo_bills_1
+				idea_JAP_emperor_akihito
+				article_nine_jap
+				g7_member
 			}
 			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
-				GER_ussr_war_goal
+				JAP_new_imperial_society
+				JAP_popular_state
+				JAP_democratic_state
 			}
 		}
-		"JAP"={
-			history = "JAP_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				state_shintoism
-				JAP_zaibatsus
-				JAP_militarism
-			}	
-			focuses = {
-				JAP_the_zero
-				JAP_warrior_spirit
-				JAP_strike_on_the_southern_resource_area
-			}			
-		}
-		"SOV"={
-			history = "SOV_GATHERING_STORM_DESC"
+		"SOV" = {
+			history = "SOV_MODERN_DAY_DESC"
 			ideology = communism
 			ideas = {
-				trotskyite_plot
-				home_of_revolution
+				orthodox_christian
+				russian_legacy
+				p5_member
 			}
 			focuses = {
-				SOV_great_purge
-				SOV_claims_on_baltic
-				SOV_war_with_uk
-			}	
-		}
-
-
-		"MUU"={
-			history = "MUU_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				MUU_rural_isolation
-				MUU_rural_guerrillas
-			}
-			focuses = {
-				MUU_government_purges
-				MUU_power_ojjamun
-				MUU_impeach_ollun
-			}	
-		}
-
-		"ATL"={
-			history = "ATL_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				ATL_trading_empire
-				ATL_naval_power
-				ATL_useless_air_force
-			}
-			focuses = {
-				ATL_kaixanarak_final
-				ATL_isolation_final_2
-				ATL_open
-			}	
-		}
-		
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-
-		"ITA"={
-			minor = yes
-			history = "ITA_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				vittoria_mutilata
-				victor_emmanuel
-			}	
-			focuses = {
-				ITA_pact_of_steel
-				ITA_spanish_italian_faction
-				ITA_italy_first
-			}		
-		}
-
-		# minors from DLC ####
-		"POL"={
-			minor = yes
-			history = "POL_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				
-			}
-			focuses = {
-				POL_the_baltic_alliance
-				POL_draw_closer_to_britain
-				POL_seek_accommodation_with_germany
+				SOV_take_crimea
+				SOV_2008_military_reforms
+				SOV_russian_national_interests
 			}
 		}
-		"CAN"={
-			minor = yes
-			history = "CAN_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				CAN_great_depression_1
-				CAN_conscription_crisis
-			}
-			focuses = {
-				CAN_skewer_the_eagle
-				CAN_north_american_alliance
-				CAN_join_comintern
-			}
-		}
-		"AST"={
-			minor = yes
-			history = "AST_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				AST_great_depression_1
-			}
-			focuses = {
-				AST_never_another_gallipoli
-				AST_support_indonesian_uprising
-				AST_delegation_to_china
-			}
-		}
-		"NZL"={
-			minor = yes
-			history = "NZL_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				
-			}
-			focuses = {
-				NZL_bob_semple_tank
-				NZL_independent_new_zealand
-				NZL_maori_volunteers
-			}
-		}
-		"SAF"={
-			minor = yes
-			history = "SAF_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				SAF_ossewabrandwag
-				SAF_history_of_segregation
-			}
-			focuses = {
-				SAF_secure_interests_in_africa
-				SAF_support_the_german_coup
-				SAF_anti_colonialist_crusade
-			}
-		}
-		"RAJ"={
-			minor = yes
-			history = "RAJ_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				RAJ_agrarian_society
-				RAJ_princely_states
-			}
-			focuses = {
-				RAJ_all_india_forward_bloc
-				RAJ_indian_gurkhas
-				RAJ_the_smiling_buddha
-			}
-		}
-		"CZE"={
-			minor = yes
-			history = "CZE_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				CZE_skoda_works
-				CZE_divided_nation
-			}
-			focuses = {
-				CZE_sudeten_1
-				CZE_industrial_legacy
-				CZE_military_research_institute
-			}
-		}
-
-		"HUN"={
-			minor = yes
-			history = "HUN_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				HUN_treaty_of_triannon
-			}
-			focuses = {
-				HUN_proclaim_the_restoration_of_austria_hungary
-				HUN_secret_rearmament
-				HUN_renounce_the_treaty_of_trianon
-			}
-		}
-
-		"ROM"={
-			minor = yes
-			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				ROM_king_carol_ii_hedonist
-				neutrality_idea
-			}
-			focuses = {
-				ROM_balkans_dominance
-				ROM_institute_royal_dictatorship
-				ROM_preserve_greater_romania
-			}
-		}
-		
-		"YUG"={
-			minor = yes
-			history = "YUG_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				anti_german_military
-				YUG_idea_croatian_opposition
-				YUG_idea_serbian_general_staff
-			}
-			focuses = {
-				YUG_western_focus
-				YUG_abolish_the_monarchy
-				YUG_establish_the_banovina_of_croatia
-			}
-		}
-		"CHI"={
-			minor = yes
-			history = "CHI_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_army_corruption_1
-				CHI_hyper_inflation_1
-				CHI_nine_power_treaty
-			}
-			focuses = {
-				CHI_united_front
-				CHI_army_reform
-				CHI_invite_the_flying_tigers
-			}
-		}
-		"PRC"={
-			minor = yes
-			history = "PRC_GATHERING_STORM_DESC"
+		"CHI" = {
+			history = "CHI_MODERN_DAY_DESC"
 			ideology = communism
 			ideas = {
-				PRC_the_long_march_1
-				PRC_low_popular_support_3
-				PRC_power_struggles
+				zhonghua
+				party_before_country
+				chabuduo
 			}
 			focuses = {
-				PRC_infiltration
-				PRC_maoism
-				PRC_anti_japanese_expedition
+				CHI_End_US_Hegemony
+				CHI_Skynet
+				CHI_Hong_Kong_Future
 			}
 		}
-		"MAN"={
+
+		"---" = {
+			history = "OTHER_MODERN_DAY_DESC"
+		}
+		"BRA" = {
 			minor = yes
-			history = "MAN_GATHERING_STORM_DESC"
-			ideology = fascism
+			history = "BRA_MODERN_DAY_DESC"
+			ideology = communism
 			ideas = {
-				MAN_banditry
-				MAN_kwantung_veto
-				MAN_low_legitimacy_5
+				cartels_3
+				BRA_idea_brazilian_knack
+				rio_pact_member
 			}
 			focuses = {
-				MAN_obedience
-				MAN_independence_war
-				MAN_claim_the_mandate_of_heaven
+				BRA_lula
+				BRA_pay_back_the_imf
+				BRA_fome_zero
 			}
 		}
-		
-		"GXC"={
+		"CAN" = {
 			minor = yes
-			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
+			history = "CAN_MODERN_DAY_DESC"
+			ideology = democratic
 			ideas = {
-				PRC_government_corruption
-				CHI_ineffective_bureaucracy_warlord
+				pluralist
+				g7_member
+				NATO_member
 			}
 			focuses = {
-				CHI_join_the_republican_government
-				CHI_provoke_border_clashes
-				CHI_join_the_chinese_soviet
-			}
-		}		
-		"YUN"={
-			minor = yes
-			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				PRC_government_corruption
-				CHI_ineffective_bureaucracy_warlord
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_provoke_border_clashes
-				CHI_join_the_chinese_soviet
-			}
-		}		
-		"SHX"={
-			minor = yes
-			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				PRC_government_corruption
-				CHI_ineffective_bureaucracy_warlord
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_provoke_border_clashes
-				CHI_join_the_chinese_soviet
-			}
-		}		
-		"XSM"={
-			minor = yes
-			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				PRC_government_corruption
-				CHI_ineffective_bureaucracy_warlord
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_provoke_border_clashes
-				CHI_join_the_chinese_soviet
-			}
-		}		
-		"SIK"={
-			minor = yes
-			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				PRC_government_corruption
-				CHI_ineffective_bureaucracy_warlord
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_provoke_border_clashes
-				CHI_join_the_chinese_soviet
+				CAN_Canadian_Economy
+				CAN_Trans_Canada_Highway_Expansion
+				CAN_Heavy_Industries_Focus
 			}
 		}
-		
-		"MEX"={
+		"DEN" = {
 			minor = yes
-			history = "MEXICO_GATHERING_STORM_DESC"
+			history = "DEN_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				EU_member
+				NATO_member
+			}
+			focuses = {
+				DEN_befriend_the_baltic_states
+				DEN_fund_DR
+				DEN_venerate_queen
+			}
+		}
+		"FIN" = {
+			minor = yes
+			history = "FIN_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				EU_member
+				the_euro
+				finnish_neutrality
+			}
+			focuses = {
+				FIN_government_expansion
+				FIN_leopard_2a4_imports
+				FIN_greater_finland
+			}
+		}
+		"NOR" = {
+			minor = yes
+			history = "NOR_MODERN_DAY_DESC"
 			ideology = neutrality
 			ideas = {
-				MEX_church_power_2
-				MEX_politicised_army
-				MEX_oil_concessions
+				NATO_member
+				rentier_state
 			}
 			focuses = {
-				MEX_focus_aztec_eagles
-				MEX_focus_hispanic_alliance
-				MEX_focus_smash_the_bureaucrats
+				NOR_import_american_tanks
+				NOR_northern_oil_investments
+				NOR_expand_e6_and_e39
+			}
+		}
+		"SWE" = {
+			minor = yes
+			history = "SWE_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				EU_member
+			}
+			focuses = {
+				SWE_northern_friendship
+				SWE_oresund_bridge
+				SWE_improve_the_stridsvagn_122
+			}
+		}
+		"ITA" = {
+			minor = yes
+			history = "ITA_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				NATO_member
+				ITA_mafia
+				g7_member
+			}
+			focuses = {
+				ITA_reestablish_rome
+				ITA_our_lands_balkans
+				ITA_anti_corruption_measures
+			}
+		}
+		"SWI" = {
+			minor = yes
+			history = "SWI_MODERN_DAY_DESC"
+			ideology = neutrality
+			ideas = {
+				SWI_swiss_neutrality
+				swiss_political_system
+			}
+			focuses = {
+				SWI_join_schengen
+				SWI_economic_relations_in_the_alps
+				SWI_european_tank_license
+			}
+		}
+		"POL" = {
+			minor = yes
+			history = "POL_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				christian
+				NATO_member
+				EU_member
+			}
+			focuses = {
+				POL_pis
+				POL_po
+				POL_monarchy
+			}
+		}
+		"UKR" = {
+			minor = yes
+			history = "UKR_MODERN_DAY_DESC"
+			ideology = neutrality
+			ideas = {
+				orthodox_christian
+				idea_GUAM_member_state
+				UKR_kleptocracy
+			}
+			focuses = {
+				UKR_pro_russian_government_in_power
+				UKR_pro_ukrainian_government_in_power
+				UKR_take_lead_at_national_revival
+			}
+		}
+		"ETH" = {
+			minor = yes
+			history = "ETH_MODERN_DAY_DESC"
+			ideology = communism
+			ideas = {
+				ETH_looming_famine
+				AU_member
+				USA_usaid
+			}
+			focuses = {
+				ETH_invite_zera_yacob
+				ETH_declare_mengistu_innocent
+				ETH_expand_the_etaf
+			}
+		}
+		"NIG" = {
+			minor = yes
+			history = "NIG_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				fifty_fifty_divide
+				NIG_unrestrained_piracy_idea
+				AU_member
+			}
+			focuses = {
+				NIG_the_pdp
+				NIG_the_anpp
+				NIG_rise_of_boko_haram
+			}
+		}
+		"SYR" = {
+			minor = yes
+			history = "SYR_MODERN_DAY_DESC"
+			ideology = communism
+			ideas = {
+				shia
+				alawite_high_command
+				divided_syria
+			}
+			focuses = {
+				SYR_assad_day
+				SYR_the_resistance_axis
+				SYR_russian_military_cooperation
+			}
+		}
+		"FSA" = {
+			minor = yes
+			history = "FSA_MODERN_DAY_DESC"
+			ideology = neutrality
+			ideas = {
+				sunni
+				youth_radicalization
+				al_jazeera_allowed
+			}
+			focuses = {
+				SYR_free_syria
+				SYR_rebuild_economy
+				SYR_join_war_on_terror
+			}
+		}
+		"NUS" = {
+			minor = yes
+			history = "NUS_MODERN_DAY_DESC"
+			ideology = fascism
+			ideas = {
+				sunni
+				youth_radicalization
+				al_jazeera_banned
+			}
+			focuses = {
+				SYR_islamic_emirate
+				SYR_loan_money_saudi
+				SYR_levant_defence_pact
+			}
+		}
+		"BHR" = {
+			minor = yes
+			history = "BHR_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				home_of_the_baharna
+				unrepresentative_government_sunni
+				shia_resistance_05
+			}
+			focuses = {
+				GCC_arrest_prominent_shia_clerics
+				GCC_favor_the_shiraziyyin
+				GCC_behead_the_snake
+			}
+		}
+		"KUW" = {
+			minor = yes
+			history = "KUW_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				elected_legislature
+				legacy_of_the_gulf_war
+				kuwait_expat
+			}
+			focuses = {
+				GCC_end_censorship
+				GCC_condemn_anti_shia_preachers
+				GCC_back_the_syrian_opposition
+			}
+		}
+		"OMA" = {
+			minor = yes
+			history = "OMA_MODERN_DAY_DESC"
+			ideology = neutrality
+			ideas = {
+				idea_gcc_member_state
+				oil_dependency
+				omani_neutrality
+			}
+			focuses = {
+				GCC_combat_saudi_influence
+				GCC_absolute_monarchy
+				GCC_strategic_hedging
+			}
+		}
+		"QAT" = {
+			minor = yes
+			history = "QAT_MODERN_DAY_DESC"
+			ideology = neutrality
+			ideas = {
+				idea_gcc_member_state
+				al_jazeera
+				qatar_expat
+			}
+			focuses = {
+				GCC_the_arab_street
+				GCC_a_radical_reorientation
+				GCC_turkish_bases
+			}
+		}
+		"SAU" = {
+			minor = yes
+			history = "SAU_MODERN_DAY_DESC"
+			ideology = fascism
+			ideas = {
+				idea_gcc_member_state
+				oil_dependency
+				birthplace_of_wahhabism
+			}
+			focuses = {
+				GCC_the_gcc
+				GCC_jihad_in_arabia
+				GCC_behead_the_snake
+			}
+		}
+		"UAE" = {
+			minor = yes
+			history = "UAE_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				idea_gcc_member_state
+				oil_dependency
+				little_sparta
+			}
+			focuses = {
+				GCC_develop_indigenous_drone_capability
+				GCC_war_in_libya
+				GCC_the_dubai_model
+			}
+		}
+		"BRM" = {
+			minor = yes
+			history = "BRM_MODERN_DAY_DESC"
+			ideology = neutrality
+			ideas = {
+				ASEAN_Member
+				Rohingya_Crisis
+				Ethnic_Insurgencies
+			}
+			focuses = {
+				BRM_mobilize_the_monks
+				BRM_turn_on_the_united_wa_state_army
+				BRM_establish_a_federated_state
 			}
 		}
 
-		"HOL"={
-			minor = yes
-			history = "NETHERLANDS_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				HOL_wilhelmina
-				HOL_shell_shocked_spectator_5
-				HOL_de_crisisjaren_5
-			}
-			focuses = {
-				HOL_continue_the_war_in_batavia
-				HOL_liberation
-				HOL_prepare_the_inundation_lines
-			}
-		}
-
-		"SPR"={
-			minor = yes
-			history = "SPAIN_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				SPR_military_disloyalty
-				SPA_carlism_1
-				SPR_political_violence
-			}
-			focuses = {
-				SPA_caudillo_of_spain
-				SPA_no_compromise_on_carlist_ideals
-				SPR_anarchism_knows_no_borders
-			}
-		}
-
-		"POR"={
-			minor = yes
-			history = "PORTUGAL_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				POR_unstable_republic
-				POR_unreliable_army
-			}
-			focuses = {
-				POR_estado_novo
-				POR_workers_of_iberia_unite
-				POR_luso_tropicalism
-			}
-		}
-
-		"FMU"={
-			minor = yes
-			history = "FMU_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				FMU_unfair_sufferage
-				FMU_companies
-				FMU_sanctions
-			}
-			focuses = {
-				FMU_revoke_sanction
-				FMU_brotherhood
-				FMU_annex_manu
-			}
-		}
-
-		"TOD"={
-			minor = yes
-			history = "TOD_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-																		
-																 
-			}
-			focuses = {
-				TOD_foreignaiddemocracy1
-				TOD_outwardcommunism1
-				TOD_gloriousvolunteers1
-			}
-		}
-		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

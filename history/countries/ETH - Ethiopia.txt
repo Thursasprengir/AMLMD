@@ -1,0 +1,448 @@
+﻿2000.1.1 = {
+	add_ideas = {
+		#pop_050
+		unrestrained_corruption
+		orthodox_christian
+		gdp_1
+		fast_growth
+		defence_01
+		edu_03
+		health_02
+		AU_member
+		social_01
+		bureau_01
+		volunteer_army
+		no_women_in_military
+		USA_usaid #https://explorer.usaid.gov/aid-dashboard.html
+		international_bankers
+		farmers
+		oligarchs
+		#hybrid
+		#tax_cost_13
+		multi_ethnic_state_idea
+	}
+
+	capital = 233
+	oob = "ETH_2000"
+	set_convoys = 5
+
+	add_ideas = {
+		gdp_1
+		#pop_050
+		orthodox_christian
+		defence_05
+		edu_03
+		health_02
+		social_01
+		bureau_01
+		partial_draft_army
+		drafted_women
+		international_bankers
+		farmers
+		oligarchs
+		#hybrid
+		#tax_cost_10
+		multi_ethnic_state_idea
+		ETH_looming_famine
+	}
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 175 }
+	add_to_array = { influence_array = DJI.id }
+	add_to_array = { influence_array_val = 28 }
+	add_to_array = { influence_array = KEN.id }
+	add_to_array = { influence_array_val = 5 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 30 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 11 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 117 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 33 }
+	startup_influence = yes
+
+	add_opinion_modifier = { target = ERI modifier = ERI_Border_Disputes }
+
+	set_technology = {
+		legacy_doctrines = 1
+		modern_blitzkrieg = 1
+		forward_defense = 1
+		encourage_nco_iniative = 1
+		air_land_battle = 1
+		util_vehicle_0 = 1
+
+		#For templates
+		infantry_weapons = 1
+		combat_eng_equipment = 1
+		command_control_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		artillery_0 = 1
+		SP_arty_0 = 1
+		Anti_Air_0 = 1
+		SP_Anti_Air_0 = 1
+		Early_APC = 1
+		APC_1 = 1
+		IFV_1 = 1
+		MBT_1 = 1
+		
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		radar = 1
+	}
+
+	set_country_flag = enthusiastic_international_bankers
+	set_country_flag = hostile_farmers
+	set_country_flag = positive_oligarchs
+
+	set_variable = { var = debt value = 11 }
+	set_variable = { var = treasury value = 1 }
+	set_variable = { var = tax_rate value = 10 }
+	set_variable = { var = int_investments value = 0 }
+	#initial_money_setup = yes
+
+	set_popularities = {
+		democratic = 23.0
+		communism = 62.9
+		fascism = 0.0
+		neutrality = 7.1
+		nationalist = 7.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "1995.5.15"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.07 } #conservatism
+	set_variable = { party_pop_array^2 = 0.16 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.629 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.071 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.07 } #Monarchist
+	add_to_array = { ruling_party = 5 }
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Meles Zenawi"
+		picture = "meles_zenawi.dds"
+		ideology = anarchist_communism
+		traits = {
+			emerging_anarchist_communism
+		}
+	}
+
+	### Field marshal's
+
+	create_field_marshal = {
+		name = "Samora Muhammad Yunis"
+		picture = "Portrait_Samora_Yunis.dds"
+		traits = { old_guard organisational_leader }
+		id = 20701
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+	}
+	create_field_marshal = {
+		name = "Saere Mekonen"
+		picture = "Portrait_Saere_Mekonen.dds"
+		traits = { }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+	create_field_marshal = {
+		name = "Tsadkan Gebretensay"
+		picture = "Portrait_Tsadkan_Gebretensay.dds"
+		traits = { armor_officer }
+		id = 20706
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+### Corps commander
+
+	create_corps_commander = {
+		name = "Birhanu Julla"
+		picture = "Portrait_Birhanu_Julla.dds"
+		id = 20700
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Zewdu Kiros Gebrekidan"
+		picture = "Portrait_Zewdu_Kiros_Gebrekidan.dds"
+		traits = { trickster }
+		id = 20703
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Gebremeskel Gebregzeaber"
+		picture = "Portrait_Gebremeskel_Gebregzeaber.dds"
+		traits = { desert_fox }
+		id = 20704
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Abraha Tesfaye"
+		picture = "Portrait_Abraha_Tesfaye.dds"
+		traits = { trait_engineer }
+		id = 20705
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Molla Hailemariam"
+		picture = "Portrait_Molla_Hailemariam.dds"
+		traits = {  }
+		id = 20702
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Demeke Zewdu"
+		picture = "Portrait_Demeke_Zewdu.dds"
+		traits = { hill_fighter }
+		id = 20707
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Gebre Adhana Woldezgu"
+		picture = "Portrait_Gebre_Adhana_Woldezgu.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Tesfay Gidey Hailemichae"
+		picture = "Portrait_Tesfay_Gidey_Hailemichae.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Hassen Ebrahim Mussa"
+		picture = "Portrait_Hassen_Ebrahim_Mussa.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Yohannes Gebremeskel Tesfamariam"
+		picture = "Portrait_Yohannes_Gebremeskel_Tesfamariam.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Tadesse Werede Tesfay"
+		picture = "Portrait_Tadesse_Werede_Tesfay.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	### Navy leaders
+
+	create_navy_leader = {
+		name = "Samora Muhammad Yunis"
+		picture = "Portrait_Samora_Yunis.dds"
+		traits = {	}
+		id = 20708
+	}
+
+}
+
+2017.1.1 = {
+	capital = 233
+	oob = "ETH_2017"
+	set_convoys = 5
+
+	add_ideas = {
+		#pop_050
+		unrestrained_corruption
+		orthodox_christian
+		gdp_1
+		fast_growth
+		defence_01
+		edu_03
+		health_02
+		social_01
+		bureau_01
+		volunteer_army
+		no_women_in_military
+		Enduring_Freedom
+		USA_usaid #https://explorer.usaid.gov/aid-dashboard.html
+		international_bankers
+		farmers
+		oligarchs
+		#hybrid
+		#tax_cost_13
+		multi_ethnic_state_idea
+	}
+
+	#set_country_flag = gdp_1
+	set_country_flag = enthusiastic_international_bankers
+	set_country_flag = hostile_farmers
+	set_country_flag = positive_oligarchs
+
+	set_variable = { var = debt value = 2 }
+	set_variable = { var = treasury value = }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 13 }
+
+	#set_variable = { var = size_modifier value = 0.74 } #6 CIC
+	#initial_money_setup = yes
+
+	# Starting tech
+	set_technology = {
+
+		util_vehicle_0 = 1
+
+		#For templates
+		infantry_weapons = 1
+		combat_eng_equipment = 1
+		command_control_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		artillery_0 = 1
+		SP_arty_0 = 1
+		Anti_Air_0 = 1
+		SP_Anti_Air_0 = 1
+		Early_APC = 1
+		APC_1 = 1
+		IFV_1 = 1
+		MBT_1 = 1
+	}
+
+	set_popularities = {
+		democratic = 0.0
+		communism = 91.8
+		fascism = 0.0
+		neutrality = 8.2
+		nationalist = 0.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2015.5.24"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0 } #conservatism
+	set_variable = { party_pop_array^2 = 0 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.918 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.082 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+	add_to_array = { ruling_party = 5 }
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Hailermariam Desalegn"
+		picture = "Hailemariam_Desalegn.dds"
+		ideology = anarchist_communism
+		traits = {
+			emerging_anarchist_communism
+		}
+	}
+}

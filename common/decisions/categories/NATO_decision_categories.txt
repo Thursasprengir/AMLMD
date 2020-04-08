@@ -1,0 +1,20 @@
+NATO_decisions = {
+	icon = GFX_decision_generic_join_nato
+	
+	allowed = {
+		OR = {
+			is_european_nation = yes
+			is_Caucasus = yes
+			original_tag = CAN
+			original_tag = USA
+			original_tag = TUR
+		}
+	}
+	
+	visible = {
+		has_game_rule = {
+			rule = rule_disable_nato
+			option = no  
+		}
+	}
+}

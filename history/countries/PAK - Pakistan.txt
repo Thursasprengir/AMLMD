@@ -1,0 +1,660 @@
+﻿2000.1.1 = {
+	capital = 422
+	oob = "PAK_2000"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "PAK_2000_naval_mtg"
+		else = {
+			set_naval_oob = "PAK_2000_naval_legacy"
+		}
+	}
+	
+	set_convoys = 80
+	
+	add_opinion_modifier = { target = RAJ modifier = strategic_rivals }
+	reverse_add_opinion_modifier = { target = RAJ modifier = strategic_rivals }
+	add_opinion_modifier = { target = SOV modifier = historic_enemies }
+	reverse_add_opinion_modifier = { target = SOV modifier = historic_enemies }
+	add_opinion_modifier = { target = SAU modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = SAU modifier = historic_friends }
+	add_opinion_modifier = { target = TAL modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = TAL modifier = historic_friends }
+	add_opinion_modifier = { target = MAY modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = MAY modifier = historic_friends }
+	add_opinion_modifier = { target = IND modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = IND modifier = historic_friends }
+	add_opinion_modifier = { target = TUR modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = TUR modifier = historic_friends }
+	add_opinion_modifier = { target = UAE modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = UAE modifier = historic_friends }
+	add_opinion_modifier = { target = EGY modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = EGY modifier = historic_friends }
+	add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+	add_opinion_modifier = { target = UAE modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = UAE modifier = large_commercial_relations }
+	add_opinion_modifier = { target = GER modifier = large_commercial_relations }
+	add_opinion_modifier = { target = ENG modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SPR modifier = large_commercial_relations }
+	add_opinion_modifier = { target = USA modifier = large_commercial_relations }
+	
+	add_ideas = {
+		rampant_corruption
+		gdp_2
+		sunni
+		youth_radicalization
+		saudi_aid
+		nuclear_power
+		fast_growth
+		defence_04
+		edu_01
+		health_01
+		social_01
+		bureau_02
+		police_01
+		isi_pakistan
+		the_military
+		landowners
+		volunteer_army
+		volunteer_women
+		intervention_limited_interventionism
+		USA_usaid #https://explorer.usaid.gov/aid-dashboard.html
+		multi_ethnic_state_idea
+		commonwealth_of_nations_member
+		limited_power_projection
+	}
+	
+	set_technology = { 
+		legacy_doctrines = 1 
+		modern_blitzkrieg = 1 
+		forward_defense = 1 
+		encourage_nco_iniative = 1 
+		air_land_battle = 1
+
+		infantry_weapons = 1
+
+		combat_eng_equipment = 1
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+
+		land_Drone_equipment = 1
+
+		Rec_tank_0 = 1
+
+		MBT_1 = 1
+		MBT_2 = 1
+		MBT_3 = 1 #Al Khalid
+
+		ENGI_MBT_1 = 1
+		ENGI_MBT_2 = 1
+		ENGI_MBT_3 = 1
+
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+
+		IFV_1 = 1
+		IFV_2 = 1
+
+		Early_APC = 1
+
+		APC_1 = 1
+		APC_2 = 1 #Talha
+
+		artillery_0 = 1
+		Arty_upgrade_1 = 1
+		SP_arty_0 = 1
+		SP_R_arty_0 = 1 #KRL 122
+		
+		night_vision_1 = 1
+		night_vision_2 = 1
+
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		AT_upgrade_1 = 1
+		Anti_tank_1 = 1
+
+		Anti_Air_0 = 1
+		SP_Anti_Air_0 = 1
+		AA_upgrade_1 = 1
+		Anti_Air_1 = 1 #Anza
+		
+
+		early_fighter = 1
+		MR_Fighter1 = 1
+		Strike_fighter1 = 1
+		AS_Fighter1 = 1
+		
+		Air_UAV1 = 1 #Burraq
+		
+		early_bomber = 1
+
+		early_helicopter = 1
+		attack_helicopter1 = 1
+
+		landing_craft = 1
+	
+		frigate_1 = 1
+		
+		body_armor_1980 = 1
+		camouflage = 1
+		camouflage2 = 1
+		diesel_attack_submarine_1 = 1
+
+		##Industrial tech & Engineering Tech
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1 
+	}
+	
+	set_variable = { power_projection = 1 }
+	
+	diplomatic_relation = {
+		country = SAU
+		relation = military_access 
+		active = yes
+	}
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 340 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 142 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 57 }
+	add_to_array = { influence_array = SAU.id }
+	add_to_array = { influence_array_val = 48 }
+	add_to_array = { influence_array = TUR.id }
+	add_to_array = { influence_array_val = 24 }
+	add_to_array = { influence_array = PER.id }
+	add_to_array = { influence_array_val = 7 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 6 }
+	startup_influence = yes
+	
+	### Economy
+	set_variable = { var = debt value = 89  }
+	set_variable = { var = treasury value = 3 }
+	set_variable = { var = tax_rate value = 10 }
+	set_variable = { var = int_investments value = 0 }
+	#initial_money_setup = yes
+	
+	set_popularities = {
+		democratic = 35
+		communism = 34.0
+		fascism = 5.0
+		neutrality = 2.0
+		nationalist = 24
+	}
+	set_politics = {
+		
+		ruling_party = nationalist
+		last_election = "1998.2.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	start_politics_input = yes
+	
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.02 } #conservatism
+	set_variable = { party_pop_array^2 = 0.07 } #liberalism
+	set_variable = { party_pop_array^3 = 0.26 } #socialism
+	set_variable = { party_pop_array^4 = 0.01 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.045 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 25.5 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0.03 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0.05 } #Caliphate
+	set_variable = { party_pop_array^12 = 0.02 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.005 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0.005 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0.23 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+	
+	### Ruling Party
+	add_to_array = { ruling_party = 22 }
+	
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Pervez Musharraf"
+		picture = "PAK_Pervez_Musharraf.dds"
+		ideology = Nat_Autocracy
+		traits = {
+			nationalist_Nat_Autocracy
+		}
+	}
+	
+	create_field_marshal = {
+		name = "Zubair Mahmood Hayat"
+		picture = "Portrait_Zubair_Hayat.dds"
+		traits = { old_guard thorough_planner }
+		id = 45900
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+	}
+
+	create_field_marshal = {
+		name = "Qamar Javed Bajwa"
+		picture = "Portrait_Qamar_Bajwa.dds"
+		traits = { offensive_doctrine }
+		id = 45901
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+	}
+
+	create_corps_commander = {
+		name = "Azhar Saleh Abbasi"
+		picture = "Portrait_Azhar_Saleh_Abbasi.dds"
+		traits = { panzer_leader }
+		id = 45902
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Muhammad Zafar Iqbal"
+		picture = "Portrait_Zafar_Iqbal.dds"
+		traits = { panzer_leader }
+		id = 45903
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Ishfaq Nadeem Ahmad"
+		picture = "Portrait_Ishfaq_Ahmad.dds"
+		traits = { panzer_leader }
+		id = 45904
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Sadiq Ali"
+		picture = "Portrait_Sadiq_Ali.dds"
+		traits = { bearer_of_artillery }
+		id = 45905
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Ikram Ul Haq"
+		picture = "Portrait_IkramuL_Haq.dds"
+		traits = { fortress_buster }
+		id = 45906
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Sher Afgun"
+		picture = "Portrait_Sher_Afgun.dds"
+		traits = { trickster }
+		id = 45907
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Shahid Baig Mirza"
+		picture = "Portrait_Shahid_Mirza.dds"
+		traits = { panzer_leader }
+		id = 45908
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Naveed Mukhtar"
+		picture = "Portrait_Naveed_Mukhtar.dds"
+		traits = { panzer_leader }
+		id = 45909
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Athar Abbas"
+		picture = "Portrait_Athar_Abbas.dds"
+		traits = { trait_mountaineer winter_specialist  }
+		id = 45910
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Nazir Ahmed Butt"
+		picture = "Portrait_Nazir_Ahmed_Butt.dds"
+		traits = { trait_engineer }
+		id = 45911
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Hidayat Ur Rehman"
+		picture = "Portrait_Hidayat_ur_Rehman.dds"
+		traits = { hill_fighter }
+		id = 45912
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Nauman Mahmood"
+		picture = "Portrait_Nauman_Mahmood.dds"
+		traits = { ranger }
+		id = 45913
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Aamer Riaz"
+		picture = "Portrait_Aamer_Riaz.dds"
+		traits = { hill_fighter }
+		id = 45914
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Muhammad Zahid Latif Mirza"
+		picture = "Portrait_Zahid_Mirza.dds"
+		traits = { bearer_of_artillery }
+		id = 45915
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Mian Muhammad Hilal Hussein"
+		picture = "Portrait_Mian_Mohammad_Hussain.dds"
+		traits = { commando }
+		id = 45916
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Sohail Aman"
+		picture = "Portrait_Sohail_Aman.dds"
+		traits = { commando }
+		id = 45917
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+	}
+
+	create_corps_commander = {
+		name = "Umar Farooq Burki"
+		picture = "Portrait_Umar_Faruq_Burki.dds"
+		traits = { desert_fox }
+		id = 45918
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Muhammad Zakaullah"
+		picture = "Portrait_Muhammad_Zakaullah.dds"
+		traits = { old_guard_navy superior_tactician }
+		id = 45919
+	}
+
+	create_navy_leader = {
+		name = "Hasham Siddique"
+		picture = "Portrait_Hasham_Siddique.dds"
+		traits = { blockade_runner }
+		id = 45920
+	}
+
+	create_navy_leader = {
+		name = "Zafar Mahmood Abbasi"
+		picture = "Portrait_Zafar_Abbasi.dds"
+		traits = { seawolf }
+		id = 45921
+	}
+
+	create_navy_leader = {
+		name = "Shah Sohail Masood"
+		picture = "Portrait_Shah_Masood.dds"
+		traits = { spotter }
+		id = 45922
+	}
+
+	create_navy_leader = {
+		name = "Khaleem Shaukat"
+		picture = "Portrait_Khaleem_Shaukat.dds"
+		traits = { fly_swatter }
+		id = 45923
+	}
+
+	create_navy_leader = {
+		name = "Sajid Wazir Khan"
+		picture = "Portrait_Sajid_Wazir_Khan.dds"
+		traits = { ironside }
+		id = 45924
+	}
+
+	create_navy_leader = {
+		name = "Mukhtar Khan"
+		picture = "Portrait_Mukhtar_Khan.dds"
+		traits = { air_controller }
+		id = 45925
+	}
+
+	create_navy_leader = {
+		name = "Moazzam Ilyas"
+		picture = "Portrait_Moazzam_Ilyas.dds"
+		traits = { seawolf }
+		id = 45926
+	}
+
+	create_navy_leader = {
+		name = "Muhammad Amjad Khan Niazi"
+		picture = "Portrait_Muhammad_Amjad_Khan_Niazi.dds"
+		traits = { blockade_runner }
+		id = 45927
+	}
+}
+
+2017.1.1 = {
+	capital = 422
+	oob = "PAK_2017"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "PAK_2017_naval_mtg"
+		else = {
+			set_naval_oob = "PAK_2017_naval_legacy"
+		}
+	}
+	
+	set_convoys = 80
+	
+	#Internal Faction Setup
+	set_country_flag = negative_the_military
+	set_country_flag = negative_landowners
+	set_country_flag = positive_isi_pakistan
+	
+	# Starting tech
+	set_technology = { 
+	
+		land_Drone_equipment1 = 1
+		land_Drone_equipment2 = 1 #2005
+		Air_UAV1 = 1
+		MR_Fighter2 = 1 #JF-17 Thunder
+		command_control_equipment2 = 1
+		Arty_upgrade_3 = 1
+		
+		internet1 = 1 	#1G
+	}
+	
+	add_ideas = {
+		#pop_050
+		rampant_corruption
+		gdp_2
+		sunni
+		youth_radicalization
+		saudi_aid
+		fast_growth
+		defence_04
+		edu_01
+		health_01
+		social_01
+		bureau_02
+		police_01
+		isi_pakistan
+		the_military
+		landowners
+		volunteer_army
+		volunteer_women
+		Major_Non_NATO_Ally
+		sco_observer
+		intervention_limited_interventionism
+		USA_usaid #https://explorer.usaid.gov/aid-dashboard.html
+		#hybrid
+		#tax_cost_11
+		multi_ethnic_state_idea
+	}
+	
+	set_variable = { var = debt value = 204 }
+	set_variable = { var = treasury value = 22 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 11 }
+	#initial_money_setup = yes
+
+	set_popularities = {
+		democratic = 26.0
+		communism = 42.5
+		fascism = 5.0
+		neutrality = 2.5
+		nationalist = 24.0
+	}
+	set_politics = {
+		
+		ruling_party = communism
+		last_election = "2013.5.11"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	
+	start_politics_input = yes
+	
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.03 } #conservatism
+	set_variable = { party_pop_array^2 = 0.06 } #liberalism
+	set_variable = { party_pop_array^3 = 0.17 } #socialism
+	set_variable = { party_pop_array^4 = 0.005 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.02 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.39 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0.01 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0.05 } #Caliphate
+	set_variable = { party_pop_array^12 = 0.025 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.2 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0.04 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+	
+	### Ruling Party
+	add_to_array = { ruling_party = 1 }
+	
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Nawaz Sharif"
+		picture = "Nawaz_Sharif.dds"
+		ideology = Conservative
+		traits = {
+			emerging_Conservative
+		}
+	}
+}

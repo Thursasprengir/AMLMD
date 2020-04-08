@@ -1,59 +1,47 @@
 areas = {
 
-	suez = {
-        strategic_regions = {
-            128
-            28
-
-            # now also morocco etc for testing
-            182
-            126
-        }
-    }
-
-    scandinavia = {
-		strategic_regions = {
-            11
-            191
-            10
-            192
-            12
-            13
-        }
-    }
-
 	europe = {
-
 		continents = { 
 			europe
 		}
 	}
 
 	north_america = {
-
 		continents = { 
 			north_america 
 		}
 	}
 
-	south_america = {
+	caribbean = {
+		#continents = { 
+		#	caribbean 
+		# }
+		strategic_regions = {
+		53 # Caribbean Sea
+		}
+	}
 
+	south_america = {
 		continents = { 
 			south_america 
 		}
 	}
 
 	africa = {
-
 		continents = { 
 			africa 
 		}
 	}
 
 	asia = {
-
 		continents = { 
 			asia 
+		}
+		strategic_regions = {
+			526 # Chinese Spratlys
+			801 # Vietnamese Spratlys
+			802 # Eastern Spratlys
+			816 # Southern Spratlys
 		}
 	}
 
@@ -64,30 +52,7 @@ areas = {
 		}
 	}
 
-	atlantis = {
-
-		continents = { 
-			atlantis 
-		}
-	}
-	
-	mu = {
-
-		continents = { 
-			mu 
-		}
-	}
-	
-	lemuria = {
-
-		continents = { 
-			lemuria 
-		}
-	}
-
-	
 	pacific = {
-
 		strategic_regions = {
 			105 # Hawaii
 			180 # Micronesian Gap
@@ -110,7 +75,6 @@ areas = {
 	}
 
 	oceania = {
-
 		strategic_regions = {
 			156 # Australia
 			157 # New Zealand

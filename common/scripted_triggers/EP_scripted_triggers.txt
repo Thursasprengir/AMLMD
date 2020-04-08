@@ -1,0 +1,665 @@
+##Written by Birdy and Razmode
+
+####### SMALL ARMS AND INFANTRY EQUIPMENT #######
+###Infantry Weapons Triggers 
+tag_has_infantry_weapons_zero = {
+	has_tech = infantry_weapons
+	NOT = { has_tech = infantry_weapons1 }
+	NOT = { has_tech = infantry_weapons2 }
+	NOT = { has_tech = infantry_weapons3 }
+	NOT = { has_tech = infantry_weapons4 }
+	NOT = { has_tech = infantry_weapons5 }
+	NOT = { has_tech = infantry_weapons6 }
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_one = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	NOT = { has_tech = infantry_weapons2 }
+	NOT = { has_tech = infantry_weapons3 }
+	NOT = { has_tech = infantry_weapons4 }
+	NOT = { has_tech = infantry_weapons5 }
+	NOT = { has_tech = infantry_weapons6 }
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_two = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	has_tech = infantry_weapons2
+	NOT = { has_tech = infantry_weapons3 }
+	NOT = { has_tech = infantry_weapons4 }
+	NOT = { has_tech = infantry_weapons5 }
+	NOT = { has_tech = infantry_weapons6 }
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_three = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	has_tech = infantry_weapons2
+	has_tech = infantry_weapons3
+	NOT = { has_tech = infantry_weapons4 }
+	NOT = { has_tech = infantry_weapons5 }
+	NOT = { has_tech = infantry_weapons6 }
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_four = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	has_tech = infantry_weapons2
+	has_tech = infantry_weapons3
+	has_tech = infantry_weapons4
+	NOT = { has_tech = infantry_weapons5 }
+	NOT = { has_tech = infantry_weapons6 }
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_five = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	has_tech = infantry_weapons2
+	has_tech = infantry_weapons3
+	has_tech = infantry_weapons4
+	has_tech = infantry_weapons5
+	NOT = { has_tech = infantry_weapons6 }
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_six = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	has_tech = infantry_weapons2
+	has_tech = infantry_weapons3
+	has_tech = infantry_weapons4
+	has_tech = infantry_weapons5
+	has_tech = infantry_weapons6
+	NOT = { has_tech = infantry_weapons7 }
+}
+
+tag_has_infantry_weapons_seven = {
+	has_tech = infantry_weapons
+	has_tech = infantry_weapons1
+	has_tech = infantry_weapons2
+	has_tech = infantry_weapons3
+	has_tech = infantry_weapons4
+	has_tech = infantry_weapons5
+	has_tech = infantry_weapons6
+	has_tech = infantry_weapons7
+}
+
+### CC equi ### 
+
+tag_has_cc_equi_zero = {
+	has_tech = command_control_equipment
+	NOT = { has_tech = command_control_equipment1 }
+	NOT = { has_tech = command_control_equipment2 }
+	NOT = { has_tech = command_control_equipment3 }
+	NOT = { has_tech = command_control_equipment4 }
+	NOT = { has_tech = command_control_equipment5 }
+	NOT = { has_tech = command_control_equipment6 }
+}
+
+tag_has_cc_equi_one = {
+	has_tech = command_control_equipment
+	has_tech = command_control_equipment1
+	NOT = { has_tech = command_control_equipment2 }
+	NOT = { has_tech = command_control_equipment3 }
+	NOT = { has_tech = command_control_equipment4 }
+	NOT = { has_tech = command_control_equipment5 }
+	NOT = { has_tech = command_control_equipment6 }
+}
+
+tag_has_cc_equi_two = {
+	has_tech = command_control_equipment
+	has_tech = command_control_equipment1
+	has_tech = command_control_equipment2
+	NOT = { has_tech = command_control_equipment3 }
+	NOT = { has_tech = command_control_equipment4 }
+	NOT = { has_tech = command_control_equipment5 }
+	NOT = { has_tech = command_control_equipment6 }
+}
+
+tag_has_cc_equi_three = {
+	has_tech = command_control_equipment
+	has_tech = command_control_equipment1
+	has_tech = command_control_equipment2
+	has_tech = command_control_equipment3
+	NOT = { has_tech = command_control_equipment4 }
+	NOT = { has_tech = command_control_equipment5 }
+	NOT = { has_tech = command_control_equipment6 }
+}
+
+tag_has_cc_equi_four = {
+	has_tech = command_control_equipment
+	has_tech = command_control_equipment1
+	has_tech = command_control_equipment2
+	has_tech = command_control_equipment3
+	has_tech = command_control_equipment4
+	NOT = { has_tech = command_control_equipment5 }
+	NOT = { has_tech = command_control_equipment6 }
+}
+
+tag_has_cc_equi_five = {
+	has_tech = command_control_equipment
+	has_tech = command_control_equipment1
+	has_tech = command_control_equipment2
+	has_tech = command_control_equipment3
+	has_tech = command_control_equipment4
+	has_tech = command_control_equipment5
+	NOT = { has_tech = command_control_equipment6 }
+}
+
+tag_has_cc_equi_six = {
+	has_tech = command_control_equipment
+	has_tech = command_control_equipment1
+	has_tech = command_control_equipment2
+	has_tech = command_control_equipment3
+	has_tech = command_control_equipment4
+	has_tech = command_control_equipment5
+	has_tech = command_control_equipment6
+}
+
+### MANPADS ###
+tag_has_manpads_zero = {
+	has_tech = Anti_Air_0
+	NOT = { has_tech = Anti_Air_1 }
+	NOT = { has_tech = Anti_Air_2 }
+	NOT = { has_tech = Anti_Air_3 }
+	NOT = { has_tech = Anti_Air_4 }
+}
+
+tag_has_manpads_one = {
+	has_tech = Anti_Air_0
+	has_tech = Anti_Air_1
+	NOT = { has_tech = Anti_Air_2 }
+	NOT = { has_tech = Anti_Air_3 }
+	NOT = { has_tech = Anti_Air_4 }
+}
+
+tag_has_manpads_two = {
+	has_tech = Anti_Air_0
+	has_tech = Anti_Air_1
+	has_tech = Anti_Air_2
+	NOT = { has_tech = Anti_Air_3 }
+	NOT = { has_tech = Anti_Air_4 }
+}
+
+tag_has_manpads_three = {
+	has_tech = Anti_Air_0
+	has_tech = Anti_Air_1
+	has_tech = Anti_Air_2
+	has_tech = Anti_Air_3
+	NOT = { has_tech = Anti_Air_4 }
+}
+
+tag_has_manpads_four = {
+	has_tech = Anti_Air_0
+	has_tech = Anti_Air_1
+	has_tech = Anti_Air_2
+	has_tech = Anti_Air_3
+	has_tech = Anti_Air_4
+}
+
+### ATGMs ###
+tag_has_atgm_zero = {
+	has_tech = Anti_tank_0
+	NOT = { has_tech = Anti_tank_1 }
+	NOT = { has_tech = Anti_tank_2 }
+	NOT = { has_tech = Anti_tank_3 }
+	NOT = { has_tech = Anti_tank_4 }
+}
+
+tag_has_atgm_one = {
+	has_tech = Anti_tank_0
+	has_tech = Anti_tank_1
+	NOT = { has_tech = Anti_tank_2 }
+	NOT = { has_tech = Anti_tank_3 }
+	NOT = { has_tech = Anti_tank_4 }
+}
+
+tag_has_atgm_two = {
+	has_tech = Anti_tank_0
+	has_tech = Anti_tank_1
+	has_tech = Anti_tank_2
+	NOT = { has_tech = Anti_tank_3 }
+	NOT = { has_tech = Anti_tank_4 }
+}
+
+tag_has_atgm_three = {
+	has_tech = Anti_tank_0
+	has_tech = Anti_tank_1
+	has_tech = Anti_tank_2
+	has_tech = Anti_tank_3
+	NOT = { has_tech = Anti_tank_4 }
+}
+
+tag_has_atgm_four = {
+	has_tech = Anti_tank_0
+	has_tech = Anti_tank_1
+	has_tech = Anti_tank_2
+	has_tech = Anti_tank_3
+	has_tech = Anti_tank_4
+}
+
+
+### Artillery Equipment ###
+tag_has_artillery_zero = {
+	has_tech = artillery_0
+	NOT = { has_tech = artillery_1 }
+	NOT = { has_tech = artillery_2 }
+	NOT = { has_tech = artillery_3 }
+	NOT = { has_tech = artillery_4 }
+}
+
+tag_has_artillery_one = {
+	has_tech = artillery_0
+	has_tech = artillery_1
+	NOT = { has_tech = artillery_2 }
+	NOT = { has_tech = artillery_3 }
+	NOT = { has_tech = artillery_4 }
+}
+
+tag_has_artillery_two = {
+	has_tech = artillery_0
+	has_tech = artillery_1
+	has_tech = artillery_2
+	NOT = { has_tech = artillery_3 }
+	NOT = { has_tech = artillery_4 }
+}
+
+tag_has_artillery_three = {
+	has_tech = artillery_0
+	has_tech = artillery_1
+	has_tech = artillery_2
+	has_tech = artillery_3
+	NOT = { has_tech = artillery_4 }
+}	
+
+tag_has_artillery_four = {
+	has_tech = artillery_0
+	has_tech = artillery_1
+	has_tech = artillery_2
+	has_tech = artillery_3
+	has_tech = artillery_4 
+}
+
+### MBT ###
+tag_has_mbt_three = {
+	has_tech = MBT_3
+	NOT = { has_tech = MBT_4 }
+	NOT = { has_tech = MBT_5 }
+	NOT = { has_tech = MBT_7 }
+	NOT = { has_tech = MBT_8 }
+}	
+
+tag_has_mbt_four = {
+	has_tech = MBT_3
+	has_tech = MBT_4
+	NOT = { has_tech = MBT_5 }
+	NOT = { has_tech = MBT_7 }
+	NOT = { has_tech = MBT_8 }
+}
+
+tag_has_mbt_five = {
+	has_tech = MBT_3
+	has_tech = MBT_4
+	has_tech = MBT_5
+	NOT = { has_tech = MBT_7 }
+	NOT = { has_tech = MBT_8 }
+}
+
+tag_has_mbt_seven = {
+	has_tech = MBT_3
+	has_tech = MBT_4 
+	has_tech = MBT_5 
+	has_tech = MBT_7 
+	NOT = { has_tech = MBT_8 }
+}
+
+tag_has_mbt_eight = {
+	has_tech = MBT_3
+	has_tech = MBT_4
+	has_tech = MBT_5
+	has_tech = MBT_7
+	has_tech = MBT_8
+}
+
+### APC ###
+
+tag_has_apc_one = {
+	has_tech = APC_1
+	NOT = { has_tech = APC_2 }
+	NOT = { has_tech = APC_3 }
+	NOT = { has_tech = APC_4 }
+	NOT = { has_tech = APC_5 }
+	NOT = { has_tech = APC_6 }
+	NOT = { has_tech = APC_7 }
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_two = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	NOT = { has_tech = APC_3 }
+	NOT = { has_tech = APC_4 }
+	NOT = { has_tech = APC_5 }
+	NOT = { has_tech = APC_6 }
+	NOT = { has_tech = APC_7 }
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_three = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	has_tech = APC_3
+	NOT = { has_tech = APC_4 }
+	NOT = { has_tech = APC_5 }
+	NOT = { has_tech = APC_6 }
+	NOT = { has_tech = APC_7 }
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_four = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	has_tech = APC_3
+	has_tech = APC_4
+	NOT = { has_tech = APC_5 }
+	NOT = { has_tech = APC_6 }
+	NOT = { has_tech = APC_7 }
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_five = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	has_tech = APC_3
+	has_tech = APC_4
+	has_tech = APC_5
+	NOT = { has_tech = APC_6 }
+	NOT = { has_tech = APC_7 }
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_six = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	has_tech = APC_3
+	has_tech = APC_4
+	has_tech = APC_5
+	has_tech = APC_6
+	NOT = { has_tech = APC_7 }
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_seven = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	has_tech = APC_3
+	has_tech = APC_4
+	has_tech = APC_5
+	has_tech = APC_6
+	has_tech = APC_7
+	NOT = { has_tech = APC_8 }
+}
+
+tag_has_apc_eight = {
+	has_tech = APC_1
+	has_tech = APC_2 
+	has_tech = APC_3
+	has_tech = APC_4
+	has_tech = APC_5
+	has_tech = APC_6
+	has_tech = APC_7
+	has_tech = APC_8
+}
+
+### IFV ###
+
+tag_has_ifv_one = {
+	has_tech = IFV_1
+	NOT = { has_tech = IFV_2 }
+	NOT = { has_tech = IFV_3 }
+	NOT = { has_tech = IFV_4 }
+	NOT = { has_tech = IFV_5 }
+	NOT = { has_tech = IFV_6 }
+	NOT = { has_tech = IFV_7 }
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_two = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	NOT = { has_tech = IFV_3 }
+	NOT = { has_tech = IFV_4 }
+	NOT = { has_tech = IFV_5 }
+	NOT = { has_tech = IFV_6 }
+	NOT = { has_tech = IFV_7 }
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_three = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	has_tech = IFV_3
+	NOT = { has_tech = IFV_4 }
+	NOT = { has_tech = IFV_5 }
+	NOT = { has_tech = IFV_6 }
+	NOT = { has_tech = IFV_7 }
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_four = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	has_tech = IFV_3
+	has_tech = IFV_4
+	NOT = { has_tech = IFV_5 }
+	NOT = { has_tech = IFV_6 }
+	NOT = { has_tech = IFV_7 }
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_five = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	has_tech = IFV_3
+	has_tech = IFV_4
+	has_tech = IFV_5
+	NOT = { has_tech = IFV_6 }
+	NOT = { has_tech = IFV_7 }
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_six = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	has_tech = IFV_3
+	has_tech = IFV_4
+	has_tech = IFV_5
+	has_tech = IFV_6
+	NOT = { has_tech = IFV_7 }
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_seven = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	has_tech = IFV_3
+	has_tech = IFV_4
+	has_tech = IFV_5
+	has_tech = IFV_6
+	has_tech = IFV_7
+	NOT = { has_tech = IFV_8 }
+}
+
+tag_has_ifv_eight = {
+	has_tech = IFV_1
+	has_tech = IFV_2 
+	has_tech = IFV_3
+	has_tech = IFV_4
+	has_tech = IFV_5
+	has_tech = IFV_6
+	has_tech = IFV_7
+	has_tech = IFV_8
+}
+
+### Recon Tank ###
+
+tag_has_rec_zero = {
+	has_tech = Rec_tank_0
+	NOT = { has_tech = Rec_tank_1 }
+	NOT = { has_tech = Rec_tank_2 }
+	NOT = { has_tech = Rec_tank_3 }
+	NOT = { has_tech = Rec_tank_4 }
+	NOT = { has_tech = Rec_tank_5 }
+}
+
+tag_has_rec_one = {
+	has_tech = Rec_tank_0
+	has_tech = Rec_tank_1
+	NOT = { has_tech = Rec_tank_2 }
+	NOT = { has_tech = Rec_tank_3 }
+	NOT = { has_tech = Rec_tank_4 }
+	NOT = { has_tech = Rec_tank_5 }
+}
+
+tag_has_rec_two = {
+	has_tech = Rec_tank_0
+	has_tech = Rec_tank_1
+	has_tech = Rec_tank_2
+	NOT = { has_tech = Rec_tank_3 }
+	NOT = { has_tech = Rec_tank_4 }
+	NOT = { has_tech = Rec_tank_5 }
+}
+
+tag_has_rec_three = {
+	has_tech = Rec_tank_0
+	has_tech = Rec_tank_1
+	has_tech = Rec_tank_2
+	has_tech = Rec_tank_3
+	NOT = { has_tech = Rec_tank_4 }
+	NOT = { has_tech = Rec_tank_5 }
+}
+
+tag_has_rec_four = {
+	has_tech = Rec_tank_0
+	has_tech = Rec_tank_1
+	has_tech = Rec_tank_2
+	has_tech = Rec_tank_3
+	has_tech = Rec_tank_4
+	NOT = { has_tech = Rec_tank_5 }
+}
+
+tag_has_rec_five = {
+	has_tech = Rec_tank_0
+	has_tech = Rec_tank_1
+	has_tech = Rec_tank_2
+	has_tech = Rec_tank_3
+	has_tech = Rec_tank_4
+	has_tech = Rec_tank_5
+}
+
+### Utility ###
+
+tag_has_utility_zero = {
+	has_tech = util_vehicle_0
+	NOT = { has_tech = util_vehicle_1 }
+	NOT = { has_tech = util_vehicle_2 }
+	NOT = { has_tech = util_vehicle_3 }
+	NOT = { has_tech = util_vehicle_4 }
+	NOT = { has_tech = util_vehicle_5 }
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_one = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	NOT = { has_tech = util_vehicle_2 }
+	NOT = { has_tech = util_vehicle_3 }
+	NOT = { has_tech = util_vehicle_4 }
+	NOT = { has_tech = util_vehicle_5 }
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_two = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	NOT = { has_tech = util_vehicle_3 }
+	NOT = { has_tech = util_vehicle_4 }
+	NOT = { has_tech = util_vehicle_5 }
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_three = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	has_tech = util_vehicle_3
+	NOT = { has_tech = util_vehicle_4 }
+	NOT = { has_tech = util_vehicle_5 }
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_four = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	has_tech = util_vehicle_3
+	has_tech = util_vehicle_4
+	NOT = { has_tech = util_vehicle_5 }
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_four = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	has_tech = util_vehicle_3
+	has_tech = util_vehicle_4
+	NOT = { has_tech = util_vehicle_5 }
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_five = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	has_tech = util_vehicle_3
+	has_tech = util_vehicle_4
+	has_tech = util_vehicle_5
+	NOT = { has_tech = util_vehicle_6 }
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_six = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	has_tech = util_vehicle_3
+	has_tech = util_vehicle_4
+	has_tech = util_vehicle_5
+	has_tech = util_vehicle_6
+	NOT = { has_tech = util_vehicle_7 }
+}
+
+tag_has_utility_seven = {
+	has_tech = util_vehicle_0
+	has_tech = util_vehicle_1
+	has_tech = util_vehicle_2
+	has_tech = util_vehicle_3
+	has_tech = util_vehicle_4
+	has_tech = util_vehicle_5
+	has_tech = util_vehicle_6
+	has_tech = util_vehicle_7
+}

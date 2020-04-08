@@ -1,2833 +1,1816 @@
-war_measures = {
-
-	USA_homeland_defense = {
-
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			any_state = {
-				is_core_of = USA
+USA_american_economic_decisions_category = {
+	USA_resource_steel_factories_decision = {
+		visible = { 
+			any_owned_state = {
+				has_resources_amount = {
+					resource = steel
+					amount > 1
+				}
 				NOT = {
-					is_controlled_by = USA
-				}
-			}
-			has_civil_war = no
-
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 200
-		}
-
-		visible = {
-			has_defensive_war = yes
-			CSA = {
-				exists = no
-			}
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					has_war_support < 0.9
-				}
-				set_war_support = 0.9
-			}
-			if = {
-				limit = {
-					has_idea = great_depression
-				}
-				remove_ideas = great_depression
-			}
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_idea = extensive_conscription
-							has_idea = scraping_the_barrel
-							has_idea = service_by_requirement
-							has_idea = all_adults_serve
-						}
+					AND = {
+						has_state_flag = USA_expanded_steel_one_flag
+						has_state_flag = USA_expanded_steel_two_flag
+						has_state_flag = USA_expanded_steel_three_flag
 					}
 				}
-				add_ideas = extensive_conscription
 			}
-			if = {
-				limit = {
-					OR = {
-						has_idea = undisturbed_isolation
-						has_idea = isolation
-						has_idea = civilian_economy
-						has_idea = low_economic_mobilisation
-					}
-				}
-				add_ideas = war_economy
-			}
-			add_ideas = USA_homeland_defense
 		}
-	}
-	USA_raise_silver_legions = {
-		icon = generic_prepare_civil_war
 		
-		allowed = {
-			original_tag = USA
-		}
-
 		available = {
-			has_completed_focus = USA_ally_with_the_silver_shirts
-		}
-		visible = {
-			has_civil_war = yes
-		}
-		cost = 10
-		days_re_enable = 30
-
-		complete_effect = {
-			if = {
-				limit = {
-					not = { has_template = "Silver Legion" }
+			custom_trigger_tooltip = {
+				tooltip = USA_has_wall_street_faction_TT
+				has_idea = wall_street
+			}
+			NOT = { has_decision = USA_resource_aluminimum_prospecting_decision } 
+			NOT = { has_decision = USA_resource_oil_prospecting_decision }
+			NOT = { has_decision = USA_resource_techmetals_prospecting_decision }
+			any_owned_state = {
+				has_resources_amount = {
+					resource = steel
+					amount > 1
 				}
-				division_template = {
-					name = "Silver Legion"
-					priority = 0
-					division_names_group = USA_INF_01
-					is_locked = yes
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
+				custom_trigger_tooltip = {	
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_steel_one_flag
+							has_state_flag = USA_expanded_steel_two_flag
+							has_state_flag = USA_expanded_steel_three_flag
+						}
 					}
+					tooltip = USA_not_expanded_states_resources_three_times_TT
 				}
 			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"1. Silver Legion\" division_template = \"Silver Legion\" start_experience_factor = 0.7" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"2. Silver Legion\" division_template = \"Silver Legion\" start_experience_factor = 0.7" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"3. Silver Legion\" division_template = \"Silver Legion\" start_experience_factor = 0.7" 
-					owner = ROOT
-				}
-
-				create_unit = {
-					division = "name = \"4. Silver Legion\" division_template = \"Silver Legion\" start_experience_factor = 0.7"  
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"5. Silver Legion\" division_template = \"Silver Legion\" start_experience_factor = 0.7"  
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"6. Silver Legion\" division_template = \"Silver Legion\" start_experience_factor = 0.7" 
-					owner = ROOT
-				}
-			}
+			congress_low_support_trigger = yes
 		}
-	}
-
-	USA_raise_the_free_corps = {
-		icon = generic_prepare_civil_war
-		available = {
-			OR = {
-				AND = {
-					has_war = yes
-					has_cosmetic_tag = USA_CSA
-				}
-				has_civil_war = yes
-			}
-		}
-		visible = {
-			has_completed_focus = USA_recruit_the_free_corps
-			not = { has_country_flag = USA_free_corps_raised }
-			not = { has_government = democratic }
-		}
-		cost = 0
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 200
-		}
-		complete_effect = {
-			division_template = {
-				name = "Free Corps"
-					priority = 1
-					division_names_group = USA_INF_01
-					regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-
-					infantry = { x = 2 y = 0 }
-					infantry = { x = 2 y = 1 }
-					infantry = { x = 2 y = 2 }
-				}
-			}
-			366 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Florida\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Florida\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Florida\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			365 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Georgia\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Georgia\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Georgia\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			367 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Alabama\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Alabama\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Alabama\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			370 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Mississippi\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Mississippi\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Mississippi\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			362 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Virginia\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Virginia\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Virginia\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			363 = {
-					create_unit = {
-						division = "name = \"I/Free Corps North Carolina\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps North Carolina\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps North Carolina\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			364 = {
-					create_unit = {
-						division = "name = \"I/Free Corps South Carolina\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps South Carolina\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps South Carolina\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			371 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Louisiana\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Louisiana\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Louisiana\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			375 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Texas\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Texas\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Texas\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			372 = {
-					create_unit = {
-						division = "name = \"I/Free Corps Arkansas\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"II/Free Corps Arkansas\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"III/Free Corps Arkansas\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-						owner = ROOT
-					}
-			}
-			if = {
-					limit = {
-						has_country_flag = MTG_work_with_the_bund
-					}
-					373 = {
-						create_unit = {
-							division = "name = \"I/Freikorps Missouri\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"II/Freikorps Missouri\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"III/Freikorps Missouri\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-					}
-					394 = {
-						create_unit = {
-							division = "name = \"I/Freikorps Wisconsin\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"II/Freikorps Wisconsin\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"III/Freikorps Wisconsin\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-					}
-					395 = {
-						create_unit = {
-							division = "name = \"I/Freikorps Illinois\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"II/Freikorps Illinois\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"III/Freikorps Illinois\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-					}
-					261 = {
-						create_unit = {
-							division = "name = \"I/Freikorps Ohio\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"II/Freikorps Ohio\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"III/Freikorps Ohio\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-					}
-					396 = {
-						create_unit = {
-							division = "name = \"I/Freikorps Indiana\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"II/Freikorps Indiana\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"III/Freikorps Indiana\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-					}
-					393 = {
-						create_unit = {
-							division = "name = \"I/Freikorps Michigan\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"II/Freikorps Michigan\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"III/Freikorps Michigan\" division_template = \"Free Corps\" start_experience_factor = 0.7" 
-							owner = ROOT
-						}
-					}
-			}
-		}
-	}
-	USA_CSA_set_up_provisional_government = { 
-		available = {
-			any_state = {
-				is_core_of = USA
-				is_fully_controlled_by = ROOT
-			}
-		}
-		visible = {
-			original_tag = CSA
-			has_war_with = USA
-		}
-		cost = 0
-		days_remove = 100
-		fixed_random_seed = yes
-		ai_will_do = {
-			factor = 1
-		}
+		
+		icon = steel
+		days_remove = 90
+		days_re_enable = 60
+		cost = 100
+		
 		modifier = {
+			consumer_goods_factor = 0.03
 			political_power_gain = -0.25
 		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_resource_steel_factories_decision"
+			set_country_flag = USA_expanding_steel_flag
+		}
+
 		remove_effect = {
-			random_state = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_resource_steel_factories_decision"
+			random_owned_controlled_state = {
 				limit = {
-					not = { is_core_of = ROOT }
-					is_core_of = USA
-					is_fully_controlled_by = ROOT
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_steel_one_flag
+							has_state_flag = USA_expanded_steel_two_flag
+							has_state_flag = USA_expanded_steel_three_flag
+						}
+					}
+					has_resources_amount = {
+						resource = steel
+						amount > 1
+					}
 				}
-				remove_core_of = USA
-				add_claim_by = USA
-				add_core_of = CSA
-				save_event_target_as = USA_state_government_created
+				set_state_flag = USA_expanding_states_steel_production
+				prioritize = { 773 774 793 }
+				USA_set_resource_flag_effect = yes
+				add_resource = {
+					type = steel
+					amount = 3
+				}
+				clr_state_flag = USA_expanding_states_steel_production
 			}
-			USA = {
-				country_event = mtg_usa_civil_war_fascists.203
+			USA_scaling_resource_production_cost_effect = yes
+			clr_country_flag = USA_expanding_steel_flag
+			USA_congress_small_opposition = yes
+		}
+
+		ai_will_do = {
+			factor = 0.25
+			modifier = { 
+				add = 0.25
+				has_government = democratic 
 			}
+			modifier = {
+				add = 0.25
+				has_government = communism
+			}
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = yes
+					is_historical_focus_on = no 
+				}
+			}
+			modifier = {
+				add = 5
+				has_country_flag = positive_wall_street
+				has_country_flag = indifferent_wall_street
+			}
+
 		}
 	}
-	USA_order_weapons_in_USB = {
-	icon = generic_prepare_civil_war
+	
+	USA_resource_aluminimum_prospecting_decision = {
+		visible = { 
+			any_owned_state = {
+				has_resources_amount = {
+					resource = aluminium
+					amount > 1
+				}
+				NOT = {
+					AND = {
+						has_state_flag = USA_expanded_aluminium_one_flag
+						has_state_flag = USA_expanded_aluminium_two_flag
+						has_state_flag = USA_expanded_aluminium_three_flag
+					}
+				}
+			}
+		}
+		 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = USB_available_factories_tt
-				check_variable = { USB.USB_factories_available > 5 }
+				tooltip = USA_has_wall_street_faction_TT
+				has_idea = wall_street
 			}
-			any_neighbor_country = {
-				tag = USB
-			}
-		}
-		visible = {
-			country_exists = USB
-			OR = {
-				original_tag = CSA
-				original_tag = USA
-			}
-			not = { has_war_with = USB }
-			USB = { is_in_faction = no }
-		}
-		days_remove = 45
-		cost = 25
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				has_equipment = {
-					infantry_equipment < 1
+			NOT = { has_decision = USA_resource_oil_prospecting_decision } 
+			NOT = { has_decision = USA_resource_steel_factories_decision }
+			NOT = { has_decision = USA_resource_techmetals_prospecting_decision } 
+			any_owned_state = {
+				has_resources_amount = {
+					resource = aluminium
+					amount > 1
 				}
-				factor = 50
-			}
-			modifier = {
-				has_manpower < 10000 
-				factor = 0 #need to up conscription laws
-			}
-		}
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			add_to_variable = { USB.USB_factories_available = -3 }
-			USB = {
-				add_offsite_building = { type = industrial_complex level = 2 }
-			}
-		}
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 2500
-			}
-			USB = {
-				add_offsite_building = { type = industrial_complex level = -2 }
-			}
-			add_to_variable = { USB.USB_factories_available = 3 }
-		}
-	}
-	USA_order_artillery_in_USB = {
-		icon = ger_military_buildup
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = USB_available_factories_tt
-				check_variable = { USB.USB_factories_available > 5 }
-			}
-			any_neighbor_country = {
-				tag = USB
-			}
-		}
-		visible = {
-			country_exists = USB
-			OR = {
-				original_tag = CSA
-				original_tag = USA
-			}
-			not = { has_war_with = USB }
-			USB = { is_in_faction = no }
-		}
-		days_remove = 60
-		cost = 50
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_equipment = {
-					artillery_equipment < 1
-				}
-				factor = 50
-			}
-			modifier = {
-				has_manpower < 10000 
-				factor = 0 #need to up conscription laws
-			}
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		complete_effect = {
-			add_to_variable = { USB.USB_factories_available = -6 }
-			USB = {
-				add_offsite_building = { type = industrial_complex level = 5 }
-			}
-		}
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 75
-			}
-			USB = {
-				add_offsite_building = { type = industrial_complex level = -5 }
-			}
-			add_to_variable = { USB.USB_factories_available = 6 }
-		}
-	}
-	USA_order_fighters_in_USB = {
-		icon = generic_air
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = USB_available_factories_tt
-				check_variable = { USB.USB_factories_available > 5 }
-			}
-			any_neighbor_country = {
-				tag = USB
-			}
-		}
-		visible = {
-			country_exists = USB
-			OR = {
-				original_tag = CSA
-				original_tag = USA
-			}
-			not = { has_war_with = USB }
-			USB = { is_in_faction = no }
-		}
-		days_remove = 60
-		cost = 50
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_equipment = {
-					fighter_equipment < 1
-				}
-				factor = 5
-			}
-			modifier = {
-				has_manpower < 10000 
-				factor = 0 #need to up conscription laws
-			}
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		complete_effect = {
-			add_to_variable = { USB.USB_factories_available = -6 }
-			USB = {
-				add_offsite_building = { type = industrial_complex level = 5 }
-			}
-		}
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = fighter_equipment
-				amount = 50
-			}
-			USB = {
-				add_offsite_building = { type = industrial_complex level = -5 }
-			}
-			add_to_variable = { USB.USB_factories_available = 6 }
-		}
-	}
-	USA_order_bombers_in_USB = {
-		icon = generic_air
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = USB_available_factories_tt
-				check_variable = { USB.USB_factories_available > 5 }
-			}
-			any_neighbor_country = {
-				tag = USB
-			}
-		}
-		visible = {
-			country_exists = USB
-			OR = {
-				original_tag = CSA
-				original_tag = USA
-			}
-			not = { has_war_with = USB }
-			USB = { is_in_faction = no }
-		}
-		days_remove = 60
-		cost = 50
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_equipment = {
-					tac_bomber_equipment < 1
-				}
-				factor = 5
-			}
-			modifier = {
-				has_manpower < 10000 
-				factor = 0 #need to up conscription laws
-			}
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		complete_effect = {
-			add_to_variable = { USB.USB_factories_available = -6 }
-			USB = {
-				add_offsite_building = { type = industrial_complex level = 5 }
-			}
-		}
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment
-				amount = 25
-			}
-			USB = {
-				add_offsite_building = { type = industrial_complex level = -5 }
-			}
-			add_to_variable = { USB.USB_factories_available = 6 }
-		}
-	}
-}
-USA_aid_britain = {
-	USA_establish_personal_communication_with_former_naval_person = {
-
-		icon = generic_political_discourse
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
-			has_country_flag = blood_toil_tears_sweat_speech
-			ENG = { has_defensive_war = yes }
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_opinion = { target = ENG value > 60 }
-			}
-			modifier = {
-				factor = 10
-				has_opinion = { target = ENG value > 99 }
-			}
-		}
-
-		visible = {
-			has_war = no
-		}
-
-		complete_effect = {
-			add_war_support = 0.05
-			add_opinion_modifier = { target = ENG modifier = USA_special_relationship }
-			reverse_add_opinion_modifier = { target = ENG modifier = USA_special_relationship }
-		}
-	}
-
-	USA_battle_domestic_isolationism = {
-
-		icon = generic_civil_support
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
-			has_country_flag = fight_on_the_beaches_speech
-			ENG = { has_defensive_war = yes }
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_opinion = { target = ENG value > 60 }
-			}
-			modifier = {
-				factor = 10
-				has_opinion = { target = ENG value > 99 }
-			}
-		}
-
-		modifier = {
-			war_support_weekly = 0.002		
-		}
-
-		days_remove = 180
-
-		visible = {
-			has_war = no
-		}
-
-		complete_effect = {
-			add_war_support = 0.05
-		}
-	}
-
-	USA_emergency_arms_deliveries = {
-
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
-			has_country_flag = this_was_their_finest_hour_speech
-			ENG = { has_defensive_war = yes }
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_opinion = { target = ENG value > 60 }
-			}
-			modifier = {
-				factor = 10
-				has_opinion = { target = ENG value > 99 }
-			}
-		}
-
-		modifier = {
-			war_support_weekly = 0.005		
-		}
-
-		days_remove = 30
-
-		visible = {
-			has_war = no
-		}
-
-		complete_effect = {
-			ENG = {
-				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = USA }
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 300 producer = USA }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 300 producer = USA }
-				country_event = { id = wtt_britain.30 }
-			}
-		}
-	}
-
-	USA_arsenal_of_democracy_decision = {
-
-		icon = generic_industry
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
-			has_country_flag = mers_el_kebir_raid
-			ENG = { has_defensive_war = yes }
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 10
-		}
-
-		visible = {
-			has_war = no
-		}
-
-		modifier = {
-			war_support_weekly = 0.001		
-			industrial_capacity_factory = 0.02
-			industrial_capacity_dockyard = 0.02
-			consumer_goods_factor = -0.05
-		}
-
-		days_remove = 360
-
-		complete_effect = {
-		}
-	}
-}
-
-foreign_support = {
-	USA_support_the_anti_fascist_war = {
-
-		icon = generic_industry
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			NOT = {
-				has_global_flag = USA_support_the_anti_fascist_war_flag
-			}
-			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
-				has_war_with = JAP
-			}
-		}
-
-		targets = { CHI PRC GXC YUN SHX XSM SIK D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
-
-		target_root_trigger = {
-			OR = {
-				has_completed_focus = USA_limited_intervention
-				has_completed_focus = USA_lend_lease_act
-			}
-		}
-
-		target_trigger = {
-			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
-				has_war_with = JAP
-			}
-		}
-
-		visible = {
-			has_government = democratic
-			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
-				has_war_with = JAP
-			}
-		}
-
-		cost = 25
-		ai_will_do = {
-			factor = 50
-			modifier = {
-				factor = 3
-				any_other_country = {
-					has_completed_focus = CHI_mission_to_the_us
-					has_idea = CHI_soong_mei_ling
-					surrender_progress > 0.2
-					has_defensive_war = yes
+				custom_trigger_tooltip = {	
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_aluminium_one_flag
+							has_state_flag = USA_expanded_aluminium_two_flag
+							has_state_flag = USA_expanded_aluminium_three_flag
+						}
+					}
+					tooltip = USA_not_expanded_states_resources_three_times_TT
 				}
 			}
-
-			modifier = {
-				factor = 0.5
-				has_war_support > 0.6
-			}
-
-			modifier = {
-				factor = 2
-				has_war_with = JAP
-			}
 		}
-
-		fire_only_once = no
-
+		
+		icon = aluminium
+		days_remove = 90
+		days_re_enable = 60
+		cost = 100
+		
 		modifier = {
-			civilian_factory_use = 5			
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.25
 		}
-
-		days_remove = 180
-
+		
 		complete_effect = {
-			FROM = {
-				add_offsite_building = { type = arms_factory level = 3 }
-				set_global_flag = USA_support_the_anti_fascist_war_flag
-			}
+			log = "[GetDateText]: [Root.GetName]: Decision USA_resource_aluminimum_prospecting_decision"
+			set_country_flag = USA_expanding_aluminium_flag
 		}
 
 		remove_effect = {
-			add_war_support = 0.05
-			FROM = {
-				add_offsite_building = { type = arms_factory level = -3 }
-				hidden_effect = {
-					clr_global_flag = USA_support_the_anti_fascist_war_flag
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_resource_aluminimum_prospecting_decision"
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_aluminium_one_flag
+							has_state_flag = USA_expanded_aluminium_two_flag
+							has_state_flag = USA_expanded_aluminium_three_flag
+						}
+					}
+					has_resources_amount = {
+						resource = aluminium
+						amount > 1
+					}
 				}
-			}
-		}
-	}
-
-	USA_guns_for_the_anti_fascist_war = {
-
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			has_equipment = { infantry_equipment > 999 }
-			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
-				has_idea = CHI_soong_mei_ling
-				has_war_with = JAP
-			}
-		}
-
-		targets = { CHI PRC GXC YUN SHX XSM SIK D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
-
-		target_trigger = {
-			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
-				has_idea = CHI_soong_mei_ling
-				has_war_with = JAP
-			}
-		}
-
-		visible = {
-			has_government = democratic
-			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
-				has_idea = CHI_soong_mei_ling
-				has_war_with = JAP
-			}
-		}
-
-		cost = 25
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 3
-				FROM = {
-					has_completed_focus = CHI_mission_to_the_us
-					has_idea = CHI_soong_mei_ling
-					surrender_progress > 0.2
-					has_defensive_war = yes
+				set_state_flag = USA_expanding_states_aluminium_production
+				USA_set_resource_flag_effect = yes
+				add_resource = {
+					type = aluminium
+					amount = 3
 				}
+				clr_state_flag = USA_expanding_states_aluminium_production
 			}
-
-			modifier = {
-				factor = 0.5
-				has_war_support < 0.6
-			}
-
-			modifier = {
-				factor = 2
-				has_war_with = JAP
-			}
+			USA_scaling_resource_production_cost_effect = yes
+			clr_country_flag = USA_expanding_aluminium_flag
+			USA_congress_small_opposition = yes
 		}
-
-		fire_only_once = no	
-
-		days_re_enable = 180
-
-		complete_effect = {
-			ROOT = {
-				send_equipment = {
-					target = FROM
-					type = infantry_equipment
-					amount = 1000
-					old_prioritised = yes
-				}
-			}
-		}
-	}
-}
-USA_foreign_support = {
-	USA_invite_donations_FROM = {
-		icon = ger_mefo_bills
-		available = {
-			has_war = no
-		}
-		visible = {
-			has_completed_focus = USA_invite_foreign_support
-			has_war = no
-		}
-		target_trigger = {
-			FROM = {
-				is_major = yes
-				exists = yes
-				has_war = no
-				has_government = fascism
-			}
-		}
-		cost = 25
+		
 		ai_will_do = {
 			factor = 1
-		}
-		days_re_enable = 45
-		complete_effect = {
-			FROM = {
-				country_event = mtg_usa_foreign_support.1
+			modifier = { 
+				add = 2
+				has_government = democratic 
+			}
+			modifier = {
+				add = 1 
+				has_government = communism
+			}
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = yes
+					is_historical_focus_on = no 
+				}
+			}
+			modifier = {
+				add = 2
+				has_country_flag = enthusiastic_wall_street
+				has_country_flag = positive_wall_street
+				has_country_flag = indifferent_wall_street
 			}
 		}
 	}
 	
-	USA_smuggle_weapons_FROM = {
-		icon = generic_prepare_civil_war
-		available = {
-			has_war = no
-		}
-		visible = {
-			has_completed_focus = USA_invite_foreign_support
-			has_war = no
-
-		}
-		target_trigger = {
-			FROM = {
-				exists = yes
-				is_major = yes
-				has_government = fascism
-				has_war = no
-				has_country_flag = USA_foreign_support_donations_approved
-			}
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 1
-		}
-		days_re_enable = 45
-		complete_effect = {
-			FROM = {
-				country_event = mtg_usa_foreign_support.4
-			}
-		}
-	}
-	USA_training_camps_in_FROM = {
-		icon = generic_prepare_civil_war
-		available = {
-			has_war = no
-		}
-		visible = {
-			has_completed_focus = USA_invite_foreign_support
-			has_war = no
-		}
-		target_trigger = {
-			FROM = {
-				is_major = yes
-				exists = yes
-				has_war = no
-				has_government = fascism
-				not = { has_country_flag = USA_training_camps_approved }
-				has_country_flag = USA_foreign_support_donations_approved
-			}
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 1
-		}
-		days_re_enable = 45
-		complete_effect = {
-			FROM = {	
-				country_event = mtg_usa_foreign_support.9
-			}
-		}
-	}
-	USA_pilot_training_in_FROM = {
-		icon = generic_air
-		available = {
-			has_war = no
-		}
-		visible = {
-			has_completed_focus = USA_invite_foreign_support
-			has_war = no
-		}
-		target_trigger = {
-			FROM = {
-				exists = yes
-				is_major = yes
-				has_war = no
-				has_government = fascism
-				has_tech = fighter1
-				not = { has_country_flag = usa_pilot_training }
-				has_country_flag = USA_foreign_support_donations_approved
-			}
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 1
-		}
-		days_re_enable = 45
-		complete_effect = {
-			FROM = {
-				set_country_flag = usa_pilot_training
-				country_event = mtg_usa_foreign_support.12
-			}
-		}
-	}
-	USA_fund_shipyards_FROM = {
-		icon = generic_construction
-		available = {
-			has_war = no
-		}
-		visible = {
-			has_completed_focus = USA_invite_foreign_support
-			has_war = no
-		}
-		target_trigger = {
-			FROM = {
-				exists = yes
-				is_major = yes
-				has_war = no
-				has_government = fascism
-				has_country_flag = USA_foreign_support_donations_approved
-			}
-		}
-		cost = 125
-		ai_will_do = {
-			factor = 1
-		}
-		days_re_enable = 90
-		complete_effect = {
-			FROM = {
-				country_event = mtg_usa_foreign_support.15
-			}
-		}
-	}
-}
-
-USA_honor_the_confederacy = {
-	USA_celebrate_montgomery_convention_day = {
-		icon = generic_nationalism
-		available = {
-			
-		}
-		cost = 25
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_stability = 0.05
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			set_cosmetic_tag = USA_CSA
-			if = {
-				limit = {
-					not = {
-						has_country_flag = USA_CSA_legitimacy
+	USA_resource_oil_prospecting_decision = {
+		visible = { 
+			any_owned_state = {
+				has_resources_amount = {
+					resource = oil
+					amount > 1
+				}
+				NOT = {
+					AND = {
+						has_state_flag = USA_expanded_oil_one_flag
+						has_state_flag = USA_expanded_oil_two_flag
+						has_state_flag = USA_expanded_oil_three_flag
 					}
 				}
-				set_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
-			}
-			else = {
-				modify_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
 			}
 		}
-	}
-	USA_move_government_to_richmond = {
-		icon = generic_nationalism
+		 
 		available = {
-			362 = {
-				is_controlled_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = USA_has_wall_street_faction_TT
+				has_idea = wall_street
 			}
-		}
-		visible = {
-			capital_scope = {
-				not = { state = 362 }
-			}
-		}
-		cost = 25
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_stability = 0.1
-			set_capital = 362
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			if = {
-				limit = {
-					not = {
-						has_country_flag = USA_CSA_legitimacy
+			NOT = { has_decision = USA_resource_aluminimum_prospecting_decision } 
+			NOT = { has_decision = USA_resource_steel_factories_decision }
+			NOT = { has_decision = USA_resource_techmetals_prospecting_decision } 
+			any_owned_state = {
+				has_resources_amount = {
+					resource = oil
+					amount > 1
+				}
+				custom_trigger_tooltip = {	
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_oil_one_flag
+							has_state_flag = USA_expanded_oil_two_flag
+							has_state_flag = USA_expanded_oil_three_flag
+						}
 					}
-				}
-				set_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
-			}
-			else = {
-				modify_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
+					tooltip = USA_not_expanded_states_resources_three_times_TT
 				}
 			}
 		}
-	}
-	USA_secure_state_rights = {
-		icon = generic_nationalism
-		available = {
-			has_cosmetic_tag = USA_CSA 
-		}
-		visible = {
-			
-		}
-		cost = 75
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			add_stability = 0.1
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			if = {
-				limit = {
-					not = {
-						has_country_flag = USA_CSA_legitimacy
-					}
-				}
-				set_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
-			}
-			else = {
-				modify_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
-			}
-		}
-	}
-	USA_permit_confederate_flags = {
-		icon = generic_nationalism
-		available = {
-			has_cosmetic_tag = USA_CSA
-		}
-		visible = {
-			has_country_flag = {
-				flag = USA_CSA_legitimacy
-				value > 2
-			}
-		}
-		cost = 75
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			add_stability = 0.1
-			add_war_support = 0.1
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			if = {
-				limit = {
-					not = {
-						has_country_flag = USA_CSA_legitimacy
-					}
-				}
-				set_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
-			}
-			else = {
-				modify_country_flag = {
-					flag = USA_CSA_legitimacy
-					value = 1
-				}
-			}
-		}
-	}
-	USA_constitutional_convention = {
-		icon = eng_trade_unions_support
-		available = {
-			fascism > 0.35
-		}
-		visible = {
-			has_country_flag = {
-				flag = USA_CSA_legitimacy
-				value > 2
-			}
-			has_cosmetic_tag = USA_CSA
-		}
+		
+		icon = oil
+		days_remove = 90
+		days_re_enable = 60
 		cost = 100
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
+		
+		modifier = {
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.25
 		}
+		
 		complete_effect = {
-			add_stability = 0.1
-			add_war_support = 0.05
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			set_politics = { ruling_party = fascism }
+			log = "[GetDateText]: [Root.GetName]: Decision USA_resource_oil_prospecting_decision"
+			set_country_flag = USA_expanding_oil_flag
 		}
-	}
 
-}
-economy_decisions = {
-	USA_communal_domain = {
-		icon = generic_operation
-		available = {
-			any_state = {
-				is_core_of = ROOT
-				is_controlled_by = ROOT
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-			}
-		}
-		visible = {
-			has_completed_focus = USA_communal_property_act
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 1
-		}
-		days_re_enable = 90
-
-		complete_effect = {
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_resource_oil_prospecting_decision"
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_oil_one_flag
+							has_state_flag = USA_expanded_oil_two_flag
+							has_state_flag = USA_expanded_oil_three_flag
+						}
+					}
+					has_resources_amount = {
+						resource = oil
+						amount > 1
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				set_state_flag = USA_expanding_states_oil_production
+				USA_set_resource_flag_effect = yes
+				add_resource = {
+					type = oil
+					amount = 3
+				}
+				clr_state_flag = USA_expanding_states_oil_production
+			}
+			USA_scaling_resource_production_cost_effect = yes
+			clr_country_flag = USA_expanding_oil_flag
+			USA_congress_small_opposition = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				add = 2
+				has_government = democratic 
+			}
+			modifier = {
+				add = 1 
+				has_government = communism
+			}
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = yes
+					is_historical_focus_on = no 
+				}
+			}
+			modifier = {
+				add = 5
+				has_country_flag = enthusiastic_wall_street
+				has_country_flag = positive_wall_street
+				has_country_flag = indifferent_wall_street
 			}
 		}
 	}
-}
-
-foreign_politics = {
-	USA_guns_for_the_anti_bolshevist_war = {
-
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			OR = {
-				not = { has_government = communism }
-				has_war_with = SOV #commie on commie violence
-			}
-			has_equipment = { infantry_equipment > 999 }
-			FROM = {
-				has_war_with = SOV
-				not = {
-					has_war_with = ROOT
+	
+	USA_resource_techmetals_prospecting_decision = {
+		visible = { 
+			any_owned_state = {
+				has_resources_amount = {
+					resource = tungsten
+					amount > 1
+				}
+				NOT = {
+					AND = {
+						has_state_flag = USA_expanded_tungsten_one_flag
+						has_state_flag = USA_expanded_tungsten_two_flag
+						has_state_flag = USA_expanded_tungsten_three_flag
+					}
 				}
 			}
 		}
-
-		target_root_trigger = {
-			has_completed_focus = USA_anti_bolshevist_aid
-		}
-
-		target_trigger = {
-			FROM = {
-				not = { has_war_with = ROOT }
-				has_war_with = SOV
+		 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_has_wall_street_faction_TT
+				has_idea = wall_street
 			}
-		}
-
-		visible = {
-			has_completed_focus = USA_anti_bolshevist_aid
-			FROM = {
-				has_war_with = SOV
-			}
-		}
-
-		cost = 25
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				surrender_progress > 0
-			}
-			modifier = {
-				factor = 0.5
-				has_war_support < 0.6
-			}
-
-			modifier = {
-				factor = 2
-				has_war_with = SOV
-			}
-		}
-
-		fire_only_once = no	
-
-		days_re_enable = 180
-
-		complete_effect = {
-			ROOT = {
-				send_equipment = {
-					target = FROM
-					type = infantry_equipment
-					amount = 1000
-					old_prioritised = yes
+			NOT = { has_decision = USA_resource_aluminimum_prospecting_decision } 
+			NOT = { has_decision = USA_resource_oil_prospecting_decision }
+			NOT = { has_decision = USA_resource_steel_factories_decision }
+			any_owned_state = {
+				has_resources_amount = {
+					resource = tungsten
+					amount > 1
+				}
+				custom_trigger_tooltip = {	
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_tungsten_one_flag
+							has_state_flag = USA_expanded_tungsten_two_flag
+							has_state_flag = USA_expanded_tungsten_three_flag
+						}
+					}
+					tooltip = USA_not_expanded_states_resources_three_times_TT
 				}
 			}
 		}
-	}
-	USA_form_defensive_alliance_north_american_dominion = {
-
-		icon = generic
-
-		available = {
-			not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
+		icon = tungsten
+		days_remove = 60
+		days_re_enable = 90
+		cost = 100
+		modifier = {
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.25
 		}
-
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				has_war_with = USA
-				factor = 20
-			}
-		}
-
-		visible = {
-			has_country_flag = north_american_dominion_refused
-			is_in_faction = no
-			not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
-		}
-
+		
 		complete_effect = {
-			set_global_flag = mtg_usa_north_american_dominion_refused_faction
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction = MTG_USA_NORTH_AMERICAN_DOMINION_FACTION
-			hidden_effect = {
-				#news_event = { id = xxx days = 3 } MTG_TODO_GABRIEL
-			}
-		}
-	}
-	USA_join_defensive_alliance_north_american_dominion = {
-
-		icon = generic
-
-		available = {
-			has_global_flag = mtg_usa_north_american_dominion_refused_faction
+			log = "[GetDateText]: [Root.GetName]: Decision USA_resource_techmetals_prospecting_decision"
+			set_country_flag = USA_expanding_states_tungsten_production
 		}
 
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				has_war_with = USA
-				factor = 20
-			}
-		}
-
-		visible = {
-			has_country_flag = north_american_dominion_refused
-			is_in_faction = no
-		}
-
-		complete_effect = {
-			random_other_country = {
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_resource_techmetals_prospecting_decision"
+			random_owned_controlled_state = {
 				limit = {
-					has_country_flag = north_american_dominion_refused
-					is_faction_leader = yes
+					NOT = {
+						AND = {
+							has_state_flag = USA_expanded_tungsten_one_flag
+							has_state_flag = USA_expanded_tungsten_two_flag
+							has_state_flag = USA_expanded_tungsten_three_flag
+						}
+					}
+					has_resources_amount = {
+						resource = tungsten
+						amount > 1
+					}
 				}
-				country_event = generic.2
+				set_state_flag = USA_expanding_states_tungsten_production
+				USA_set_resource_flag_effect = yes
+				add_resource = {
+					type = tungsten
+					amount = 3
+				}
+				clr_state_flag = USA_expanding_states_tungsten_production
+			}
+			USA_scaling_resource_production_cost_effect = yes
+			clr_country_flag = USA_expanding_states_tungsten_production
+			USA_congress_small_opposition = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				add = 2
+				has_government = democratic 
+			}
+			modifier = {
+				add = 1 
+				has_government = communism
+			}
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = yes
+					is_historical_focus_on = no 
+				}
+			}
+			modifier = {
+				add = 2
+				has_country_flag = enthusiastic_wall_street
+				has_country_flag = positive_wall_street
+				has_country_flag = indifferent_wall_street
 			}
 		}
 	}
-	USA_join_the_unions = {
-		icon = infiltrate_state
+	
+	USA_regulate_wall_street_decision = {
 		visible = {
-			SOV = {
-				has_war = yes
-				is_in_faction_with = USA
-			}
-			has_completed_focus = USA_unholy_alliance
+			has_idea = wall_street 
 		}
 		available = {
-			SOV = {
-				surrender_progress > 0.8
+			custom_trigger_tooltip = {
+				tooltip = USA_has_wall_street_faction_TT
+				has_idea = wall_street
+			}
+			NOT = { has_decision = USA_deregulate_wall_street_decision }
+			custom_trigger_tooltip = { 
+				check_variable = { USA_economic_regulation_var < 90 }
+				check_variable = { USA_strength_of_wall_street_var < 45 }
+				tooltip = USA_regulate_wall_street_decision_tt
 			}
 		}
-		fire_only_once = yes
+		
+		icon = decision_generic_construction
+		days_remove = 60
+		days_re_enable = 90
+		cost = 100
+		
+		remove_effect = {
+			log = "[GetDateText]: [This.GetName]: Decision remove USA_regulate_wall_street_decision"
+			USA_modify_construction_speed_decrease_two = yes 
+			USA_modify_local_resource_factor_decrease_two = yes
+			usa_regulations_increased_by_4 = yes 
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				check_variable = { USA_economic_regulation_var < 65 }
+				add = 5 
+			}
+			modifier = {
+				check_variable = { USA_economic_regulation_var > 65 }
+				factor = 0 
+			}
+			modifier = {
+				add = -0.50 
+				OR = { 
+					is_in_array = { ruling_party = 1 }
+					is_in_array = { ruling_party = 16 }
+					is_in_array = { ruling_party = 20 }
+					is_in_array = { ruling_party = 21 }
+					is_in_array = { ruling_party = 22 }
+				}
+			}
+		}
+	}
+	
+	USA_deregulate_wall_street_decision = {
+		visible = {
+			has_idea = wall_street 
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_has_wall_street_faction_TT 
+				has_idea = wall_street
+			}
+			NOT = { has_decision = USA_regulate_wall_street_decision }
+			custom_trigger_tooltip = {
+				check_variable = { USA_economic_regulation_var > 10 }
+				check_variable = { USA_strength_of_wall_street_var > 5 }
+				tooltip = USA_deregulate_wall_street_decision_tt
+			}
+		}
+		
+		icon = political_actions
+		days_remove = 60 
+		days_re_enable = 90 
+		cost = 100 
+		
+		remove_effect = {
+			log = "[GetDateText]: [This.GetName]: Decision remove USA_deregulate_wall_street_decision"
+			USA_modify_construction_speed_add_two = yes
+			USA_modify_local_resource_factor_add_two = yes
+			usa_regulations_decreased_by_4 = yes
+		}
+
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				check_variable = { USA_economic_regulation_var > 65 }
+				add = 2 
+			}
+			modifier = {
+				check_variable = { USA_economic_regulation_var < 30 }
+				factor = 0 
+			}
+			modifier = {
+				add = 4
+				OR = { 
+					is_in_array = { ruling_party = 1 }
+					is_in_array = { ruling_party = 16 }
+					is_in_array = { ruling_party = 20 }
+					is_in_array = { ruling_party = 21 }
+					is_in_array = { ruling_party = 22 }
+				}
+			}
+		}
+	}
+	
+	USA_industrial_outsourcing_decision = {
+		visible = {
+			NOT = { has_government = communism }
+			NOT = { has_government = nationalist }
+		}
+		available = {
+			NOT = { has_government = communism }
+			NOT = { has_government = nationalist }
+			custom_trigger_tooltip = {
+				check_variable = { USA_economic_regulation_var > 70 }
+				tooltip = USA_greater_than_70_regulation_tt
+			}
+		}	
+		
+		complete_effect = {
+			log = "[GetDateText]: [This.GetName]: Decision USA_industrial_outsourcing_decision"
+			add_offsite_building = { type = industrial_complex level = 2 }
+			decrease_wall_street_opinion = yes
+		}
+		icon = generic_construction 
+		days_remove = 100
+		days_re_enable = 50
+		cost = 150
+
+		remove_effect = { 
+			log = "[GetDateText]: [This.GetName]:Decision remove USA_industrial_outsourcing_decision"
+			USA_modify_construction_speed_add_two = yes
+		}
+
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {
-			annex_country = { target = SOV transfer_troops = yes}
-				 
-			
-		}
 	}
-}
-USA_war_plans = {
-	USA_execute_war_plan_green = {
-		icon = generic_operation
-		available = {
-			has_war_with = MEX
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_green
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		modifier = {
-			production_speed_infrastructure_factor = 0.1
-		}
-		targeted_modifier = {
-			tag = MEX
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_red = {
-		icon = generic_operation
-		available = {
-			has_war_with = ENG
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_red
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		modifier = {
-			spotting_chance = 0.1
-		}
-		targeted_modifier = {
-			tag = ENG
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_silver = {
-		icon = generic_operation
-		available = {
-			has_war_with = ITA
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_silver
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = ITA
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_ruby = {
-		icon = generic_operation
-		available = {
-			has_war_with = RAJ
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_ruby
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = RAJ
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_scarlet_garnet = {
-		icon = generic_operation
-		available = {
-			has_war_with = AST
-			has_war_with = NZL
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_scarlet_garnet
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = AST
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = NZL
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_orange = {
-		icon = generic_operation
-		available = {
-			has_war_with = JAP
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_orange
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		modifier = {
-			amphibious_invasion = 0.1
-			invasion_preparation = -0.25
-		}
-		targeted_modifier = {
-			tag = JAP
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = MAN
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = MEN
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_cyan = {
-		icon = generic_operation
-		available = {
-			has_war_with = ATL
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_cyan
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		modifier = {
-			amphibious_invasion = 0.1
-			invasion_preparation = -0.25
-		}
-		targeted_modifier = {
-			tag = ATL
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_yellow = {
-		icon = generic_operation
-		available = {
-			OR = {
-				has_war_with = CHI
-				has_war_with = PRC
-				has_war_with = SHX
-				has_war_with = YUN
-				has_war_with = GXC
-				has_war_with = XSM
-				has_war_with = SIK
 
+	USA_bring_microsoft_to_court_decision = {
+		visible = {
+			original_tag = USA
+			has_country_flag = USA_allowed_microsoft_merger
+		}
+		available = {
+			has_country_flag = USA_allowed_microsoft_merger
+			custom_trigger_tooltip = {
+				check_variable = { USA_economic_regulation_var > 40 }
+				tooltip = USA_greater_than_40_regulation_tt
 			}
 		}
-		visible = {
-			has_completed_focus = USA_war_plan_yellow
+		icon = decision
+		days_remove = 60 #Time to Build a Case
+		cost = 100 
+
+		remove_effect = {
+			log = "[GetDateText]: [This.GetName]: Decision Remove USA_bring_microsoft_to_court_decision"
+			country_event = { id = usa.47 days = 1 }
 		}
+
 		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = CHI
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = PRC
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = SHX
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = YUN
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = XSM
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = GXC
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-		targeted_modifier = {
-			tag = SIK
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_crimson = {
-		icon = generic_operation
-		available = {
-			has_war_with = CAN
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_crimson
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		modifier = {
-			production_speed_bunker_factor = 0.1
-		}
-		targeted_modifier = {
-			tag = CAN
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_gray = {
-		icon = generic_operation
-		available = {
-			any_enemy_country = {
-				capital_scope = {
-					OR = {
-						is_on_continent = south_america
-						is_on_continent = north_america
-					}
-				}
-			}
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_gray
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		modifier = {
-			amphibious_invasion = 0.1
-			invasion_preparation = -0.5
-		}
-	
-	}
-	USA_execute_war_plan_gold = {
-		icon = generic_operation
-		available = {
-			has_war_with = FRA
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_gold
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = FRA
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_black = {
-		icon = generic_operation
-		available = {
-			has_war_with = GER
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_black
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = GER
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
-		}
-	}
-	USA_execute_war_plan_white = {
-		icon = generic_operation
-		available = {
-			has_war_with = SOV
-		}
-		visible = {
-			has_completed_focus = USA_war_plan_white
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		fire_only_once = yes
-		days_remove = 180
-		targeted_modifier = {
-			tag = SOV
-			attack_bonus_against = 0.1
-			defense_bonus_against = 0.1
+			factor = 25
 		}
 	}
 }
-USA_intervention_mandate = {
-	USA_request_mandate_against_FROM = {
+
+USA_congress_md = {
+	USA_small_lobby_effort = { 
+		icon = generic_political_discourse
 		available = {
-			has_war_support > 0.4
-			if = {
-				limit = {
-					FROM = {
-						has_offensive_war = yes
-					}
-					congress_low_support_trigger = yes
+			custom_trigger_tooltip = {
+				OR = {
+					check_variable = { senators_support < senators_total }
+					check_variable = { representatives_support < representatives_total }
 				}
+				tooltip = USA_not_total_support_tt
 			}
-			else_if = {
-				limit = {
-					FROM = {
-						has_war = yes
-					}
-				}
+			NOT = {
+				has_decision = USA_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 2.0
+				has_political_power > 100
+			}
+		}	
+		custom_cost_trigger = {
+			always = yes
+		}
+		custom_cost_text = [USA_lobbying_cost]	
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
 				congress_medium_support_trigger = yes
+				factor = 0.5
 			}
-			else = {
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
 				congress_high_support_trigger = yes
-			}
-			not = { has_war_with = FROM }
-		}
-		visible = {
-			not = { has_wargoal_against = FROM }
-		}
-		target_trigger = {
-			FROM = {
-				exists = yes
-				not = {
-					has_war_with = ROOT
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-				}
-				has_country_flag = {
-					flag = USA_intervention_strikes
-					value > 2
-				}
+				factor = 0
 			}
 		}
-		war_with_target_on_remove = yes
+		modifier = {
+			political_power_factor = -0.05
+		}
 		days_remove = 60
-		cost = 50
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-			modifier = {
-				OR = {
-					GER = { has_completed_focus = GER_danzig_or_war }
-					JAP = { has_completed_focus = JAP_intervene_in_china }
-				}
-				factor = 10
-			}
-		}
+		days_re_enable = 90
 		remove_effect = {
-			create_wargoal = {
-				type = topple_government
-				target = FROM
-			}
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_small_lobby_effort"
+			USA_congress_small_support = yes
+			USA_scaling_lobbying_effort_cost_effect = yes
 		}
-	}
-	USA_prepare_intervention_in_europe_against_FROM = {
-
-		icon = generic_prepare_civil_war
-
-		available = {
-
-		}
-
-		visible = {
-			not = {
-				has_war_with = FROM
-			}
-			has_completed_focus = USA_focus_on_europe
-		}
-		target_trigger = {
-			FROM = {
-				is_major = yes
-				capital_scope = {
-					is_on_continent = europe
+	} 
+	USA_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = { 
+			custom_trigger_tooltip = {
+				OR = {
+					check_variable = { senators_support < senators_total }
+					check_variable = { representatives_support < representatives_total }
 				}
-				has_added_tension_amount > 10
-				not = { has_government = democratic }
+				tooltip = USA_not_total_support_tt
 			}
-		}
-
-		cost = 75
-		days_remove = 90
-		complete_effect = {
-			add_war_support = 0.05
-			if = {
-				limit = {
-					has_war_support < 0.4
-				}
-				USA_congress_small_opposition = yes
-			}
-			if = {
-				limit = {
-					FROM = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				FROM = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				FROM = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	USA_prepare_intervention_in_asia_against_FROM = {
-
-		icon = generic_prepare_civil_war
-
-		available = {
-
-		}
-
-		visible = {
-			not = {
-				has_war_with = FROM
-			}
-			has_completed_focus = USA_focus_on_asia
-		}
-
-		target_trigger = {
-			FROM = {
-				is_major = yes
-				capital_scope = {
-					is_on_continent = asia
-				}
-				has_added_tension_amount > 10
-				not = { has_government = democratic }
-			}
-		}
-		cost = 75
-		days_remove = 90
-		complete_effect = {
-			add_war_support = 0.05
-			if = {
-				limit = {
-					has_war_support < 0.4
-				}
-				USA_congress_small_opposition = yes
-			}
-			if = {
-				limit = {
-					FROM = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				FROM = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				FROM = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	USA_protest_anschluss = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_anschluss_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = GER
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			GER = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					GER = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				GER = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				GER = { 
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_munich = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_munich_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = GER
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			GER = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					GER = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				GER = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				GER = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_molotov_ribbentrop = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_MR_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = GER
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			GER = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					GER = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				GER = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				GER = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			if = {
-				limit = {
-					SOV = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				SOV = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				SOV = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_baltic_annexation = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_baltic_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = SOV
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-			modifier = {
-				GER = {
-					has_country_flag = USA_intervention_strikes
-				}
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			SOV = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					SOV = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				SOV = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				SOV = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_army_of_aggression = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_army_of_aggression_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = FRA
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-			modifier = {
-				GER = {
-					has_country_flag = USA_intervention_strikes
-				}
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			FRA = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					FRA = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				FRA = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				FRA = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_albania = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_albania_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = ITA
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-			modifier = {
-				GER = {
-					has_country_flag = USA_intervention_strikes
-				}
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			ITA = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					ITA = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				ITA = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				ITA = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_yugoslavia = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_yugoslavia_window
-			has_completed_focus = USA_focus_on_europe
-			not = {
-				has_war_with = ITA
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-			modifier = {
-				GER = {
-					has_country_flag = USA_intervention_strikes
-				}
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			ITA = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					ITA = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				ITA = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				ITA = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_china = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
+			NOT = { has_decision = USA_small_lobby_effort }
 			OR = {
-				has_country_flag = USA_china_window
-				613 = {
-					CONTROLLER = {
-						OR = {
-							original_tag = JAP
-							is_subject_of = JAP
-						}
-					}
-				}
+				political_power_daily > 3.0
+				has_political_power > 100
 			}
-			has_completed_focus = USA_focus_on_asia
-			not = {
-				has_war_with = JAP
-			}
+		}	
+		custom_cost_trigger = {
+			always = yes
 		}
-		fire_only_once = yes
-		cost = 25
+		custom_cost_text = [USA_lobbying_cost]
+		cost = 0
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			JAP = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					JAP = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				JAP = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				JAP = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_indochina = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_indochina_window
-			has_completed_focus = USA_focus_on_asia
-			not = {
-				has_war_with = JAP
-			}
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			JAP = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					JAP = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				JAP = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				JAP = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_protest_panay = {
-		icon = eng_propaganda_campaigns
-		available = {
-			
-		}
-		visible = {
-			has_country_flag = USA_panay_window
-			has_completed_focus = USA_focus_on_asia
-			not = {
-				has_war_with = JAP
-			}
-			not = { has_wargoal_against = JAP }
-		}
-		fire_only_once = yes
-		cost = 25
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			add_war_support = 0.05
-			JAP = { country_event = mtg_usa_diplomatic_protest.1 } 
-			if = {
-				limit = {
-					JAP = {
-						not = { has_country_flag = USA_intervention_strikes }
-					}
-				}
-				JAP = {
-					set_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-			else = {
-				JAP = {
-					modify_country_flag = {
-						flag = USA_intervention_strikes
-						value = 1
-					}
-				}
-			}
-		}
-	}
-	USA_request_monroe_mandate_against_FROM = {
-		available = {
-			has_war_support > 0.25
-			if = {
-				limit = {
-					has_war_support > 0.6
-				}
-				congress_low_support_trigger = yes
-			}
-			else_if = {
-				limit = {
-					has_war_support > 0.4
-				}
 				congress_medium_support_trigger = yes
+				factor = 0.5
 			}
-			else = {
-				congress_high_support_trigger = yes
-			}
-		}
-		visible = {
-			has_completed_focus = USA_reinforce_monroe_doctrine
-			not = { has_wargoal_against = FROM }
-			not = { has_war_with = FROM }
-			FROM = {
-				exists = yes
-				not = { is_subject_of = ROOT }
-			}
-		}
-		target_trigger = {
-			FROM = {
-				exists = yes
-				not = { has_war_with = ROOT }
-				NOT = { 
-					has_government = ROOT
-					is_subject_of = ROOT
-				}
-				capital_scope = {
-					OR = {
-						is_on_continent = north_america
-						is_on_continent = south_america
-					}
-				}
-				OR = {
-					has_civil_war = yes
-					AND = {
-						is_subject = yes
-						NOT = { tag = CAN }
-						OVERLORD = {
-							NOT = { 
-								capital_scope = {
-									OR = {
-										is_on_continent = north_america
-										is_on_continent = south_america
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		cost = 50
-		days_remove = 35
-		war_with_target_on_remove = yes
-		ai_will_do = {
-			factor = 1
 			modifier = {
-				has_war = yes
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
 				factor = 0
 			}
+		}
+		days_remove = 90
+		days_re_enable = 90
+		modifier = {
+			political_power_factor = -0.15
 		}
 		remove_effect = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = FROM
-			}
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_medium_lobby_effort"
+			USA_congress_medium_support = yes
+			USA_scaling_lobbying_effort_cost_effect = yes
 		}
 	}
-	USA_demand_liberation = {
+	USA_special_measures = {
+		icon = ger_mefo_bills
 		available = {
-			has_war_support > 0.2
-			if = {
-				limit = {
-					has_war_support > 0.6
+			custom_trigger_tooltip = {
+				OR = {
+					check_variable = { senators_support < senators_total }
+					check_variable = { representatives_support < representatives_total }
 				}
-				congress_low_support_trigger = yes
-			}
-			else_if = {
-				limit = {
-					has_war_support > 0.4
-				}
-				congress_medium_support_trigger = yes
-			}
-			else = {
-				congress_high_support_trigger = yes
+				tooltip = USA_not_total_support_tt
 			}
 		}
-		visible = {
-			has_completed_focus = USA_reinforce_monroe_doctrine
-			NOT = { has_wargoal_against = FROM }
-			FROM = {
-				NOT = { has_country_flag = USA_monroe_backed_down } #set when US player backs down in reply event
-				any_owned_state = {
-					is_controlled_by = PREV
-					OR = {
-						is_on_continent = north_america
-						is_on_continent = south_america
-					}
-				}
-			} 
-		}
-		target_trigger = {
-			FROM = {
-				NOT = { 
-					OR = {
-						has_government = ROOT
-						has_government = neutrality
-					}
-				}
-				NOT = { 
-					capital_scope = {
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
-						}
-					}
-				}
-				any_owned_state = {
-					is_controlled_by = PREV
-					OR = {
-						is_on_continent = north_america
-						is_on_continent = south_america
-					}
-				}
-			}
-		}
-		cost = 50
+		cost = 150
 		ai_will_do = {
-			factor = 1
+			factor = 0
+		}
+		days_remove = 60
+		days_re_enable = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_special_measures"
+			USA_congress_small_support = yes
+			USA_scaling_lobbying_effort_cost_effect = yes
+		}
+	}
+	USA_use_huac = {
+		icon = oppression
+		available = {
+			custom_trigger_tooltip = {
+				OR = {
+					check_variable = { senators_support < senators_total }
+					check_variable = { representatives_support < representatives_total }
+				}
+				tooltip = USA_not_total_support_tt
+			}
+			has_elections = yes
+			has_stability > 0.3 
+		}
+		visible = { 
+			has_elections = yes
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove = 60
+		days_re_enable = 180
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_use_huac"
+			USA_congress_small_support = yes
+			add_stability = -0.03
+		}
+	}
+	USA_beat_up_opposition = {
+		icon = oppression
+		available = {
+			OR = {	
+				has_stability < 0.20
+				has_government = communism 
+				has_government = nationalist
+			}
+		}
+		visible = { has_elections = yes }
+		cost = 100
+		ai_will_do = {
+			factor = 0.25
 			modifier = {
-				has_war = yes
+				congress_low_support_trigger = yes
 				factor = 0
 			}
 		}
+		days_remove = 60
+		days_re_enable = 150
 		complete_effect = {
-			FROM = { 
-				country_event = mtg_usa_diplomatic_protest.2 
+			log = "[GetDateText]: [Root.GetName]: Decision USA_beat_up_opposition"
+			add_stability = -0.05
+			USA_congress_small_support = yes
+			if = {
+				limit = { has_government = nationalist }
+				hidden_effect = {
+					add_popularity = { ideology = nationalist popularity = 0.02 }
+					add_to_variable = { party_pop_array^20 = 0.02 }
+				}
+				custom_effect_tooltip = USA_gain_right_wing_populist_2_TT
+			}
+			if = {
+				limit = { has_government = communism }
+				hidden_effect = {
+					add_popularity = { ideology = communism popularity = 0.02 }
+					add_to_variable = {	 party_pop_array^4 = 0.02 }
+				}
+				custom_effect_tooltip = USA_gain_communists_2_TT
+			}
+		}
+	}
+	USA_pay_farm_subsidies = {
+		icon = ger_mefo_bills
+		available = {
+			custom_trigger_tooltip = {
+				OR = {
+					check_variable = { senators_support < senators_total }
+					check_variable = { representatives_support < representatives_total }
+				}
+				tooltip = USA_not_total_support_tt
+			}
+		}
+		custom_cost_trigger = {
+			always = yes
+		}
+		custom_cost_text = [USA_farm_subsidies_cost]
+		cost = 0
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 90
+		days_re_enable = 365
+		modifier = { consumer_goods_factor = 0.05 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_pay_farm_subsidies"
+			USA_congress_small_support = yes
+			USA_scaling_resource_production_cost_effect = yes
+		}
+	}
+	USA_give_tax_break = {
+		icon = ger_mefo_bills
+		available = {
+			custom_trigger_tooltip = {
+				OR = {
+					check_variable = { senators_support < senators_total }
+					check_variable = { representatives_support < representatives_total }
+				}
+				tooltip = USA_not_total_support_tt
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 365
+		modifier = { consumer_goods_factor = 0.05 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_give_tax_break"
+			hidden_effect = {
+				remove_tax_cost = yes
+				subtract_from_variable = { tax_rate = 3 }
+				set_tax_cost = yes
+				calculate_tax_gain = yes
+				update_military_rate = yes
+				ingame_calculate_size_modifier = yes
+				calculate_resource_sale_rate = yes
+			}
+			custom_effect_tooltip = reduce_tax_rate_3_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_give_tax_break"
+			USA_congress_small_support = yes
+			hidden_effect = {
+				remove_tax_cost = yes
+				add_to_variable = { tax_rate = 3 }
+				set_tax_cost = yes
+				calculate_tax_gain = yes
+				update_military_rate = yes
+				ingame_calculate_size_modifier = yes
+				calculate_resource_sale_rate = yes
+			}
+			custom_effect_tooltip = add_tax_rate_3_tt
+		}
+	}
+	USA_amend_the_budget = {
+		icon = ger_mefo_bills
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		visible = { has_government = democratic }
+		cost = 25
+		days_remove = 90
+		days_re_enable = 275
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = { consumer_goods_factor = -0.05 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_amend_the_budget"
+			USA_congress_medium_opposition = yes
+		}
+	}
+	USA_research_grants = {
+		icon = decision_generic_research
+		available = { congress_medium_support_trigger = yes }
+		visible = { has_government = democratic }
+		cost = 100
+		days_remove = 90
+		days_re_enable = 275
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = { research_speed_factor = 0.10 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_research_grants"
+			USA_congress_medium_opposition = yes
+		}
+	}
+	USA_statehood_for_puerto_rico = {
+		icon = infiltrate_state
+		available = {
+			815 = { NOT = { is_core_of = USA } }
+			political_power_daily > 2.50
+			congress_high_support_trigger = yes 
+		}
+		visible = {
+			815 = { #Puerto Rico
+				is_fully_controlled_by = USA
+			}
+		}
+		highlight_states = {
+			state = 815
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		days_remove = 240
+		cost = 150
+		modifier = {
+			political_power_factor = -0.10
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_statehood_for_puerto_rico"
+			USA_congress_add_state = yes
+			815 = { add_core_of = USA }
+			USA_congress_medium_opposition = yes
+		}
+	}
+	USA_statehood_for_guam = {
+		icon = infiltrate_state
+		available = {
+			818 = { NOT = { is_core_of = USA } }
+			political_power_daily > 2.50
+			congress_high_support_trigger = yes 
+		}
+		visible = {
+			818 = { #Puerto Rico
+				is_fully_controlled_by = USA
+			}
+		}
+		highlight_states = {
+			state = 818
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		days_remove = 240
+		cost = 150
+		modifier = {
+			political_power_factor = -0.10
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_statehood_for_puerto_rico"
+			818 = { add_core_of = USA }
+			USA_congress_add_state = yes
+			USA_congress_medium_opposition = yes
+		}
+	}
+	USA_invest_in_state_factory = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_congress_invest_in_state_factory_tt
+				any_owned_state = {
+					has_state_flag = USA_congress_build_factory
+					check_variable = { factory_goal = industrial_complex_level }
+				}
+			}
+		}
+		highlight_states = {
+			has_state_flag = USA_congress_build_factory
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = USA_congress_build_factory
+			}
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout USA_invest_in_state_factory"
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_factory
+				}
+				clr_state_flag = USA_congress_build_factory
+				clear_variable = factory_goal
+			}
+			
+			USA_congress_small_opposition = yes 
+			clr_country_flag = USA_congress_investment
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_invest_in_state_factory"
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_factory
+				}
+				clr_state_flag = USA_congress_build_factory
+				clear_variable = factory_goal
+			}
+			ROOT = {
+				USA_congress_medium_support = yes 
+				clr_country_flag = USA_congress_investment
+			}
+			
+		}
+	}
+	USA_invest_in_state_arms_factory = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_congress_invest_in_state_arms_factory_tt
+				any_owned_state = {
+					has_state_flag = USA_congress_build_arms_factory
+					check_variable = { arms_factory_goal = arms_factory_level }
+				}
+			}
+		}
+		highlight_states = {
+			has_state_flag = USA_congress_build_arms_factory
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = USA_congress_build_arms_factory
+			}
+		}
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_arms_factory
+				}
+				clr_state_flag = USA_congress_build_arms_factory
+				clear_variable = arms_factory_goal
+			}
+			USA_congress_small_opposition = yes 
+			clr_country_flag = USA_congress_investment
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_arms_factory
+				}
+				clr_state_flag = USA_congress_build_arms_factory
+				clear_variable = arms_factory_goal
+			}
+			ROOT = {
+				USA_congress_medium_support = yes 
+				clr_country_flag = USA_congress_investment
+			}
+		}
+	}
+	USA_invest_in_state_dockyard = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_congress_invest_in_dockyard_tooltip
+				any_owned_state = {
+					has_state_flag = USA_congress_build_dockyard
+					check_variable = { dockyard_goal = building_level@dockyard }
+				}
+			}
+		}
+		highlight_states = {
+			has_state_flag = USA_congress_build_dockyard
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = USA_congress_build_dockyard
+			}
+		}
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_dockyard
+				}
+				clr_state_flag = USA_congress_build_dockyard
+				clear_variable = dockyard_goal
+			}
+			USA_congress_small_opposition = yes 
+			clr_country_flag = USA_congress_investment
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_dockyard
+				}
+				clr_state_flag = USA_congress_build_dockyard
+				clear_variable = dockyard_goal
+			}
+			ROOT = {
+				USA_congress_medium_support = yes 
+				clr_country_flag = USA_congress_investment
+			}
+		}
+	}
+	USA_invest_in_state_infrastructure = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_congress_invest_in_state_infrastructure_tt
+				any_owned_state = {
+					has_state_flag = USA_congress_build_infrastructure
+					check_variable = { infrastructure_goal = infrastructure_level }
+				}
+			}
+		}
+		highlight_states = {
+			has_state_flag = USA_congress_build_infrastructure
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = USA_congress_build_infrastructure
+			}
+		}
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_infrastructure
+				}
+				clr_state_flag = USA_congress_build_infrastructure
+				clear_variable = infrastructure_goal
+			}
+			
+			USA_congress_small_opposition = yes 
+			clr_country_flag = USA_congress_investment
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = USA_congress_build_infrastructure
+				}
+				clr_state_flag = USA_congress_build_infrastructure
+				clear_variable = infrastructure_goal
+			}
+			ROOT = {
+				USA_congress_medium_support = yes 
+				clr_country_flag = USA_congress_investment
+			}
+			
+		}
+	}
+	USA_communist_state_renaming = {
+		icon = decision 
+		available = {
+			custom_trigger_tooltip = {
+				is_in_array = { ruling_party = 4 } 
+				tooltip = has_communist_state_government_TT
+			}
+		}
+		visible = {
+			has_government = communism 
+		}
+		complete_effect = {
+			log = "[GetDateText]: [This.GetName]: Decision USA_communist_state_renaming"
+			country_event = { id = usa.63 days = 1 }
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = communism 
+				add = 1
 			}
 		}
 	}
 }
-USA_decolonisation = {
-	USA_freedom_for_Papua = {
+
+USA_asteroid_mining_decision = {
+	USA_asteroid_mining_mission = {
+		icon = GFX_decision_asteroid_mining
 		available = {
-			PNG = {
-				exists = no
-			}
-			controls_state = 523
-			controls_state = 737
+			always = no
 		}
-		cost = 25
+		activation = {
+			has_country_flag = asteroid_mining
+		}
+		is_good = yes
+		days_mission_timeout = 365
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout USA_asteroid_mining_mission"
+			country_event = donald_trump.12
+		}
+		fire_only_once = no
+		days_remove = 0
+	}
+	USA_pull_small_asteroid_into_orbit = {
+		icon = GFX_decision_asteroid_mining
+		visible = {
+			has_country_flag = asteroid_mining
+		}
+		days_re_enable = 30
+		cost = 50
+		fixed_random_seed = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_pull_small_asteroid_into_orbit"
+			subtract_from_variable = { treasury = 2 }
+			custom_effect_tooltip = 2_billion_expense_tt
+		}
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_pull_small_asteroid_into_orbit"
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 4 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 6 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 8 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 10 }
+					}
+				}
+			}
+			custom_effect_tooltip = asteroid_mining_small_asteroid_tt
+		}
 		ai_will_do = {
 			factor = 1
 		}
-		fire_only_once = yes
-		days_remove = 180
+	}
+	USA_pull_moderate_asteroid_into_orbit = {
+		icon = GFX_decision_asteroid_mining
+		visible = {
+			has_country_flag = asteroid_mining
+		}
+		days_re_enable = 30
+		cost = 100
+		fixed_random_seed = no
+		days_remove = 210
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_pull_moderate_asteroid_into_orbit"
+			subtract_from_variable = { treasury = 5 }
+			custom_effect_tooltip = 5_billion_expense_tt
+		}
 		remove_effect = {
-			PNG = {
-				transfer_state = 523
-				transfer_state = 737 
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_pull_moderate_asteroid_into_orbit"
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 10 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 13 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 16 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 20 }
+					}
+				}
+			}
+			custom_effect_tooltip = asteroid_mining_moderate_asteroid_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_pull_large_asteroid_into_orbit = {
+		icon = GFX_decision_asteroid_mining
+		visible = {
+			has_country_flag = asteroid_mining
+		}
+		days_re_enable = 365
+		cost = 150
+		fixed_random_seed = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_pull_large_asteroid_into_orbit"
+			subtract_from_variable = { treasury = 10 }
+			custom_effect_tooltip = 10_billion_expense_tt
+		}
+		days_remove = 360
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_pull_large_asteroid_into_orbit"
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 20 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 30 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 40 }
+					}
+					25 = {
+						add_to_variable = { global.asteroid_mineral_count = 50 }
+					}
+				}
+			}
+			custom_effect_tooltip = asteroid_mining_large_asteroid_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_expand_our_operations = {
+		icon = GFX_decision_asteroid_mining
+		visible = {
+			has_country_flag = asteroid_mining
+		}
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_expand_our_operations"
+			subtract_from_variable = { treasury = 3 }
+			custom_effect_tooltip = 3_billion_expense_tt
+		}
+		days_remove = 30
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_expand_our_operations"
+			capital_scope = {
+				random_list = {
+					25 = {
+						add_resource = {
+							type = tungsten
+							amount = 1
+						}
+					}
+					75 = {
+
+					}
+				}
+				random_list = {
+					50 = {
+						add_resource = {
+							type = steel
+							amount = 1
+						}
+					}
+					50 = {
+						
+					}
+				}
+				random_list = {
+					25 = {
+						add_resource = {
+							type = aluminium
+							amount = 1
+						}
+					}
+					75 = {
+						
+					}
+				}
+			}
+			add_to_variable = { asteroid_mining_rate = 1 }
+			add_to_variable = { global.asteroid_mining_rate = 1 }
+			custom_effect_tooltip = asteroid_mining_expand_operations_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_sell_mining_equipment = {
+		icon = GFX_decision_asteroid_mining
+		visible = {
+			has_country_flag = asteroid_mining
+		}
+		available = {
+			check_variable = { asteroid_mining_rate > 0 }
+		}
+		cost = 10
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_sell_mining_equipment"
+			add_to_variable = { treasury = 1 }
+			custom_effect_tooltip = 1_billion_revenue_tt
+		}
+		days_remove = 5
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_sell_mining_equipment"
+			capital_scope = {
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 0
+						}
+					}
+					random_list = {
+						50 = {
+							add_resource = {
+								type = tungsten
+								amount = -1
+							}
+						}
+						50 = {}
+					}
+				}
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = steel
+							amount > 0
+						}
+					}
+					random_list = {
+						75 = {
+							add_resource = {
+								type = steel
+								amount = -1
+							}
+						}
+						25 = {}
+					}
+				}
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = aluminium
+							amount > 0
+						}
+					}
+					random_list = {
+						50 = {
+							add_resource = {
+								type = aluminium
+								amount = -1
+							}
+						}
+						50 = {}
+					}
+				}
+			}
+			subtract_from_variable = { asteroid_mining_rate = 1 }
+			subtract_from_variable = { global.asteroid_mining_rate = 1 }
+			custom_effect_tooltip = asteroid_mining_sell_equipment_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_start_asteroid_mining = {
+		icon = GFX_decision_asteroid_mining
+		visible = {
+			has_global_flag = asteroid_mining
+			NOT = { has_country_flag = asteroid_mining }
+		}
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_start_asteroid_mining"
+			subtract_from_variable = { treasury = 30 }
+			custom_effect_tooltip = 30_billion_expense_tt
+		}
+		days_remove = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_start_asteroid_mining"
+			add_to_variable = { asteroid_mining_rate = 1 }
+			add_to_variable = { global.asteroid_mining_rate = 1 }
+			set_country_flag = asteroid_mining
+			custom_effect_tooltip = asteroid_mining_start_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+USA_the_trump_agenda = {
+	USA_donald_hold_maga_rally = {
+		icon = eng_propaganda_campaigns
+		
+		days_remove = 30
+		days_re_enable = 90
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_donald_hold_maga_rally"
+			add_stability = 0.01
+			add_0_5_Republican_popularity = yes
+			add_0_5_Nat_Populism_popularity = yes
+		}
+		
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				check_variable = { party_pop_array^1 < 0.70 }
+				add = 1 
 			}
 		}
 	}
-	USA_indonesian_liberation = {
-		available = {
-			OR = {
-				controls_state = 669
-				controls_state = 668
-				controls_state = 673
-				controls_state = 334
-				controls_state = 672
-				controls_state = 335
-				controls_state = 667
-				controls_state = 738
-			}
+	USA_donald_travel_ban = {
+		icon = border_war
+		
+		cost = 75
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_donald_travel_ban"
+			add_stability = -0.01
+			add_0_5_Republican_popularity = yes
+			add_1_Nat_Populism_popularity = yes
+			country_event = donald_trump.0
 		}
-		cost = 25
+		
 		ai_will_do = {
 			factor = 1
 		}
-		fire_only_once = yes
-		days_remove = 180
+	}
+	USA_donald_supreme_court_justice = {
+		icon = eng_trade_unions_support
+		visible = {
+			has_country_flag = empty_scotus_seat
+		}
+		cost = 25
+		days_remove = 30
+		modifier = {
+			stability_factor = -0.03
+			political_power_cost = 0.5
+		}
 		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_donald_supreme_court_justice"
+			clr_country_flag = empty_scotus_seat
+			set_country_flag = republican_scotus_justice_added
 			if = {
 				limit = {
-					not = { country_exists = INS }
+					has_country_flag = republican_scotus_justice_added
 				}
-				every_state = {
-					limit = {
-						is_core_of = INS
-						is_controlled_by = ROOT
-					}
-					"INS" = {
-						transfer_state = PREV
-					}
-				}
+				set_country_flag = second_republican_scotus_justice_added
 			}
-			else_if = {
+			if = {
 				limit = {
-					has_war_with = INS
+					has_country_flag = second_republican_scotus_justice_added
 				}
-				"INS" = {
-					start_civil_war = {
-						ideology = ROOT
-						size = 1
-					}
-				}
-				random_country = {
-					limit = {
-						original_tag = INS
-						has_government = ROOT
-					}
-					ROOT = {
-						add_to_faction = PREV
-					}
-					every_state = {
-						limit = {
-							OR = {
-								state = 669
-								state = 668
-								state = 673
-								state = 334
-								state = 672
-								state = 335
-								state = 667
-								state = 738
-							}
-							is_controlled_by = ROOT
-						}
-						random_country = {
-							limit = {
-								original_tag = INS
-								has_government = ROOT
-							}
-							transfer_state = PREV
-						}
-					}
-				}
+				set_country_flag = third_republican_scotus_justice_added
 			}
+			add_political_power = 15
+			add_1_Republican_popularity = yes
+			add_1_Nat_Populism_popularity = yes
+			custom_effect_tooltip = add_republican_scotus_justice_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 25
+				has_country_flag = empty_scotus_seat 
+			}
+		}
+	}
+	USA_fire_james_comey = {
+		icon = decision
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_fire_james_comey"
+			add_stability = 0.02
+			add_0_25_Republican_popularity = yes
+			add_0_25_Nat_Populism_popularity = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_pull_out_of_the_paris_climate_accords = {
+		icon = generic_break_treaty	
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_pull_out_of_the_paris_climate_accords"
+			add_stability = -0.02 
+			subtract_0_5_Republican_popularity = yes
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.02
+		}
+		days_remove = 365
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_finish_keystone_and_dakota_pipelines = {
+		icon = oil
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_finish_keystone_and_dakota_pipelines"
+			add_stability = -0.02
+			add_0_25_Republican_popularity = yes
+			set_country_flag = Keystone_Pipeline_Finished
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.03
+		}
+		days_remove = 365
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_america_first_energy_plan = {
+		icon = generic_civil_support
+		visible = {
+			has_completed_focus = USA_the_american_economy
+		}
+		
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_america_first_energy_plan"
+			add_0_25_Nat_Populism_popularity = yes
+			787 = {
+				add_resource = { type = oil amount = 2 }
+			}
+			800 = {
+				add_resource = { type = oil amount = 2 }
+			}
+			771 = {
+				add_resource = { type = oil amount = 1 }
+			}
+			set_country_flag = afep
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_open_public_lands_to_fracking = {
+		icon = decision
+		visible = {
+			has_country_flag = afep
+		}
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { USA_economic_regulation_var < 50 }
+				tooltip = USA_less_than_50_regulation_tt
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30 
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_open_public_lands_to_fracking"
+			add_0_25_Nat_Populism_popularity = yes
+			787 = {
+				add_resource = { type = oil amount = 2 }
+			}
+			800 = {
+				add_resource = { type = oil amount = 4 }
+			}
+			788 = {
+				add_resource = { type = oil amount = 1 }
+			}
+			subtract_from_variable = { treasury = 10 }
+			custom_effect_tooltip = 10_billion_expense_tt
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Deal with Immigration
+	USA_end_catch_and_release_policy = {
+		icon = decision
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			has_country_flag = increased_border_security
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_end_catch_and_release_policy"
+			add_stability = -0.02
+			add_0_5_Nat_Populism_popularity = yes
+			clr_country_flag = increased_border_security
+			set_country_flag = end_catch_and_release
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_increase_border_security = {
+		icon = border_war
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_increase_border_security"
+			add_stability = 0.02
+			add_0_25_Nat_Populism_popularity = yes
+			subtract_from_variable = { treasury = 0.5 }
+			custom_effect_tooltip = 0_5_billion_expense_tt
+			MEX = { add_opinion_modifier = { target = USA modifier = recent_actions_negative } }
+			set_country_flag = increased_border_security
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_stop_the_caravans = {
+		icon = decision
+		visible = {
+			has_country_flag = end_catch_and_release
+		}
+		
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_stop_the_caravans"
+			add_stability = 0.03
+			add_0_25_Nat_Populism_popularity = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_repeal_obamacare = {
+		icon = generic_break_treaty 		
+		fire_only_once = yes 
+		cost = 50
+		days_remove = 7
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_stop_the_caravans"
+			country_event = { id = USA_Repeal_Obama_Care.0 days = 1 }
+			subtract_2_5_Republican_popularity = yes
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	USA_pick_donald_trump_cabinet = {
+		icon = decision 
+		available = {
+			date > 2017.01.20
+		}
+		fire_only_once = no 
+		cost = 0
+		
+		days_remove = 7
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove USA_pick_donald_trump_cabinet"
+			country_event = { id = USA_Cabinet_picks.0 days = 1 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				date > 2017.01.20 
+				add = 50
+			}
+		}
+	}
+}
+
+USA_america_first = {
+	USA_finish_off_ISIS = {
+		icon = decision
+		
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision USA_finish_off_ISIS"
+			country_event = donald_trump.500
+		}
+		
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

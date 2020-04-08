@@ -1,0 +1,773 @@
+﻿2000.1.1 = {
+	add_ideas = {
+		#pop_050
+		medium_corruption
+		pluralist
+		legacy_of_1949
+		rival_government
+		gdp_7
+		stable_growth
+		defence_03
+		edu_04
+		health_04
+		social_03
+		bureau_03
+		police_02
+		draft_army
+		volunteer_women
+		small_medium_business_owners
+		industrial_conglomerates
+		landowners
+		#hybrid
+		#tax_cost_16
+	}
+
+	capital = 598
+	oob = "TAI_2000"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "TAI_2000_naval_mtg"
+		else = {
+			set_naval_oob = "TAI_2000_naval_legacy"
+		}
+	}
+
+	set_convoys = 40
+
+	set_technology = {
+		legacy_doctrines = 1
+		modern_blitzkrieg = 1
+		forward_defense = 1
+		encourage_nco_iniative = 1
+		air_land_battle = 1
+
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
+
+		command_control_equipment = 1
+
+		land_Drone_equipment = 1
+
+		Anti_tank_0 = 1
+
+		Heavy_Anti_tank_0 = 1
+
+		Anti_Air_0 = 1
+
+		combat_eng_equipment = 1
+
+		Early_APC = 1
+		MBT_1 = 1
+		ENGI_MBT_1 = 1
+
+		IFV_1 = 1
+		IFV_2 = 1
+
+		APC_1 = 1
+		APC_2 = 1
+		APC_3 = 1
+
+		Air_APC_1 = 1
+
+		Rec_tank_0 = 1
+
+		util_vehicle_0 = 1
+
+		SP_arty_0 = 1
+
+		artillery_0 = 1
+		artillery_1 = 1
+
+		Arty_upgrade_1 = 1
+
+		SP_R_arty_0 = 1
+		SP_R_arty_1 = 1
+
+		early_helicopter = 1
+		transport_helicopter1 = 1
+
+		SP_Anti_Air_0 = 1
+		SP_Anti_Air_1 = 1
+
+		ENGI_MBT_1 = 1
+
+		early_fighter = 1
+
+		MR_Fighter1 = 1
+		MR_Fighter2 = 1
+
+		early_bomber = 1
+
+		L_Strike_fighter1 = 1
+		L_Strike_fighter2 = 1
+
+		transport_plane1 = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+
+		landing_craft = 1
+
+		frigate_1 = 1
+		diesel_attack_submarine_1 = 1
+
+		body_armor_1980 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+
+		radar = 1 
+		internet1 = 1 
+		internet2 = 1 
+		gprs = 1
+
+	}
+
+	add_ideas = {
+		#pop_050
+		medium_corruption
+		pluralist
+		gdp_7
+		stable_growth
+		defence_03
+		edu_04
+		health_04
+		social_03
+		bureau_03
+		police_02
+		draft_army
+		volunteer_women
+		Major_Non_NATO_Ally
+		small_medium_business_owners
+		industrial_conglomerates
+		landowners
+		#hybrid
+		#tax_cost_12
+	}
+	
+	#Cyber
+	add_to_array = { cyber_targets = CHI }
+	add_to_array = { cyber_targets = JAP }
+	add_to_array = { cyber_targets = NKO }
+	
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 200 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 12 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 57 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 28 }
+	add_to_array = { influence_array = SIN.id }
+	add_to_array = { influence_array_val = 29 }
+	add_to_array = { influence_array = KOR.id }
+	add_to_array = { influence_array_val = 17 }
+	add_to_array = { influence_array = PHI.id }
+	add_to_array = { influence_array_val = 3 }
+	startup_influence = yes
+
+
+	set_country_flag = Major_Non_NATO_Ally
+	set_country_flag = Major_Importer_US_Arms #Trends-in-international-arms-transfers-2016.pdf
+	set_country_flag = positive_small_medium_business_owners
+	set_country_flag = enthusiastic_industrial_conglomerates
+
+	set_variable = { var = debt value = 127 }
+	set_variable = { var = treasury value = 243 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 12 }
+	#initial_money_setup = yes
+
+	#Chinese diaspora trading network
+	add_opinion_modifier = { target = SIN modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIN modifier = bamboo_network  }
+	add_opinion_modifier = { target = SIA modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIA modifier = bamboo_network  }
+	add_opinion_modifier = { target = MAY modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = MAY modifier = bamboo_network  }
+	add_opinion_modifier = { target = CHI modifier = bamboo_network }
+
+	add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	add_opinion_modifier = { target = KOR modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = KOR modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SIN modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = SIN modifier = large_commercial_relations }
+	add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	add_opinion_modifier = { target = VIE modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = VIE modifier = large_commercial_relations }
+	add_opinion_modifier = { target = MAY modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = MAY modifier = large_commercial_relations }
+	add_opinion_modifier = { target = PHI modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = PHI modifier = large_commercial_relations }
+	add_opinion_modifier = { target = USA modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = USA modifier = large_commercial_relations }
+
+	add_opinion_modifier = { target = JAP modifier = maritime_border_dispute }
+	reverse_add_opinion_modifier = { target = JAP modifier = maritime_border_dispute }
+
+	#Recognition
+	add_to_array = { global.rival_governments = THIS }
+	set_country_flag = rival_government_CHI
+	
+	SAO = { set_country_flag = Recognised_@FROM }
+	MLW = { set_country_flag = Recognised_@FROM }
+	COS = { set_country_flag = Recognised_@FROM }
+	DMI = { set_country_flag = Recognised_@FROM }
+	PAN = { set_country_flag = Recognised_@FROM }
+	ELS = { set_country_flag = Recognised_@FROM }
+	DOM = { set_country_flag = Recognised_@FROM }
+	BFA = { set_country_flag = Recognised_@FROM }
+	CHA = { set_country_flag = Recognised_@FROM }
+	GRA = { set_country_flag = Recognised_@FROM }
+	FYR = { set_country_flag = Recognised_@FROM }
+	BLZ = { set_country_flag = Recognised_@FROM }
+	GUA = { set_country_flag = Recognised_@FROM }
+	HON = { set_country_flag = Recognised_@FROM }
+	NIC = { set_country_flag = Recognised_@FROM }
+	PAR = { set_country_flag = Recognised_@FROM }
+	MIC = { set_country_flag = Recognised_@FROM }
+	SOL = { set_country_flag = Recognised_@FROM }
+	SWA = { set_country_flag = Recognised_@FROM }
+	HAI = { set_country_flag = Recognised_@FROM }
+	STV = { set_country_flag = Recognised_@FROM }
+	STK = { set_country_flag = Recognised_@FROM }
+	STL = { set_country_flag = Recognised_@FROM }
+	
+	add_to_variable = {
+		var = TAI.Granted_Recognition
+		value = 23
+	}
+	add_opinion_modifier = { target = SAO modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = SAO modifier = recognize_taiwan }
+	add_opinion_modifier = { target = MLW modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = MLW modifier = recognize_taiwan }
+	add_opinion_modifier = { target = COS modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = COS modifier = recognize_taiwan }
+	add_opinion_modifier = { target = DMI modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = DMI modifier = recognize_taiwan }
+	add_opinion_modifier = { target = PAN modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = PAN modifier = recognize_taiwan }
+	add_opinion_modifier = { target = ELS modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = ELS modifier = recognize_taiwan }
+	add_opinion_modifier = { target = DOM modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = DOM modifier = recognize_taiwan }
+	add_opinion_modifier = { target = BFA modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = BFA modifier = recognize_taiwan }
+	add_opinion_modifier = { target = CHA modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = CHA modifier = recognize_taiwan }
+	add_opinion_modifier = { target = GRA modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = GRA modifier = recognize_taiwan }
+	add_opinion_modifier = { target = FYR modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = FYR modifier = recognize_taiwan }
+	add_opinion_modifier = { target = BLZ modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = BLZ modifier = recognize_taiwan }
+	add_opinion_modifier = { target = GUA modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = GUA modifier = recognize_taiwan }
+	add_opinion_modifier = { target = HON modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = HON modifier = recognize_taiwan }
+	add_opinion_modifier = { target = NIC modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = NIC modifier = recognize_taiwan }
+	add_opinion_modifier = { target = PAR modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = PAR modifier = recognize_taiwan }
+	add_opinion_modifier = { target = MIC modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = MIC modifier = recognize_taiwan }
+	add_opinion_modifier = { target = SOL modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = SOL modifier = recognize_taiwan }
+	add_opinion_modifier = { target = SWA modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = SWA modifier = recognize_taiwan }
+	add_opinion_modifier = { target = HAI modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = HAI modifier = recognize_taiwan }
+	add_opinion_modifier = { target = STV modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = STV modifier = recognize_taiwan }
+	add_opinion_modifier = { target = STK modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = STK modifier = recognize_taiwan }
+	add_opinion_modifier = { target = STL modifier = recognize_taiwan }
+	reverse_add_opinion_modifier = { target = STL modifier = recognize_taiwan }
+
+	set_popularities = {
+		democratic = 62.9
+		communism = 0.1
+		fascism = 0.0
+		neutrality = 37.0
+		nationalist = 0.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1998.12.5"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.230 } #conservatism
+	set_variable = { party_pop_array^2 = 0.399 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.001 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.368 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.002 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 2 }
+	
+	#Pan-Green/Blue Coalition Stuff
+	set_variable = {
+		var = pan_green_coalition_support
+		value = party_pop_array^2
+	}
+	add_to_variable = {
+		var = pan_green_coalition_support
+		value = party_pop_array^18		
+	}
+	
+	set_variable = {
+		var = pan_blue_coalition_support
+		value = party_pop_array^1
+	}
+	add_to_variable = {
+		var = pan_blue_coalition_support
+		value = party_pop_array^6
+	}
+	add_to_variable = {
+		var = pan_blue_coalition_support
+		value = party_pop_array^14
+	}
+	
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Chen Shui-Bian"
+		picture = "Chen_Shui-bian.dds"
+		ideology = liberalism
+		traits = {
+			western_liberalism
+		}
+	}
+
+	### Field Marshals
+
+	create_field_marshal = {
+		name = "Tang Yao-ming"
+		picture = "generals/Portrait_Tang_Yao_ming.dds"
+		traits = { skilled_staffer }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	create_field_marshal = {
+		name = "Lee Tien-yu"
+		picture = "generals/Portrait_Lee_Tien_yu.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	create_field_marshal = {
+		name = "Yen Ming"
+		picture = "generals/Portrait_Yen_Ming.dds"
+		traits = { career_officer }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	create_field_marshal = {
+		name = "Yen Teh-fa"
+		picture = "generals/Portrait_Yen_Teh_fa.dds"
+		traits = { logistics_wizard }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 2
+	}
+	create_field_marshal = {
+		name = "Chiu Kuo-cheng"
+		picture = "generals/Portrait_Chiu_Kuo_cheng.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 2
+	}
+	create_field_marshal = {
+		name = "Huo Shou-yeh"
+		picture = "generals/Portrait_Huo_Shou_yeh.dds"
+		traits = { panzer_leader }
+		skill = 2
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	### Generals
+
+	create_corps_commander = {
+		name = "Chang Chieh"
+		picture = "generals/Portrait_Chang_Chieh.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 2
+	}
+	create_corps_commander = {
+		name = "Hsu Chang"
+		picture = "generals/Portrait_Hsu_Chang.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	create_corps_commander = {
+		name = "Huang Kuo Ming"
+		picture = "generals/Portrait_Huang_Kuo_Ming.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 1
+	}
+	create_corps_commander = {
+		name = "Pan Chia-yu"
+		picture = "generals/Portrait_Pan_Chia_yu.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	create_corps_commander = {
+		name = "Chen Chuan-kuan"
+		picture = "generals/Portrait_Chen_Chuan_kuan.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+
+	### Admirals
+
+	create_navy_leader = {
+		name = "Huang Shu-kuang"
+		picture = "admirals/Portrait_Huang_Shuh_Kuang.dds"
+		traits = {  }
+	}
+	create_navy_leader = {
+		name = "Lee Hsi-ming"
+		picture = "admirals/Portrait_Lee_Hsi_Min.dds"
+		traits = {  }
+	}
+	create_navy_leader = {
+		name = "Chen Yeong-kang"
+		picture = "admirals/Portrait_Chen_Yeong_kang.dds"
+		traits = {  }
+	}
+	create_navy_leader = {
+		name = "Tung Hsiang-lung"
+		picture = "admirals/Portrait_Tung_Hsiang_lung.dds"
+		traits = {  }
+	}
+	create_navy_leader = {
+		name = "Kao Kuang-chi"
+		picture = "admirals/Portrait_Kao_Kuang_chi.dds"
+		traits = {  }
+	}
+	create_navy_leader = {
+		name = "Lee Jye"
+		picture = "admirals/Portrait_Lee_Jye.dds"
+		traits = {  }
+	}
+	create_navy_leader = {
+		name = "Lin Chen-yi"
+		picture = "admirals/Portrait_Lin_Chen_yi.dds"
+		traits = {  }
+	}
+}
+
+2017.1.1 = {
+	capital = 598
+	oob = "TAI_2017"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "TAI_2017_naval_mtg"
+		else = {
+			set_naval_oob = "TAI_2017_naval_legacy"
+		}
+	}
+	set_convoys = 40
+
+	add_ideas = {
+		#pop_050
+		medium_corruption
+		pluralist
+		gdp_7
+		stable_growth
+		defence_03
+		edu_04
+		health_04
+		social_03
+		bureau_03
+		police_02
+		draft_army
+		volunteer_women
+		Major_Non_NATO_Ally
+		small_medium_business_owners
+		industrial_conglomerates
+		landowners
+		#hybrid
+		#tax_cost_16
+	}
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 200 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 62 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 37 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 18 }
+	add_to_array = { influence_array = SIN.id }
+	add_to_array = { influence_array_val = 14 }
+	add_to_array = { influence_array = KOR.id }
+	add_to_array = { influence_array_val = 11 }
+	add_to_array = { influence_array = PHI.id }
+	add_to_array = { influence_array_val = 3 }
+	startup_influence = yes
+
+
+	#set_country_flag = gdp_7
+	set_country_flag = Major_Non_NATO_Ally
+	set_country_flag = Major_Importer_US_Arms #Trends-in-international-arms-transfers-2016.pdf
+	set_country_flag = positive_small_medium_business_owners
+	set_country_flag = enthusiastic_industrial_conglomerates
+
+	set_variable = { var = debt value = 204 }
+	set_variable = { var = treasury value = 439 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 16 }
+
+	#set_variable = { var = size_modifier value = 3.38 } #18 CIC
+	#initial_money_setup = yes
+
+	#Nat focus
+		
+	add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+
+	#recognition of Taiwan
+	SAO = { clr_country_flag = Recognised_@FROM }
+	MLW = { clr_country_flag = Recognised_@FROM }
+	COS = { clr_country_flag = Recognised_@FROM }
+	DMI = { clr_country_flag = Recognised_@FROM }
+	CHA = { clr_country_flag = Recognised_@FROM }
+	GRA = { clr_country_flag = Recognised_@FROM }
+	FYR = { clr_country_flag = Recognised_@FROM }
+	
+	subtract_from_variable = {
+		var = TAI.Granted_Recognition
+		value = 7
+	}
+	
+	add_opinion_modifier = { target = SAO modifier = revoked_recognize_taiwan }
+	reverse_add_opinion_modifier = { target = SAO modifier = revoked_recognize_taiwan }
+	remove_opinion_modifier = { target = SAO modifier = recognize_taiwan }
+	remove_opinion_modifier = { target = MLW modifier = recognize_taiwan }
+	remove_opinion_modifier = { target = COS modifier = recognize_taiwan }
+	remove_opinion_modifier = { target = DMI modifier = recognize_taiwan }
+	remove_opinion_modifier = { target = CHA modifier = recognize_taiwan }
+	remove_opinion_modifier = { target = GRA modifier = recognize_taiwan }
+	remove_opinion_modifier = { target = FYR modifier = recognize_taiwan }
+
+	# Starting tech
+	set_technology = {
+
+		infantry_weapons4 = 1
+		SP_Anti_Air_2 = 1
+		APC_4 = 1
+		IFV_3 = 1
+		IFV_4 = 1
+		SP_R_arty_2 = 1
+
+		corvette_1 = 1
+		missile_corvette_1 = 1
+		missile_corvette_2 = 1
+		missile_corvette_3 = 1
+		missile_corvette_4 = 1
+
+		frigate_1 = 1
+
+		destroyer_1 = 1
+
+		submarine_1 = 1
+
+		body_armor_2000 = 1
+
+		computing3 = 1
+		decryption3 = 1
+		encryption3 = 1
+		computing4 = 1
+		decryption4 = 1
+		encryption4 = 1
+		computing5 = 1
+		decryption5 = 1
+		encryption5 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		machine_learning = 1
+		sociable_machines = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
+		genetically_modified_crops = 1
+		gene_targeting_pesticides = 1
+		human_genome_project = 1
+		crispr = 1
+		cas9_gene_editing = 1
+		wifi = 1
+		internet3 = 1	#3G
+		edge = 1
+		umts = 1
+		hsupa = 1
+		internet4 = 1	#4G
+		lte = 1
+	}
+
+	set_popularities = {
+		democratic = 87.1
+		communism = 0.0
+		fascism = 0.0
+		neutrality = 12.8
+		nationalist = 0.1
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.1.16"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.31 } #conservatism
+	set_variable = { party_pop_array^2 = 0.561 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.128 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.001 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 2 }
+
+	startup_politics = yes
+	
+	#Pan-Green/Blue Coalition Stuff
+	set_variable = {
+		var = pan_green_coalition_support
+		value = party_pop_array^2
+	}
+	add_to_variable = {
+		var = pan_green_coalition_support
+		value = party_pop_array^18		
+	}
+	
+	set_variable = {
+		var = pan_blue_coalition_support
+		value = party_pop_array^1
+	}
+	add_to_variable = {
+		var = pan_blue_coalition_support
+		value = party_pop_array^6
+	}
+	add_to_variable = {
+		var = pan_blue_coalition_support
+		value = party_pop_array^14
+	}
+
+	create_country_leader = {
+		name = "Tsai Ing-wen"
+		picture = "Tsai_Ing-wen.dds"
+		ideology = liberalism
+		traits = {
+			western_liberalism
+		}
+	}
+}

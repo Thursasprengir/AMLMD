@@ -1,9 +1,4 @@
 idea_categories = {
-	# ledger can be define for idea > idea slot > idea category
-	# first one overrides the others
-	# multiple ledgers can be defined, in that case will show on all
-	# possible values : army, air, navy, military (shows on all military ledgers), civilian, all (shows up everywhere), hidden (does not show up)
-	
 	
 	hidden_ideas = {
 		hidden = yes
@@ -13,7 +8,7 @@ idea_categories = {
 		
 		ledger = hidden
 	}
-
+	
 	country = {
 		national_spirit = yes
 		
@@ -23,62 +18,82 @@ idea_categories = {
 		ledger = hidden
 	}
 	
-	government = {
-		slot = mobilization_laws
+	national_status = {
+		slot = gdp_capita
+		slot = economic_cycles
+		slot = corruption
+		slot = internal_factions
+		slot = internal_factions
+		slot = internal_factions
+		removal_cost = -1
+		
+		ledger = civilian
+	}
+	
+	government_budget = {
+		slot = bureaucracy
+		slot = Military_Spending
+		slot = crime_fighting
+		slot = education_budget
+		slot = health_budget
+		slot = social_budget
+		cost = 50
+		removal_cost = 0
+		
+		ledger = civilian
+	}
+	
+	political_reforms = {
 		slot = trade_laws
-		slot = economy
-		slot = political_advisor
-		slot = political_advisor
-		slot = political_advisor
+		slot = Conscription_Law
+		slot = Military_Status_Women
+		slot = Foreign_Intervention_Law
+		slot = Officer_Training_Law
+		
+		cost = 150
+		removal_cost = 0
 		
 		ledger = civilian
-		
-		cost = 150
-		removal_cost = 0
 	}
 	
-	research_production = {
-		slot = tank_manufacturer
-		slot = naval_manufacturer
-		slot = aircraft_manufacturer
-		slot = materiel_manufacturer
-		slot = industrial_concern
-		slot = theorist
-
-		ledger = civilian
+	Deffense_companies = {
+		slot = Infantry_Weapon_Company
+		slot = Vehicle_Company
+		slot = Aircraft_Company
+		slot = Helicopter_Company
+		slot = Ship_Company
+		slot = Submarine_Company
 		
 		cost = 150
 		removal_cost = 0
+		
+		ledger = invalid
 	}
 	
-	military_staff = {
-		slot = army_chief 
-		slot = navy_chief 
-		slot = air_chief
-		slot = high_command
-		slot = high_command
-		slot = high_command
-		
-		ledger = invalid # must be overridden
-		
-		cost = 150
-		removal_cost = 0
-	}
+	#Military_policies = {
+	#	
+	#}
+	
+	
+	#social_reforms = {
+	#	slot = minimum_wage
+	#	slot = max_workhours
+	#	slot = safety_regulations
+	#	slot = unemployment_subsidies
+	#	slot = pensions
+	#	slot = health_care
+	#	
+	#	cost = 150
+	#	removal_cost = 0
+	# }
+	
 }
 
-
 slot_ledgers = {
-	army_chief = army
-	navy_chief = navy
-	air_chief = air
-	
-	tank_manufacturer = army
-	naval_manufacturer = navy
-	aircraft_manufacturer = air
-	
-	theorist = invalid # must be overridden
-	high_command = invalid # must be overridden
-	
-	
-	mobilization_laws = civilian
+	Infantry_Weapon_Company = army
+	Vehicle_Company = army
+	Aircraft_Company = air
+	Helicopter_Company = air
+	Ship_Company = navy
+	Submarine_Company = navy
 }

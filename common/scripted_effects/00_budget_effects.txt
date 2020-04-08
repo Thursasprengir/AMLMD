@@ -1,0 +1,1127 @@
+# Written by HansNery
+
+# Increase Economic Growth
+increase_economic_growth = {
+	if = {
+		limit = { has_idea = depression }
+		swap_ideas = { remove_idea = depression add_idea = recession }
+	}
+	else_if = {
+		limit = { has_idea = recession }
+		swap_ideas = { remove_idea = recession add_idea = stagnation }
+	}
+	else_if = {
+		limit = { has_idea = stagnation }
+		swap_ideas = { remove_idea = stagnation add_idea = stable_growth }
+	}
+	else_if = {
+		limit = { has_idea = stable_growth }
+		swap_ideas = { remove_idea = stable_growth add_idea = fast_growth }
+	}
+	else_if = {
+		limit = { has_idea = fast_growth }
+		swap_ideas = { remove_idea = fast_growth add_idea = economic_boom }
+	}
+	else_if = {
+		limit = { has_idea = economic_boom }
+		add_political_power = 100 #if desired economic level is reached before PP is rewarded instead
+		add_stability = 0.05
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Decrease Economic Growth
+decrease_economic_growth = {
+	if = {
+		limit = { has_idea = economic_boom }
+		swap_ideas = { remove_idea = economic_boom add_idea = fast_growth }
+		else = {
+			if = {
+				limit = { has_idea = fast_growth }
+				swap_ideas = { remove_idea = fast_growth add_idea = stable_growth }
+				else = {
+					if = {
+						limit = { has_idea = stable_growth }
+						swap_ideas = { remove_idea = stable_growth add_idea = stagnation }
+						else = {
+							if = {
+								limit = { has_idea = stagnation }
+								swap_ideas = { remove_idea = stagnation add_idea = recession }
+								else = {
+									if = {
+										limit = { has_idea = recession }
+										swap_ideas = { remove_idea = recession add_idea = depression }
+										else = {
+											if = {
+												limit = { has_idea = depression }
+												add_political_power = -150	#If country has maximum level it loses political power instead.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+slightly_increase_economic_growth = {
+	if = {
+		limit = { 
+			has_idea = depression 
+		}
+		swap_ideas = { 
+			remove_idea = depression 
+			add_idea = recession 
+		}
+		else = {
+			if = {
+				limit = { 
+					has_idea = recession 
+				}
+				swap_ideas = { 
+				remove_idea = recession 
+					add_idea = stagnation 
+				}
+				else = {
+					if = {
+						limit = { 
+							has_idea = stagnation 
+						}
+						swap_ideas = { 
+							remove_idea = stagnation 
+							add_idea = stable_growth 
+						}
+						else = {
+							if = {
+								limit = { 
+									has_idea = stable_growth 
+								}
+								swap_ideas = { 
+									remove_idea = stable_growth 
+									add_idea = fast_growth 
+								}
+								else = {
+									if = {
+										limit = { 
+											has_idea = fast_growth 
+										}
+										swap_ideas = { 
+											remove_idea = fast_growth 
+											add_idea = economic_boom 
+										}
+										else = {
+											if = {
+												limit = { 
+													has_idea = economic_boom 
+												}
+												add_political_power = 150	#If country has maximum level it earns political power instead.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+#Bureau Adjustment - Decrease Bureau Law
+decrease_centralization = {
+	if = {
+		limit = { has_idea = bureau_05 }
+		swap_ideas = { remove_idea = bureau_05 add_idea = bureau_04 }
+	}
+	else_if = {
+		limit = { has_idea = bureau_04 }
+		swap_ideas = { remove_idea = bureau_04 add_idea = bureau_03 }
+	}
+	else_if = {
+		limit = { has_idea = bureau_03 }
+		swap_ideas = { remove_idea = bureau_03 add_idea = bureau_02 }
+	}
+	else_if = {
+		limit = { has_idea = bureau_02 }
+		swap_ideas = { remove_idea = bureau_02 add_idea = bureau_01 }
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+#Increases Bureau Law 
+increase_centralization = {
+	if = {
+		limit = { has_idea = bureau_01 }
+		swap_ideas = { remove_idea = bureau_01 add_idea = bureau_02 }
+	}
+	else_if = {
+		limit = { has_idea = bureau_02 }
+		swap_ideas = { remove_idea = bureau_02 add_idea = bureau_03 }
+	}
+	else_if = {
+		limit = { has_idea = bureau_03 }
+		swap_ideas = { remove_idea = bureau_03 add_idea = bureau_04 }
+	}
+	else_if = {
+		limit = { has_idea = bureau_04 }
+		swap_ideas = { remove_idea = bureau_04 add_idea = bureau_05 }
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Increase Social Spending
+increase_social_spending = {
+	if = {
+		limit = { has_idea = social_01 }
+		swap_ideas = { remove_idea = social_01 add_idea = social_02 }
+		else = {
+			if = {
+				limit = { has_idea = social_02 }
+				swap_ideas = { remove_idea = social_02 add_idea = social_03 }
+				else = {
+					if = {
+						limit = { has_idea = social_03 }
+						swap_ideas = { remove_idea = social_03 add_idea = social_04 }
+						else = {
+							if = {
+								limit = { has_idea = social_04 }
+								swap_ideas = { remove_idea = social_04 add_idea = social_05 }
+								else = {
+									if = {
+										limit = { has_idea = social_05 }
+										swap_ideas = { remove_idea = social_05 add_idea = social_06 }
+										else = {
+											if = {
+												limit = { has_idea = social_06 }
+												add_political_power = 150	#If country has maximum level it earns political power instead.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Decrease Social Spending
+decrease_social_spending = {
+	if = {
+		limit = { has_idea = social_06 }
+		swap_ideas = { remove_idea = social_06 add_idea = social_05 }
+		else = {
+			if = {
+				limit = { has_idea = social_05 }
+				swap_ideas = { remove_idea = social_05 add_idea = social_04 }
+				else = {
+					if = {
+						limit = { has_idea = social_04 }
+						swap_ideas = { remove_idea = social_04 add_idea = social_03 }
+						else = {
+							if = {
+								limit = { has_idea = social_03 }
+								swap_ideas = { remove_idea = social_03 add_idea = social_02 }
+								else = {
+									if = {
+										limit = { has_idea = social_02 }
+										swap_ideas = { remove_idea = social_02 add_idea = social_01 }
+										else = {
+											if = {
+												limit = { has_idea = social_01 }
+												add_political_power = -150	#If country has maximum level it loses political power instead.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Increase Education Budget
+increase_education_budget = {
+	if = {
+		limit = { has_idea = edu_01 }
+		swap_ideas = { remove_idea = edu_01 add_idea = edu_02 }
+		else = {
+			if = {
+				limit = { has_idea = edu_02 }
+				swap_ideas = { remove_idea = edu_02 add_idea = edu_03 }
+				else = {
+					if = {
+						limit = { has_idea = edu_03 }
+						swap_ideas = { remove_idea = edu_03 add_idea = edu_04 }
+						else = {
+							if = {
+								limit = { has_idea = edu_04 }
+								swap_ideas = { remove_idea = edu_04 add_idea = edu_05 }
+								else = {
+									if = {
+										limit = { has_idea = edu_05 }
+										add_political_power = 150	#If country has maximum level it earns political power instead.
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Decrease Education Budget
+decrease_education_budget = {
+	if = {
+		limit = { has_idea = edu_05 }
+		swap_ideas = { remove_idea = edu_05 add_idea = edu_04 }
+		else = {
+			if = {
+				limit = { has_idea = edu_04 }
+				swap_ideas = { remove_idea = edu_04 add_idea = edu_03 }
+				else = {
+					if = {
+						limit = { has_idea = edu_03 }
+						swap_ideas = { remove_idea = edu_03 add_idea = edu_02 }
+						else = {
+							if = {
+								limit = { has_idea = edu_02 }
+								swap_ideas = { remove_idea = edu_02 add_idea = edu_01 }
+								else = {
+									if = {
+										limit = { has_idea = edu_01 }
+										add_political_power = -150	#If country has maximum level it loses political power instead.
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Increase Healthcare Budget
+increase_healthcare_budget = {
+	if = {
+		limit = { has_idea = health_01 }
+		swap_ideas = { remove_idea = health_01 add_idea = health_02 }
+		else = {
+			if = {
+				limit = { has_idea = health_02 }
+				swap_ideas = { remove_idea = health_02 add_idea = health_03 }
+				else = {
+					if = {
+						limit = { has_idea = health_03 }
+						swap_ideas = { remove_idea = health_03 add_idea = health_04 }
+						else = {
+							if = {
+								limit = { has_idea = health_04 }
+								swap_ideas = { remove_idea = health_04 add_idea = health_05 }
+								else = {
+									if = {
+										limit = { has_idea = health_05 }
+										swap_ideas = { remove_idea = health_05 add_idea = health_06 }
+										else = {
+											if = {
+												limit = { has_idea = health_06 }
+												add_political_power = 150	#If country has maximum level it earns political power instead.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Decrease Healthcare Budget
+decrease_healthcare_budget = {
+	if = {
+		limit = { has_idea = health_06 }
+		swap_ideas = { remove_idea = health_06 add_idea = health_05 }
+		else = {
+			if = {
+				limit = { has_idea = health_05 }
+				swap_ideas = { remove_idea = health_05 add_idea = health_04 }
+				else = {
+					if = {
+						limit = { has_idea = health_04 }
+						swap_ideas = { remove_idea = health_04 add_idea = health_03 }
+						else = {
+							if = {
+								limit = { has_idea = health_03 }
+								swap_ideas = { remove_idea = health_03 add_idea = health_02 }
+								else = {
+									if = {
+										limit = { has_idea = health_02 }
+										swap_ideas = { remove_idea = health_02 add_idea = health_01 }
+										else = {
+											if = {
+												limit = { has_idea = health_01 }
+												add_political_power = 150	#If country has maximum level it earns political power instead.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Increase Corruption
+increase_corruption = {
+	if = {
+		limit = { has_idea = negligible_corruption }
+		swap_ideas = { remove_idea = negligible_corruption add_idea = slight_corruption }
+		else = {
+			if = {
+				limit = { has_idea = slight_corruption }
+				swap_ideas = { remove_idea = slight_corruption add_idea = modest_corruption }
+				else = {
+					if = {
+						limit = { has_idea = modest_corruption }
+						swap_ideas = { remove_idea = modest_corruption add_idea = medium_corruption }
+						else = {
+							if = {
+								limit = { has_idea = medium_corruption }
+								swap_ideas = { remove_idea = medium_corruption add_idea = widespread_corruption }
+								else = {
+									if = {
+										limit = { has_idea = widespread_corruption }
+										swap_ideas = { remove_idea = widespread_corruption add_idea = systematic_corruption }
+										else = {
+											if = {
+												limit = { has_idea = systematic_corruption }
+												swap_ideas = { remove_idea = systematic_corruption add_idea = unrestrained_corruption }
+												else = {
+													if = {
+														limit = { has_idea = unrestrained_corruption }
+														swap_ideas = { remove_idea = unrestrained_corruption add_idea = rampant_corruption }
+														else = {
+															if = {
+																limit = { has_idea = rampant_corruption }
+																swap_ideas = { remove_idea = rampant_corruption add_idea = crippling_corruption }
+																else = {
+																	if = {
+																		limit = { has_idea = crippling_corruption }
+																		swap_ideas = { remove_idea = crippling_corruption add_idea = paralyzing_corruption }
+																		else = {
+																			if = {
+																				limit = { has_idea = paralyzing_corruption }
+																				add_political_power = -150
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+decrease_corruption = {
+	if = {
+		limit = { has_idea = paralyzing_corruption }
+		swap_ideas = {
+			remove_idea = paralyzing_corruption 
+			add_idea = crippling_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = crippling_corruption }
+		swap_ideas = {
+			remove_idea = crippling_corruption 
+			add_idea = rampant_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = rampant_corruption }
+		swap_ideas = {
+			remove_idea = rampant_corruption 
+			add_idea = unrestrained_corruption 
+		}
+	}
+	else_if = {
+		limit = { has_idea = unrestrained_corruption }
+		swap_ideas = {
+			remove_idea = unrestrained_corruption 
+			add_idea = systematic_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = systematic_corruption }
+		swap_ideas = {
+			remove_idea = systematic_corruption 
+			add_idea = widespread_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = widespread_corruption }
+		swap_ideas = {
+			remove_idea = widespread_corruption 
+			add_idea = medium_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = medium_corruption }
+		swap_ideas = {
+			remove_idea = medium_corruption 
+			add_idea = modest_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = modest_corruption }
+		swap_ideas = {
+			remove_idea = modest_corruption 
+			add_idea = slight_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = slight_corruption }
+		swap_ideas = {
+			remove_idea = slight_corruption 
+			add_idea = negligible_corruption
+		}
+	}
+	else_if = {
+		limit = { has_idea = negligible_corruption }
+		add_political_power = 150
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Increase Military Spending
+increase_military_spending = {
+	if = {
+		limit = { has_idea = defence_00 }
+		swap_ideas = { remove_idea = defence_00 add_idea = defence_01 }
+		else = {
+			if = {
+				limit = { has_idea = defence_01 }
+				swap_ideas = { remove_idea = defence_01 add_idea = defence_02 }
+				else = {
+					if = {
+						limit = { has_idea = defence_02 }
+						swap_ideas = { remove_idea = defence_02 add_idea = defence_03 }
+						else = {
+							if = {
+								limit = { has_idea = defence_03 }
+								swap_ideas = { remove_idea = defence_03 add_idea = defence_04 }
+								else = {
+									if = {
+										limit = { has_idea = defence_04 }
+										swap_ideas = { remove_idea = defence_04 add_idea = defence_05 }
+										else = {
+											if = {
+												limit = { has_idea = defence_05 }
+												swap_ideas = { remove_idea = defence_05 add_idea = defence_06 }
+												else = {
+													if = {
+														limit = { has_idea = defence_06 }
+														swap_ideas = { remove_idea = defence_06 add_idea = defence_07 }
+														else = {
+															if = {
+																limit = { has_idea = defence_07 }
+																swap_ideas = { remove_idea = defence_07 add_idea = defence_08 }
+																else = {
+																	if = {
+																		limit = { has_idea = defence_08 }
+																		swap_ideas = { remove_idea = defence_08 add_idea = defence_09 }
+																		else = {
+																			if = {
+																				limit = { has_idea = defence_09 }
+																				add_political_power = 150	#If country has maximum level it earns political power instead.
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Decrease Military Spending
+decrease_military_spending = {
+	if = {
+		limit = { has_idea = defence_09 }
+		swap_ideas = { remove_idea = defence_09 add_idea = defence_08 }
+		else = {
+			if = {
+				limit = { has_idea = defence_08 }
+				swap_ideas = { remove_idea = defence_08 add_idea = defence_07 }
+				else = {
+					if = {
+						limit = { has_idea = defence_07 }
+						swap_ideas = { remove_idea = defence_07 add_idea = defence_06 }
+						else = {
+							if = {
+								limit = { has_idea = defence_06 }
+								swap_ideas = { remove_idea = defence_06 add_idea = defence_05 }
+								else = {
+									if = {
+										limit = { has_idea = defence_05 }
+										swap_ideas = { remove_idea = defence_05 add_idea = defence_04 }
+										else = {
+											if = {
+												limit = { has_idea = defence_04 }
+												swap_ideas = { remove_idea = defence_04 add_idea = defence_03 }
+												else = {
+													if = {
+														limit = { has_idea = defence_03 }
+														swap_ideas = { remove_idea = defence_03 add_idea = defence_02 }
+														else = {
+															if = {
+																limit = { has_idea = defence_02 }
+																swap_ideas = { remove_idea = defence_02 add_idea = defence_01 }
+																else = {
+																	if = {
+																		limit = { has_idea = defence_01 }
+																		add_political_power = 150	#If country has maximum level it earns political power instead.
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+decrease_military_spending_2 = {
+	if = {
+		limit = { has_idea = defence_09 }
+		swap_ideas = { remove_idea = defence_09 add_idea = defence_07 }
+		else = {
+			if = {
+				limit = { has_idea = defence_08 }
+				swap_ideas = { remove_idea = defence_08 add_idea = defence_06 }
+				else = {
+					if = {
+						limit = { has_idea = defence_07 }
+						swap_ideas = { remove_idea = defence_07 add_idea = defence_05 }
+						else = {
+							if = {
+								limit = { has_idea = defence_06 }
+								swap_ideas = { remove_idea = defence_06 add_idea = defence_04 }
+								else = {
+									if = {
+										limit = { has_idea = defence_05 }
+										swap_ideas = { remove_idea = defence_05 add_idea = defence_03 }
+										else = {
+											if = {
+												limit = { has_idea = defence_04 }
+												swap_ideas = { remove_idea = defence_04 add_idea = defence_02 }
+												else = {
+													if = {
+														limit = { has_idea = defence_03 }
+														swap_ideas = { remove_idea = defence_03 add_idea = defence_01 }
+														else = {
+															if = {
+																limit = { has_idea = defence_02 }
+																swap_ideas = { remove_idea = defence_02 add_idea = defence_01 }
+																add_political_power = 75	#If country has maximum level it earns political power instead.
+																else = {
+																	if = {
+																		limit = { has_idea = defence_01 }
+																		add_political_power = 150	#If country has maximum level it earns political power instead.
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+#Increase Policing 
+increase_policing_budget = {
+	if = {
+		limit = { has_idea = police_01 }
+		swap_ideas = { remove_idea = police_01 add_idea = police_02 }
+	}
+	else_if = {
+		limit = { has_idea = police_02 }
+		swap_ideas = { remove_idea = police_02 add_idea = police_03 }
+	}
+	else_if = {
+		limit = { has_idea = police_03 }
+		swap_ideas = { remove_idea = police_03 add_idea = police_04 }
+	}
+	else_if = {
+		limit = { has_idea = police_04 }
+		swap_ideas = { remove_idea = police_04 add_idea = police_05 }
+	} 
+	else_if = {
+		limit = { has_idea = police_05 }
+		add_political_power = 150
+	}
+	#this will increase policing 
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+
+# Set Social Spending to the Maximum
+max_social_spending = {
+	if = {
+		limit = { has_idea = social_01 }
+		swap_ideas = { remove_idea = social_01 add_idea = social_06 }
+	}
+	if = {
+		limit = { has_idea = social_02 }
+		swap_ideas = { remove_idea = social_02 add_idea = social_06 }
+	}
+	if = {
+		limit = { has_idea = social_03 }
+		swap_ideas = { remove_idea = social_03 add_idea = social_06 }
+	}
+	if = {
+		limit = { has_idea = social_04 }
+		swap_ideas = { remove_idea = social_04 add_idea = social_06 }
+	}
+	if = {
+		limit = { has_idea = social_05 }
+		swap_ideas = { remove_idea = social_05 add_idea = social_06 }
+	}
+	if = {
+		limit = { has_idea = social_06 }
+		add_political_power = 150	#If country has maximum level it earns political power instead.
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Education Budget to the Maximum
+max_education_budget = {
+	if = {
+		limit = { has_idea = edu_01 }
+		swap_ideas = { remove_idea = edu_01 add_idea = edu_05 }
+	}
+	if = {
+		limit = { has_idea = edu_02 }
+		swap_ideas = { remove_idea = edu_02 add_idea = edu_05 }
+	}
+	if = {
+		limit = { has_idea = edu_03 }
+		swap_ideas = { remove_idea = edu_03 add_idea = edu_05 }
+	}
+	if = {
+		limit = { has_idea = edu_04 }
+		swap_ideas = { remove_idea = edu_04 add_idea = edu_05 }
+	}
+	if = {
+		limit = { has_idea = edu_05 }
+		add_political_power = 150	#If country has maximum level it earns political power instead.
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Healthcare Budget to the Maximum
+max_healthcare_budget = {
+	if = {
+		limit = { has_idea = health_01 }
+		swap_ideas = { remove_idea = health_01 add_idea = health_06 }
+	}
+	if = {
+		limit = { has_idea = health_02 }
+		swap_ideas = { remove_idea = health_02 add_idea = health_06 }
+	}
+	if = {
+		limit = { has_idea = health_03 }
+		swap_ideas = { remove_idea = health_03 add_idea = health_06 }
+	}
+	if = {
+		limit = { has_idea = health_04 }
+		swap_ideas = { remove_idea = health_04 add_idea = health_06 }
+	}
+	if = {
+		limit = { has_idea = health_05 }
+		swap_ideas = { remove_idea = health_05 add_idea = health_06 }
+	}
+	if = {
+		limit = { has_idea = health_06 }
+		add_political_power = 150	#If country has maximum level it earns political power instead.
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Military Spending to the Sizeable
+sizeable_military_spending = {
+	if = {
+		limit = { has_idea = defence_00 }
+		swap_ideas = { remove_idea = defence_00 add_idea = defence_05 }
+	}
+	if = {
+		limit = { has_idea = defence_01 }
+		swap_ideas = { remove_idea = defence_01 add_idea = defence_05 }
+	}
+	if = {
+		limit = { has_idea = defence_02 }
+		swap_ideas = { remove_idea = defence_02 add_idea = defence_05 }
+	}
+	if = {
+		limit = { has_idea = defence_03 }
+		swap_ideas = { remove_idea = defence_03 add_idea = defence_05 }
+	}
+	if = {
+		limit = { has_idea = defence_04 }
+		swap_ideas = { remove_idea = defence_04 add_idea = defence_05 }
+	}
+	if = {
+		limit = { has_idea = defence_05 }
+		add_political_power = 150	#If country has desired level it earns political power instead.
+	}
+	if = {
+		limit = { has_idea = defence_06 }
+		add_political_power = 150	#If country has desired level it earns political power instead.
+	}
+	if = {
+		limit = { has_idea = defence_07 }
+		add_political_power = 150	#If country has desired level it earns political power instead.
+	}
+	if = {
+		limit = { has_idea = defence_08 }
+		add_political_power = 150	#If country has desired level it earns political power instead.
+	}
+	if = {
+		limit = { has_idea = defence_09 }
+		add_political_power = 150	#If country has desired level it earns political power instead.
+	}
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Economic Growth to Depression
+depression = {
+	if = {
+		limit = { has_idea = recession }
+		swap_ideas = { remove_idea = recession add_idea = depression }
+	}
+	if = {
+		limit = { has_idea = stagnation }
+		swap_ideas = { remove_idea = stagnation add_idea = depression }
+	}
+	if = {
+		limit = { has_idea = stable_growth }
+		swap_ideas = { remove_idea = stable_growth add_idea = depression }
+	}
+	if = {
+		limit = { has_idea = fast_growth }
+		swap_ideas = { remove_idea = fast_growth add_idea = depression }
+	}
+	if = {
+		limit = { has_idea = economic_boom }
+		swap_ideas = { remove_idea = economic_boom add_idea = depression }
+	}
+	if = {
+		limit = { has_idea = depression }
+		add_political_power = -150	#If country has maximum level it loses political power instead.
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Economic Growth to Recession
+recession = {
+	if = {
+		limit = { has_idea = depression }
+		swap_ideas = { remove_idea = depression add_idea = recession }
+	}
+	if = {
+		limit = { has_idea = stagnation }
+		swap_ideas = { remove_idea = stagnation add_idea = recession }
+	}
+	if = {
+		limit = { has_idea = stable_growth }
+		swap_ideas = { remove_idea = stable_growth add_idea = recession }
+	}
+	if = {
+		limit = { has_idea = fast_growth }
+		swap_ideas = { remove_idea = fast_growth add_idea = recession }
+	}
+	if = {
+		limit = { has_idea = economic_boom }
+		swap_ideas = { remove_idea = economic_boom add_idea = recession }
+	}
+	if = {
+		limit = { has_idea = recession }
+		add_political_power = -150	#If country has maximum level it loses political power instead.
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Economic Growth to Stagnation
+stagnation = {
+	if = {
+		limit = { has_idea = depression }
+		swap_ideas = { remove_idea = depression add_idea = stagnation }
+	}
+	if = {
+		limit = { has_idea = recession }
+		swap_ideas = { remove_idea = recession add_idea = stagnation }
+	}
+	if = {
+		limit = { has_idea = stable_growth }
+		swap_ideas = { remove_idea = stable_growth add_idea = stagnation }
+	}
+	if = {
+		limit = { has_idea = fast_growth }
+		swap_ideas = { remove_idea = fast_growth add_idea = stagnation }
+	}
+	if = {
+		limit = { has_idea = economic_boom }
+		swap_ideas = { remove_idea = economic_boom add_idea = stagnation }
+	}
+	if = {
+		limit = { has_idea = stagnation }
+		add_political_power = -150	#If country has maximum level it loses political power instead.
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Economic Growth to Stable Growth
+stable_growth = {
+	if = {
+		limit = { has_idea = depression }
+		swap_ideas = { remove_idea = depression add_idea = stable_growth }
+	}
+	if = {
+		limit = { has_idea = recession }
+		swap_ideas = { remove_idea = recession add_idea = stable_growth }
+	}
+	if = {
+		limit = { has_idea = stagnation }
+		swap_ideas = { remove_idea = stagnation add_idea = stable_growth }
+	}
+	if = {
+		limit = { has_idea = fast_growth }
+		swap_ideas = { remove_idea = fast_growth add_idea = stable_growth }
+	}
+	if = {
+		limit = { has_idea = economic_boom }
+		swap_ideas = { remove_idea = economic_boom add_idea = stable_growth }
+	}
+	if = {
+		limit = { has_idea = stable_growth }
+		add_political_power = 150	#If country has maximum level it earns political power instead.
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Economic Growth to Fast Growth
+fast_growth = {
+	if = {
+		limit = { has_idea = depression }
+		swap_ideas = { remove_idea = depression add_idea = fast_growth }
+	}
+	if = {
+		limit = { has_idea = recession }
+		swap_ideas = { remove_idea = recession add_idea = fast_growth }
+	}
+	if = {
+		limit = { has_idea = stagnation }
+		swap_ideas = { remove_idea = stagnation add_idea = fast_growth }
+	}
+	if = {
+		limit = { has_idea = stable_growth }
+		swap_ideas = { remove_idea = stable_growth add_idea = fast_growth }
+	}
+	if = {
+		limit = { has_idea = economic_boom }
+		swap_ideas = { remove_idea = economic_boom add_idea = fast_growth }
+	}
+	if = {
+		limit = { has_idea = fast_growth }
+		add_political_power = 150	#If country has maximum level it earns political power instead.
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}
+
+# Set Economic Growth to Economic Boom
+economic_boom = {
+	if = {
+		limit = { has_idea = depression }
+		swap_ideas = { remove_idea = depression add_idea = economic_boom }
+	}
+	if = {
+		limit = { has_idea = recession }
+		swap_ideas = { remove_idea = recession add_idea = economic_boom }
+	}
+	if = {
+		limit = { has_idea = stagnation }
+		swap_ideas = { remove_idea = stagnation add_idea = economic_boom }
+	}
+	if = {
+		limit = { has_idea = stable_growth }
+		swap_ideas = { remove_idea = stable_growth add_idea = economic_boom }
+	}
+	if = {
+		limit = { has_idea = fast_growth }
+		swap_ideas = { remove_idea = fast_growth add_idea = economic_boom }
+	}
+	if = {
+		limit = { has_idea = economic_boom }
+		add_political_power = 150	#If country has maximum level it earns political power instead.
+	}
+	set_growth_flag = yes
+	calculate_tax_gain = yes
+	update_military_rate = yes
+	ingame_calculate_size_modifier = yes
+	calculate_resource_sale_rate = yes
+}

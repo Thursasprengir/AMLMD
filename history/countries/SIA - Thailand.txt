@@ -1,0 +1,505 @@
+﻿2000.1.1 = {
+	capital = 508
+	oob = "SIA_2000"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "SIA_2000_naval_mtg"
+		else = {
+			set_naval_oob = "SIA_2000_naval_legacy"
+		}
+	}
+	set_convoys = 15
+	
+	add_ideas = ASEAN_Member
+	add_ideas = {
+		#pop_050
+		systematic_corruption
+		buddism
+		gdp_4
+		stable_growth
+		defence_02
+		edu_04
+		health_02
+		social_02
+		bureau_03
+		police_03
+		partial_draft_army
+		volunteer_women
+		the_military
+		landowners
+		small_medium_business_owners
+		#civil_law
+		#tax_cost_13
+	}
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 210 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 47 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 18 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 53 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 16 }
+	add_to_array = { influence_array = IND.id }
+	add_to_array = { influence_array_val = 4 }
+	add_to_array = { influence_array = TAI.id }
+	add_to_array = { influence_array_val = 4 }
+	add_to_array = { influence_array = SIN.id }
+	add_to_array = { influence_array_val = 8 }
+	startup_influence = yes
+	
+	set_country_flag = positive_landowners
+	set_country_flag = positive_small_medium_business_owners
+
+	set_variable = { var = debt value = 107 }
+	set_variable = { var = treasury value = 48 }
+	set_variable = { var = tax_rate value = 13 }
+	set_variable = { var = int_investments value = 0 }
+	#initial_money_setup = yes
+	
+	add_opinion_modifier = { target = CHI modifier = bamboo_network }
+	
+	add_opinion_modifier = { target = MAY modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = MAY modifier = large_commercial_relations }
+	add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+
+	set_technology = { 
+		legacy_doctrines = 1 
+		modern_blitzkrieg = 1 
+		forward_defense = 1 
+		encourage_nco_iniative = 1 
+		air_land_battle = 1
+		
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+
+		command_control_equipment = 1
+		
+		land_Drone_equipment = 1
+		
+		Anti_tank_0 = 1
+		
+		Heavy_Anti_tank_0 = 1
+		
+		Anti_Air_0 = 1
+		
+		combat_eng_equipment = 1
+		
+		Early_APC = 1
+		MBT_1 = 1
+		ENGI_MBT_1 = 1
+		
+		IFV_1 = 1
+		
+		APC_1 = 1
+		
+		Rec_tank_0 = 1
+		
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		
+		SP_arty_0 = 1
+		
+		artillery_0 = 1
+		
+		early_helicopter = 1
+		attack_helicopter1 = 1
+		transport_helicopter1 = 1
+		
+		SP_Anti_Air_0 = 1
+		
+		ENGI_MBT_1 = 1
+		
+		early_fighter = 1
+		
+		MR_Fighter1 = 1
+		
+		night_vision_1 = 1
+		night_vision_2 = 1
+
+		landing_craft = 1
+		
+		modern_carrier_0 = 1
+		LPD_0 = 1
+		
+		#Basic generic package for purchases to work
+		corvette_1 = 1
+		frigate_1 = 1
+		submarine_1 = 1
+		diesel_attack_submarine_1 = 1
+		
+		body_armor_1980 = 1
+		camouflage = 1
+		camouflage2 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1
+		internet1 = 1 	#1G
+		gprs = 1 
+	}
+	
+	set_popularities = {
+		democratic = 61.0
+		communism = 0.0
+		fascism = 0.0
+		neutrality = 9.9
+		nationalist = 29.1
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1996.11.17"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.418 } #conservatism
+	set_variable = { party_pop_array^2 = 0.192 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.099 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.291 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 1 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Chaun Leekpai"
+		picture = "Chuan_Leekpai.dds"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+		}
+	}
+	
+	create_corps_commander = {
+		name = "Apirat Kongsompong"
+		picture = "Portrait_Apirat_Kongsompong.dds"
+		id = 55500
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Chalermchai Sittisart"
+		picture = "Portrait_Chalermchai_Sittisart.dds"
+		id = 55501
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Johm Rungswang"
+		picture = "Portrait_Johm_Rungswang.dds"
+		id = 55502
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Teerachai Narkvanich"
+		picture = "Portrait_Teerachai_Nakwanich.dds"
+		id = 55503
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Udomdej Sitabutr"
+		picture = "Portrait_Udomdej_Sitabutr.dds"
+		id = 55504
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	
+	create_corps_commander = {
+		name = "Kampana Rutdi"
+		picture = "Portrait_Kampana_Rutdi.dds"
+		id = 55505
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	
+	create_corps_commander = {
+		name = "Kanit Sapitak"
+		picture = "Portrait_Kanit_Sapitak.dds"
+		id = 55506
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+	
+	create_corps_commander = {
+		name = "Prayut Chan-ocha"
+		picture = "Portrait_Prayut_Chan_ocha.dds"
+		id = 55507
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 3
+	}
+	
+	create_corps_commander = {
+		name = "Preecha Chan-ocha"
+		picture = "Portrait_Preecha_Chan_ocha.dds"
+		traits = { commando urban_assault_specialist }
+		id = 55508
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 1
+	}
+	create_corps_commander = {
+		name = "Wichai Chaerhorjor"
+		picture = "Portrait_Wichai_Chaerhorjor.dds"
+		traits = { jungle_rat }
+		id = 55509
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Na Arreenich"
+		picture = "Portrait_Na_Arreenich.dds"
+		traits = { superior_tactician }
+		id = 55510
+	}
+	create_navy_leader = {
+		name = "Narit Pratomsuwan"
+		picture = "Portrait_Narit_Pratomsuwan.dds"
+		id = 55511
+	}
+}
+
+2017.1.1 = {
+	capital = 508
+	oob = "SIA_2017"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "SIA_2017_naval_mtg"
+		else = {
+			set_naval_oob = "SIA_2017_naval_legacy"
+		}
+	}
+	set_convoys = 15
+
+	add_ideas = {
+		#pop_050
+		systematic_corruption
+		buddism
+		gdp_4
+		stable_growth
+		defence_02
+		edu_04
+		health_02
+		social_02
+		bureau_03
+		police_03
+		partial_draft_army
+		volunteer_women
+		Major_Non_NATO_Ally
+		the_military
+		landowners
+		small_medium_business_owners
+		#civil_law
+		#tax_cost_19
+	}
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 210 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 77 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 28 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 13 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 16 }
+	add_to_array = { influence_array = IND.id }
+	add_to_array = { influence_array_val = 4 }
+	add_to_array = { influence_array = TAI.id }
+	add_to_array = { influence_array_val = 4 }
+	add_to_array = { influence_array = SIN.id }
+	add_to_array = { influence_array_val = 8 }
+	startup_influence = yes
+	
+	#set_country_flag = gdp_4
+	set_country_flag = Major_Non_NATO_Ally
+	set_country_flag = Major_Importer_UKR_Arms
+	set_country_flag = positive_landowners
+	set_country_flag = positive_small_medium_business_owners
+	
+	set_variable = { var = debt value = 190 }
+	set_variable = { var = treasury value = 172 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = tax_rate value = 19 }
+	
+	#set_variable = { var = size_modifier value = 3.82 } #20 CIC
+	#initial_money_setup = yes
+	
+	#Nat focus
+	
+	
+	
+	
+	
+	
+	add_opinion_modifier = { target = CHI modifier = asean_plus_three_relations }
+	reverse_add_opinion_modifier = { target = CHI modifier = asean_plus_three_relations }
+	add_opinion_modifier = { target = KOR modifier = asean_plus_three_relations }
+	reverse_add_opinion_modifier = { target = KOR modifier = asean_plus_three_relations }
+	add_opinion_modifier = { target = JAP modifier = asean_plus_three_relations }
+	reverse_add_opinion_modifier = { target = JAP modifier = asean_plus_three_relations }
+	
+	# Starting tech
+	set_technology = {
+	
+		#First Wind
+		util_vehicle_3 = 1
+		util_vehicle_4 = 1
+		
+		SP_R_arty_0 = 1
+		SP_R_arty_1 = 1
+
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+		computing3 = 1
+		decryption3 = 1
+		encryption3 = 1
+		DNA_fingerprinting = 1
+
+		internet2 = 1 	#2G
+		gprs = 1
+		wifi = 1
+		internet3 = 1	#3G
+		edge = 1
+		umts = 1
+		hsupa = 1
+		internet4 = 1	#4G
+		lte = 1
+	}	
+	
+	set_popularities = {
+		democratic = 19.0
+		communism = 0.0
+		fascism = 0.0
+		neutrality = 1.0
+		nationalist = 80.0
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2014.2.2"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.19 } #conservatism
+	set_variable = { party_pop_array^2 = 0 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.1 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0.59 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.01 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 22 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Gen. Prayuth Chan-O-Cha"
+		picture = "Portrait_Prayut_Chan_ocha.dds"
+		ideology = Nat_Autocracy
+		traits = {
+			military_career
+			nationalist_Nat_Autocracy
+			pro_china
+			capable
+			ruthless
+		}
+	}
+}

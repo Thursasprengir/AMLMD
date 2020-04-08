@@ -1,0 +1,73 @@
+# Written by Andreas "Cold Evul" Brostrom
+
+# air_factory_balance
+# alliance
+# antagonize
+# area_priority
+# befriend
+# build_army
+# build_building
+# build_ship
+# conquer
+# contain
+# equipment_production_factor
+# equipment_stockpile
+# garrison
+# ignore
+# influence
+# invade
+# pp_spend_priority
+# protect
+# research_tech
+# role_ratio
+# send_volunteers_desire
+# support
+# template_prio
+# template_xp_reserve 
+# unit_ratio
+
+#Iran support Shias
+PER_support_shias = {
+
+	reversed = yes
+	
+	enable = {
+		NOT = { tag = PER }
+		has_idea = shia
+	}
+	
+	abort = {
+		has_country_flag = Insulted_Iran
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "PER"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "PER"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "PER"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PER"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = influence
+		id = "PER"
+		value = 200
+	}
+	
+}

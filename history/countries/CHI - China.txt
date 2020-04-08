@@ -1,0 +1,1678 @@
+﻿2000.1.1 = {
+
+	capital = 547		#This is the PRC, not Taiwan. Taiwan is "TAI"
+	oob = "CHI_2000"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "CHI_2000_naval_mtg"
+		else = {
+			set_naval_oob = "CHI_2000_naval_legacy"
+		}
+	}
+	set_convoys = 180
+
+	set_autonomy = {
+		target = HKG
+		autonomy_state = autonomy_special_administrative_region
+	}
+
+	create_faction = SHANGHAI_PACT
+
+	set_research_slots = 4
+
+	add_ideas = {
+		gdp_2
+		#tax_cost_15
+		multi_ethnic_state_idea
+		economic_boom
+		#pop_050
+		unrestrained_corruption
+		pluralist
+		zhonghua
+		censored_nation_01
+		Socialist_Market_Economy
+		factional_politics_elitist
+		water_shortages_3
+		party_before_country
+		chabuduo
+		one_child_policy
+		p5_member
+		nuclear_power
+		consumption_economy
+		defence_02
+		edu_02
+		health_01
+		social_01
+		bureau_02
+		police_04
+		volunteer_army
+		volunteer_women
+		industrial_conglomerates
+		communist_cadres
+		the_military
+		intervention_local_security
+		#hybrid
+	}
+
+	set_country_flag = positive_communist_cadres
+	set_country_flag = positive_the_military
+	set_country_flag = positive_industrial_conglomerates
+
+	set_variable = {
+		var = uighur_threat
+		value = 40
+	}
+	set_variable = {
+		var = uighur_opinion
+		value = 35
+	}
+
+	set_variable = { chinese_aggression = 0 }
+
+	#Recognition
+	add_to_array = { global.rival_governments = THIS }
+	set_country_flag = rival_government_TAI
+
+	set_country_flag = recognised_opponent_SAO
+	set_country_flag = recognised_opponent_MLW
+	set_country_flag = recognised_opponent_COS
+	set_country_flag = recognised_opponent_DMI
+	set_country_flag = recognised_opponent_PAN
+	set_country_flag = recognised_opponent_ELS
+	set_country_flag = recognised_opponent_DOM
+	set_country_flag = recognised_opponent_BFA
+	set_country_flag = recognised_opponent_CHA
+	set_country_flag = recognised_opponent_GRA
+	set_country_flag = recognised_opponent_FYR
+	set_country_flag = recognised_opponent_BLZ
+	set_country_flag = recognised_opponent_GUA
+	set_country_flag = recognised_opponent_HON
+	set_country_flag = recognised_opponent_NIC
+	set_country_flag = recognised_opponent_PAR
+	set_country_flag = recognised_opponent_MIC
+	set_country_flag = recognised_opponent_SOL
+	set_country_flag = recognised_opponent_SWA
+	set_country_flag = recognised_opponent_HAI
+	set_country_flag = recognised_opponent_STV
+	set_country_flag = recognised_opponent_STK
+	set_country_flag = recognised_opponent_STL
+
+	add_to_variable = {
+		var = CHI.Granted_Recognition
+		value = 165
+	}
+
+	#Cyber
+	add_to_array = { CHI.cyber_targets = USA }
+	add_to_array = { CHI.cyber_targets = AST }
+	add_to_array = { CHI.cyber_targets = ENG }
+	add_to_array = { CHI.cyber_targets = CAN }
+	add_to_array = { CHI.cyber_targets = FRA }
+	add_to_array = { CHI.cyber_targets = GER }
+	add_to_array = { CHI.cyber_targets = RAJ }
+	add_to_array = { CHI.cyber_targets = PER }
+	add_to_array = { CHI.cyber_targets = JAP }
+	add_to_array = { CHI.cyber_targets = KOR }
+	add_to_array = { CHI.cyber_targets = NKO }
+	add_to_array = { CHI.cyber_targets = PHI }
+	add_to_array = { CHI.cyber_targets = SOV }
+	add_to_array = { CHI.cyber_targets = SIN }
+	add_to_array = { CHI.cyber_targets = TAI }
+	add_to_array = { CHI.cyber_targets = TUR }
+	add_to_array = { CHI.cyber_targets = VIE }
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 1000 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 71 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 47 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 15 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 18 }
+	startup_influence = yes
+
+	set_global_flag = sell_CHI_cc_equi_1
+	clr_global_flag = sell_CHI_cc_equi_3
+	set_global_flag = sell_CHI_anti_tank_1
+	clr_global_flag = sell_CHI_anti_tank_2
+	set_global_flag = sell_CHI_anti_air_1
+	clr_global_flag = sell_CHI_anti_air_2
+	clr_global_flag = sell_CHI_SP_anti_air_2
+	set_global_flag = sell_CHI_H_anti_tank_1
+	clr_global_flag = sell_CHI_H_anti_tank_2
+	set_global_flag = sell_CHI_arty_1
+	clr_global_flag = sell_CHI_arty_2
+	set_global_flag = sell_CHI_rec_1
+	clr_global_flag = sell_CHI_rec_3
+
+	set_variable = { var = debt value = 404 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = treasury value = 252 }
+	set_variable = { var = tax_rate value = 18 }
+	#initial_money_setup = yes
+
+	add_opinion_modifier = { target = JAP modifier = maritime_border_dispute }
+	reverse_add_opinion_modifier = { target = JAP modifier = maritime_border_dispute }
+
+	add_opinion_modifier = { target = JAP modifier = refuse_to_apologize_for_warcrimes }
+
+	add_opinion_modifier = { target = VIE modifier = minor_border_dispute }
+	reverse_add_opinion_modifier = { target = VIE modifier = minor_border_dispute }
+
+	###Some additions by Killerrabbit###
+
+	#Chinese diaspora trading network
+	add_opinion_modifier = { target = IND modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = IND modifier = bamboo_network  }
+	add_opinion_modifier = { target = SIN modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIN modifier = bamboo_network  }
+	add_opinion_modifier = { target = TAI modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = TAI modifier = bamboo_network  }
+	add_opinion_modifier = { target = SIA modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIA modifier = bamboo_network  }
+	add_opinion_modifier = { target = VIE modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = VIE modifier = bamboo_network  }
+	add_opinion_modifier = { target = CBD modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = CBD modifier = bamboo_network  }
+	add_opinion_modifier = { target = MAY modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = MAY modifier = bamboo_network  }
+
+	#North Korea treaty
+	give_guarantee = NKO
+
+	add_opinion_modifier = { target = NKO modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = NKO modifier = historic_friends }
+
+	#Sino-Pakistan friendship & defence cooperation
+	give_guarantee = PAK
+
+	add_opinion_modifier = { target = PAK modifier = sino_pakistani_friendship }
+	reverse_add_opinion_modifier = { target = PAK modifier = sino_pakistani_friendship }
+	reverse_add_opinion_modifier = { target = RAJ modifier = raj_sino_pakistani_friendship }
+
+	add_opinion_modifier = { target = BHU modifier = minor_border_dispute }
+	reverse_add_opinion_modifier = { target = BHU modifier = minor_border_dispute }
+
+	add_opinion_modifier = { target = TAI modifier = chinese_speaking }
+	reverse_add_opinion_modifier = { target = TAI modifier = chinese_speaking }
+	add_opinion_modifier = { target = WAA modifier = chinese_speaking }
+	reverse_add_opinion_modifier = { target = WAA modifier = chinese_speaking }
+
+	#Important Trading partners
+	add_opinion_modifier = { target = USA modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = USA modifier = large_commercial_relations }
+	add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = JAP modifier = large_commercial_relations }
+	add_opinion_modifier = { target = KOR modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = KOR modifier = large_commercial_relations }
+	add_opinion_modifier = { target = GER modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = GER modifier = large_commercial_relations }
+	add_opinion_modifier = { target = MAY modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = MAY modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SIA modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = SIA modifier = large_commercial_relations }
+	add_opinion_modifier = { target = VIE modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = VIE modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SIN modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = SIN modifier = large_commercial_relations }
+
+	add_opinion_modifier = { target = BAN modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = BAN modifier = historic_friends }
+	add_opinion_modifier = { target = LAO modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = LAO modifier = historic_friends }
+	add_opinion_modifier = { target = LBA modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = LBA modifier = historic_friends }
+	add_opinion_modifier = { target = ALB modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = ALB modifier = historic_friends }
+	add_opinion_modifier = { target = ETH modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = ETH modifier = historic_friends }
+	add_opinion_modifier = { target = SUD modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = SUD modifier = historic_friends }
+	add_opinion_modifier = { target = TNZ modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = TNZ modifier = historic_friends }
+	add_opinion_modifier = { target = MOZ modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = MOZ modifier = historic_friends }
+	add_opinion_modifier = { target = ZAM modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = ZAM modifier = historic_friends }
+	add_opinion_modifier = { target = SAF modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = SAF modifier = historic_friends }
+	add_opinion_modifier = { target = AGL modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = AGL modifier = historic_friends }
+	add_opinion_modifier = { target = CUB modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = CUB modifier = historic_friends }
+	add_opinion_modifier = { target = BRM modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = BRM modifier = historic_friends }
+	add_opinion_modifier = { target = SRI modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = SRI modifier = historic_friends }
+	add_opinion_modifier = { target = PER modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = PER modifier = historic_friends }
+	add_opinion_modifier = { target = IRQ modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = IRQ modifier = historic_friends }
+
+	add_opinion_modifier = { target = JAP modifier = historic_enemies }
+	reverse_add_opinion_modifier = { target = JAP modifier = historic_enemies }
+
+	#one china
+	add_opinion_modifier = { target = TAI modifier = one_china_policy }
+	reverse_add_opinion_modifier = { target = TAI modifier = one_china_policy }
+
+	#recognition of Taiwan
+	add_opinion_modifier = { target = SAO modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = SAO modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = MLW modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = MLW modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = COS modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = COS modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = DMI modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = DMI modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = PAN modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = PAN modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = ELS modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = ELS modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = DOM modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = DOM modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = BFA modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = BFA modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = CHA modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = CHA modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = GRA modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = GRA modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = FYR modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = FYR modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = BLZ modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = BLZ modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = GUA modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = GUA modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = HON modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = HON modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = NIC modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = NIC modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = PAR modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = PAR modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = MIC modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = MIC modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = SOL modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = SOL modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = SWA modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = SWA modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = HAI modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = HAI modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = STV modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = STV modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = STK modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = STK modifier = recognize_taiwan_chi }
+	add_opinion_modifier = { target = STL modifier = recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = STL modifier = recognize_taiwan_chi }
+
+	reverse_add_opinion_modifier = { target = USA modifier = does_not_respect_intellectual_property }
+
+
+	set_technology = {
+		legacy_doctrines = 1
+		infiltration_assault = 1
+		defence_in_depth = 1
+		armoured_counterpunch = 1
+		massed_artillery = 1
+
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1 #1995
+
+		combat_eng_equipment = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+
+		land_Drone_equipment = 1
+
+		Early_APC = 1 #Vehicle Design
+
+		APC_1 = 1
+		APC_2 = 1
+		APC_3 = 1
+
+		IFV_1 = 1
+		IFV_2 = 1
+		IFV_3 = 1
+
+		MBT_1 = 1
+		MBT_2 = 1
+		MBT_3 = 1
+
+		ENGI_MBT_1 = 1
+		ENGI_MBT_2 = 1
+		ENGI_MBT_3 = 1
+
+		Rec_tank_0 = 1 #1965
+		Rec_tank_1 = 1
+
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+
+		artillery_0 = 1
+		Arty_upgrade_1 = 1
+		Arty_upgrade_2 = 1
+		SP_arty_0 = 1
+		SP_R_arty_0 = 1
+		artillery_1 = 1
+		SP_R_arty_1 = 1
+
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		AT_upgrade_1 = 1
+		Anti_tank_1 = 1
+		Heavy_Anti_tank_1 = 1
+
+		Anti_Air_0 = 1
+		SP_Anti_Air_0 = 1
+		AA_upgrade_1 = 1
+		Anti_Air_1 = 1
+
+		early_fighter = 1
+		Strike_fighter1 = 1
+		Strike_fighter2 = 1
+		MR_Fighter1 = 1
+		AS_Fighter1 = 1
+		AS_Fighter2 = 1
+
+		L_Strike_fighter2 = 1
+		L_Strike_fighter1 = 1 #Hongdu JL-8
+
+		early_bomber = 1
+
+		early_helicopter = 1
+		attack_helicopter1 = 1
+		transport_helicopter1 = 1
+
+		transport_plane1 = 1
+
+		naval_plane1 = 1
+		naval_plane2 = 1 #Y-8X
+
+		cas1 = 1
+
+		destroyer_1 = 1
+		destroyer_2 = 1 #Type 052 destroyer
+		missile_destroyer_1 = 1 #Type 051C destroyer, Type 052B Luyang I-Class, Type 051B destroyer & Type 051
+
+		corvette_1 = 1
+		corvette_2 = 1
+
+		frigate_1 = 1 #Type 053 frigate
+		frigate_2 = 1
+		missile_frigate_1 = 1
+
+		submarine_1 = 1
+
+		missile_submarine_1 = 1 #Type 091 submarine (SSN)	Han class
+
+		attack_submarine_1 = 1 #Type 092 submarine
+
+		diesel_attack_submarine_1 = 1 # ming class & Yuan-class
+		diesel_attack_submarine_2 = 1 #Song-class
+		diesel_attack_submarine_3 = 1 #Kilo-class
+
+		landing_craft = 1
+		amphibious_assault_ship = 1
+		landing_craft_air_cushioned = 1
+
+		body_armor_1980 = 1
+		camouflage = 1
+		camouflage2 = 1
+
+		strategic_bomber1 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		radar = 1
+		internet1 = 1 	#1G
+	}
+
+	set_popularities = {
+		democratic = 15.0
+		communism = 68.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 2.0
+	}
+	set_politics = {
+
+		ruling_party = communism
+		last_election = "1997.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+
+	set_variable = { election_threshold = 0.01 }
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.02 } #conservatism
+	set_variable = { party_pop_array^2 = 0.03 } #liberalism
+	set_variable = { party_pop_array^3 = 0.1 } #socialism
+	set_variable = { party_pop_array^4 = 0.528 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.025 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.01 } #Conservative
+	set_variable = { party_pop_array^7 = 0.117 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.01 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0.01 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.01 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.12 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.005 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0.01 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.005 } #Monarchist
+	add_to_array = { ruling_party = 4 }
+	add_to_array = { gov_coalition_array = 7 } #Autocracy
+	add_to_array = { gov_coalition_array = 5 } #anarchist_communism
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Jiang Zemin"
+		picture = "Jiang_Zemin.dds"
+		expire = "2030.1.1"
+		ideology = Communist-State
+		traits = {
+			emerging_Communist-State
+			engineer
+		}
+	}
+
+	create_corps_commander = {
+		name = "Chang Wanquan"
+		picture = "generals/Portrait_Chang_Wanquan.dds"
+		id = 12600
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Diao Guoxin"
+		picture = "generals/Portrait_Diao_Guoxin.dds"
+		id = 12601
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Fan Changlong"
+		picture = "generals/Portrait_Fan_Changlong.dds"
+		id = 12602
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Liu Zhenli"
+		picture = "generals/Portrait_Liu_Zhenli.dds"
+		traits = { ranger commando }
+		id = 12603
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Ma Xiaotian"
+		picture = "generals/Portrait_Ma_Xiaotian.dds"
+		traits = { naval_invader }
+		id = 12604
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Pan Liangshi"
+		picture = "generals/Portrait_Pan_Liangshi.dds"
+		id = 12605
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Peng Bo"
+		picture = "generals/Portrait_Peng_Bo.dds"
+		id = 12606
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Wei Fenghe"
+		picture = "generals/Portrait_Wei_Fenghe.dds"
+		id = 12607
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Fang Fenghui"
+		picture = "gen_fang_fenghui.dds"
+		traits = { old_guard defensive_doctrine organisational_leader }
+		id = 12608
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+
+	}
+
+	create_field_marshal = {
+		name = "Zhao Keshi"
+		picture = "gen_zhao_keshi.dds"
+		traits = { old_guard logistics_wizard }
+		id = 12609
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+
+	}
+
+	create_field_marshal = {
+		name = "Li Zuocheng"
+		picture = "gen_Li_Zuocheng.dds"
+		traits = { old_guard offensive_doctrine inspirational_leader }
+		id = 12610
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+
+	}
+
+	create_corps_commander = {
+		name = "Lie Yuejun"
+		picture = "gen_lie_yuejun.dds"
+		traits = { panzer_leader naval_invader }
+		id = 12611
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+
+	}
+
+	create_corps_commander = {
+		name = "Rong Guiqing"
+		picture = "gen_rong_guiqing.dds"
+		traits = { trait_mountaineer jungle_rat }
+		id = 12612
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+
+	}
+
+	create_corps_commander = {
+		name = "Song Puxuan"
+		picture = "gen_song_puxuan.dds"
+		traits = { winter_specialist urban_assault_specialist old_guard }
+		id = 12613
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+
+	}
+
+	create_corps_commander = {
+		name = "Wang Guanzhong"
+		picture = "gen_Wang_Guanzhong.dds"
+		traits = { old_guard }
+		id = 12614
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+
+	}
+
+	create_corps_commander = {
+		name = "Wang Jiaocheng"
+		picture = "gen_wang_jiaocheng.dds"
+		traits = { naval_invader panzer_leader }
+		id = 12615
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+
+	}
+
+	create_corps_commander = {
+		name = "Wei Fenghe"
+		picture = "gen_wei_fenghe.dds"
+		traits = { fortress_buster }
+		id = 12616
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+
+	}
+
+	create_corps_commander = {
+		name = "Zhang Shibo"
+		picture = "Gen_Zhang_Shibo.dds"
+		traits = { urban_assault_specialist }
+		id = 12617
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+
+	}
+
+	create_corps_commander = {
+		name = "Zhang Yang"
+		picture = "gen_zhang_yang.dds"
+		traits = { old_guard }
+		id = 12618
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+
+	}
+
+	create_corps_commander = {
+		name = "Zhao Zongqi"
+		picture = "gen_zhao_zongqi.dds"
+		traits = { desert_fox trait_mountaineer winter_specialist }
+		id = 12619
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+
+	}
+
+	create_corps_commander = {
+		name = "Qi Jianguo"
+		picture = "gen_Qi_Jianguo.dds"
+		traits = { hill_fighter ranger }
+		id = 12620
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+
+	}
+
+	create_corps_commander = {
+		name = "Zhang Haiqing"
+		picture = "gen_Zhang_Haiqing.dds"
+		traits = { swamp_fox commando }
+		id = 12621
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+
+	}
+
+	create_corps_commander = {
+		name = "Xu Jong"
+		picture = "generals/Portrait_Xu_Jong.dds"
+		id = 12622
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Xu Qiliang"
+		picture = "generals/Portrait_Xu_Qiliang.dds"
+		traits = { swamp_fox naval_invader }
+		id = 12623
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Yuan Huazhi"
+		picture = "generals/Portrait_Yuan_Huazhi.dds"
+		id = 12624
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Zhang Shuguo"
+		picture = "generals/Portrait_Zhang_Shuguo.dds"
+		id = 12625
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Zhang Zongcai"
+		picture = "generals/Portrait_Zhang_Zongcai.dds"
+		id = 12626
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Wu Shengli"
+		picture = "adm_wu_shengli.dds"
+		traits = { seawolf old_guard_navy }
+		skill = 4
+		id = 12627
+	}
+
+	create_navy_leader = {
+		name = "Guan Jianguo"
+		picture = "Adm_Guan_Jianguo.dds"
+		traits = { blockade_runner }
+		skill = 2
+		id = 12628
+	}
+
+	create_navy_leader = {
+		name = "Jiang Weilie"
+		picture = "Adm_Jiang_Weilie.dds"
+		traits = { blockade_runner old_guard_navy }
+		skill = 3
+		id = 12629
+	}
+
+	create_navy_leader = {
+		name = "Li Xiaoyan"
+		picture = "adm_Li_Xiaoyan.dds"
+		traits = { air_controller }
+		skill = 2
+		id = 12630
+	}
+
+	create_navy_leader = {
+		name = "Liu Geng"
+		picture = "Adm_Liu_Geng.dds"
+		traits = { air_controller }
+		skill = 2
+		id = 12631
+	}
+
+	create_navy_leader = {
+		name = "Qiuyan Peng"
+		picture = "adm_Qiuyan_Peng.dds"
+		traits = { seawolf }
+		skill = 2
+		id = 12632
+	}
+
+	create_navy_leader = {
+		name = "Su Zhiqian"
+		picture = "adm_Su_Zhiqian.dds"
+		traits = { seawolf }
+		skill = 3
+		id = 12633
+	}
+
+	create_navy_leader = {
+		name = "Wang Dengping"
+		picture = "Adm_Wang_Dengping.dds"
+		traits = { seawolf }
+		skill = 1
+		id = 12634
+	}
+
+	create_navy_leader = {
+		name = "Yao Zhilou"
+		picture = "Adm_Yao_Zhilou.dds"
+		traits = { superior_tactician old_guard_navy }
+		skill = 2
+		id = 12635
+	}
+
+	create_navy_leader = {
+		name = "Zhang Wendan"
+		picture = "adm_Zhang_Wendan.dds"
+		traits = { superior_tactician }
+		skill = 3
+		id = 12636
+	}
+
+	create_navy_leader = {
+		name = "Li Xiaoyan"
+		picture = "adm2_Li_Xiaoyan.dds"
+		traits = { blockade_runner }
+		skill = 2
+		id = 12637
+	}
+
+	create_navy_leader = {
+		name = "Feng Danyu"
+		picture = "admirals/Portrait_Feng_Danyu.dds"
+		skill = 2
+		id = 12638
+	}
+
+	create_navy_leader = {
+		name = "Miao Hua"
+		picture = "admirals/Portrait_Miao_Hua.dds"
+		skill = 2
+		id = 12639
+	}
+
+	create_navy_leader = {
+		name = "Qiu Jianpeng"
+		picture = "admirals/Portrait_Qiu_Jianpeng.dds"
+		skill = 2
+		id = 12640
+	}
+
+	create_navy_leader = {
+		name = "Shen Jinlong"
+		picture = "admirals/Portrait_Shen_Jinlong.dds"
+		traits = { seawolf }
+		skill = 2
+		id = 12641
+	}
+
+	create_equipment_variant = {
+		name = "Type 053H1 Jianghu-II-Class"
+		type = frigate_1
+		upgrades = {
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Type 053H1G Jianghu-V-Class"
+		type = frigate_2
+		upgrades = {
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Type 053H1Q Jianghu-IV-Class"
+		type = frigate_2
+		upgrades = {
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 053H3 Jiangwei-II-Class"
+		type = missile_frigate_1
+		upgrades = {
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 052B Luyang-I-Class"
+		type = missile_destroyer_1
+		upgrades = {
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 035G-Class"
+		type = diesel_attack_submarine_1
+		upgrades = {
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Naresuan-class"
+		type = missile_frigate_1
+		upgrades = {
+		}
+	}
+
+	create_equipment_variant = {
+		name = "F-22P Zulfiquar-Class"
+		type = missile_frigate_1
+		upgrades = {
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Type-59-I"
+		type = MBT_1
+		upgrades = {
+			tank_gun_upgrade = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type-59D"
+		type = MBT_1
+		upgrades = {
+			tank_engine_upgrade = 1
+			tank_armor_upgrade = 2
+			tank_gun_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 69"
+		type = MBT_1
+		upgrades = {
+			tank_reliability_upgrade = 1
+			tank_engine_upgrade = 0
+			tank_armor_upgrade = 0
+			tank_gun_upgrade = 0
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type-79"
+		type = MBT_1
+		upgrades = {
+			tank_armor_upgrade = 3
+			tank_gun_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "WZ-523"
+		type = APC_3
+		upgrades = {
+			tank_reliability_upgrade = 1
+			tank_engine_upgrade = 0
+			tank_armor_upgrade = 0
+			tank_gun_upgrade = 0
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 85"
+		type = APC_3
+		upgrades = {
+			tank_reliability_upgrade = 0
+			tank_engine_upgrade = 1
+			tank_armor_upgrade = 1
+			tank_gun_upgrade = 0
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Type 053H2 Jianghu-III-Class"
+		type = frigate_2
+		upgrades = {
+
+		}
+	}
+
+}
+
+2017.1.1 = {
+	capital = 547
+	set_convoys = 100
+	oob = "CHI_2017"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_naval_oob = "CHI_2017_naval_mtg"
+		else = {
+			set_naval_oob = "CHI_2017_naval_legacy"
+		}
+	}
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 1000 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 38 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 22 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 30 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 18 }
+	startup_influence = yes
+
+	set_country_flag = Major_Importer_RUS_Arms
+	set_country_flag = positive_communist_cadres
+	set_country_flag = positive_industrial_conglomerates
+	set_global_flag = sell_CHI_cc_equi_3
+	clr_global_flag = sell_CHI_cc_equi_1
+	set_global_flag = sell_CHI_anti_tank_2
+	clr_global_flag = sell_CHI_anti_tank_1
+	set_global_flag = sell_CHI_anti_air_2
+	clr_global_flag = sell_CHI_anti_air_1
+	set_global_flag = sell_CHI_SP_anti_air_2
+	set_global_flag = sell_CHI_H_anti_tank_2
+	clr_global_flag = sell_CHI_H_anti_tank_1
+	set_global_flag = sell_CHI_arty_2
+	clr_global_flag = sell_CHI_arty_1
+	set_global_flag = sell_CHI_rec_3
+	clr_global_flag = sell_CHI_rec_1
+
+	set_variable = { var = debt value = 5743 }
+	set_variable = { var = int_investments value = 1555 }
+	set_variable = { var = treasury value = 3098 }
+	set_variable = { var = tax_rate value = 25 }
+
+	#set_variable = { var = size_modifier value = 37.92 } #175 CIC
+	#initial_money_setup = yes
+
+	#Nat focus
+
+	complete_national_focus = CHI_Chairman_Jiang_Reign
+	complete_national_focus = CHI_End_PLA_Business_Ventures
+	complete_national_focus = CHI_Three_Represents_Thought
+	complete_national_focus = CHI_End_Class_Warfare
+	complete_national_focus = CHI_Future_of_the_CPC
+	complete_national_focus = CHI_Preserve_CPC_Unity
+	complete_national_focus = CHI_Hu_Jintao_Agenda
+	complete_national_focus = CHI_Peaceful_Rise
+	complete_national_focus = CHI_Scientific_Outlook_on_Development
+	complete_national_focus = CHI_Harmonious_Society
+	complete_national_focus = CHI_Green_GDP
+	complete_national_focus = CHI_8_Honours_8_Shames
+	complete_national_focus = CHI_Succession_Question
+	complete_national_focus = CHI_Promote_Youth_League_Members
+	complete_national_focus = CHI_Wang_Lijun_Incident
+	complete_national_focus = CHI_Xi_Jinping_Agenda
+	complete_national_focus = CHI_Xi_Jinping_Thought
+	complete_national_focus = CHI_China_Dream
+	complete_national_focus = CHI_Four_Pronged_Comprehensive_Strategy
+	complete_national_focus = CHI_Xiaokang_Society
+	complete_national_focus = CHI_Third_Plenum
+	complete_national_focus = CHI_2_Child_Policy
+	complete_national_focus = CHI_Restructure_the_Penal_System
+	complete_national_focus = CHI_Establish_the_National_Security_Commission
+	complete_national_focus = CHI_Anti_Corruption_Campaigns
+	complete_national_focus = CHI_Weaken_the_Youth_League
+	complete_national_focus = CHI_Take_Down_the_Big_Tigers
+	complete_national_focus = CHI_Establish_the_Central_Group_for_Military_Reform
+	complete_national_focus = CHI_Scrap_Military_Commands
+	complete_national_focus = CHI_Cut_Ground_Troop_Numbers
+	complete_national_focus = CHI_One_China_Policy
+	complete_national_focus = CHI_Two_Systems
+	complete_national_focus = CHI_Extend_Interpretation_of_the_Systems
+	complete_national_focus = CHI_Consider_Electoral_Reform_in_Hong_Kong
+	complete_national_focus = CHI_The_NPCSC_Decision_on_Hong_Kong
+	complete_national_focus = CHI_Dialogue_with_the_Taiwan_Self_Government
+	complete_national_focus = CHI_Three_Links
+	complete_national_focus = CHI_Cross_Strait_Service_Trade_Agreement
+	complete_national_focus = CHI_The_Untapped_Market
+	complete_national_focus = CHI_Break_the_Iron_Rice_Bowl
+	complete_national_focus = CHI_Ratification_of_WTO
+	complete_national_focus = CHI_Global_Influence
+	complete_national_focus = CHI_Form_the_SCO
+
+	#Recognition
+	clr_country_flag = recognised_opponent_SAO
+	clr_country_flag = recognised_opponent_MLW
+	clr_country_flag = recognised_opponent_COS
+	clr_country_flag = recognised_opponent_DMI
+	clr_country_flag = recognised_opponent_CHA
+	clr_country_flag = recognised_opponent_GRA
+	clr_country_flag = recognised_opponent_FYR
+
+	add_to_variable = {
+		var = CHI.Granted_Recognition
+		value = 12
+	}
+
+	add_ideas = {
+		gdp_4
+		#tax_cost_15
+		multi_ethnic_state_idea
+		fast_growth
+		#pop_050
+		unrestrained_corruption
+		pluralist
+		zhonghua
+		party_before_country
+		chabuduo
+		p5_member
+		nuclear_power
+		consumption_economy
+		defence_02
+		edu_02
+		health_02
+		social_02
+		bureau_02
+		police_05
+		volunteer_army
+		volunteer_women
+		industrial_conglomerates
+		communist_cadres
+		the_military
+		intervention_limited_interventionism
+		#hybrid
+		limited_power_projection
+	}
+
+
+	add_political_power = -700
+
+
+	diplomatic_relation = {
+		country = CBD
+		relation = military_access
+		active = yes
+	}
+
+	diplomatic_relation = {
+		country = DJI
+		relation = military_access
+		active = yes
+	}
+
+	diplomatic_relation = {
+		country = TAJ
+		relation = military_access
+		active = yes
+	}
+
+	set_variable = { power_projection = 3 }
+
+	add_opinion_modifier = { target = KOR modifier = asean_plus_three_relations }
+	reverse_add_opinion_modifier = { target = KOR modifier = asean_plus_three_relations }
+	add_opinion_modifier = { target = JAP modifier = asean_plus_three_relations }
+	reverse_add_opinion_modifier = { target = JAP modifier = asean_plus_three_relations }
+
+	#Additional large trade partners
+	add_opinion_modifier = { target = AST modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = AST modifier = large_commercial_relations }
+	add_opinion_modifier = { target = ENG modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = ENG modifier = large_commercial_relations }
+	add_opinion_modifier = { target = BRA modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = BRA modifier = large_commercial_relations }
+	add_opinion_modifier = { target = HOL modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = HOL modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SOV modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = SOV modifier = large_commercial_relations }
+	add_opinion_modifier = { target = CAN modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = CAN modifier = large_commercial_relations }
+	add_opinion_modifier = { target = IND modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = IND modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SAU modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = SAU modifier = large_commercial_relations }
+	add_opinion_modifier = { target = FRA modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = FRA modifier = large_commercial_relations }
+	add_opinion_modifier = { target = SAF modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = SAF modifier = large_commercial_relations }
+	add_opinion_modifier = { target = UAE modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = UAE modifier = large_commercial_relations }
+	add_opinion_modifier = { target = PHI modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = PHI modifier = large_commercial_relations }
+	add_opinion_modifier = { target = MEX modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = MEX modifier = large_commercial_relations }
+
+	add_opinion_modifier = { target = SAO modifier = revoked_recognize_taiwan_chi }
+	reverse_add_opinion_modifier = { target = SAO modifier = revoked_recognize_taiwan_chi }
+	remove_opinion_modifier = { target = SAO modifier = recognize_taiwan_chi }
+	remove_opinion_modifier = { target = MLW modifier = recognize_taiwan_chi }
+	remove_opinion_modifier = { target = COS modifier = recognize_taiwan_chi }
+	remove_opinion_modifier = { target = DMI modifier = recognize_taiwan_chi }
+	remove_opinion_modifier = { target = CHA modifier = recognize_taiwan_chi }
+	remove_opinion_modifier = { target = GRA modifier = recognize_taiwan_chi }
+	remove_opinion_modifier = { target = FYR modifier = recognize_taiwan_chi }
+
+	# Starting tech
+	set_technology = {
+
+		infantry_weapons4 = 1
+
+		night_vision_3 = 1 #1985
+
+		command_control_equipment2 = 1
+		command_control_equipment3 = 1 #2005
+
+		land_Drone_equipment1 = 1
+		land_Drone_equipment2 = 1 #2005
+
+		APC_4 = 1 #1995
+		APC_5 = 1
+
+		Air_APC_4 = 1 #1995
+
+		IFV_4 = 1
+		IFV_5 = 1 #2005
+
+		Air_IFV_4 = 1
+
+		MBT_4 = 1 #1995
+
+		ENGI_MBT_4 = 1 #1995
+
+		Rec_tank_2 = 1 #2005
+		Rec_tank_3 = 1 #2015
+
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+		util_vehicle_4 = 1 #2005
+
+		Arty_upgrade_3 = 1
+		artillery_2 = 1
+		SP_arty_1 = 1
+		SP_arty_2 = 1
+		SP_R_arty_2 = 1
+
+		AT_upgrade_2 = 1
+		Anti_tank_2 = 1
+		Heavy_Anti_tank_2 = 1
+
+		SP_Anti_Air_1 = 1
+		AA_upgrade_2 = 1
+		AA_upgrade_3 = 1
+		Anti_Air_2 = 1
+		SP_Anti_Air_2 = 1
+
+		Strike_upgrade_1 = 1 #4th Gen
+		Strike_fighter3 = 1
+		MR_Fighter2 = 1
+		MR_upgrade_1 = 1
+		MR_Fighter3 = 1 #4.5gen
+		AS_upgrade_1 = 1
+		AS_Fighter3 = 1 #4.5gen
+		CV_MR_Fighter1 = 1
+		CV_MR_Fighter2 = 1
+		CV_MR_Fighter3 = 1 #4.5gen
+		strategic_bomber2 = 1 #H-6
+
+		attack_helicopter2 = 1 #WZ-10
+
+		transport_helicopter2 = 1
+
+		transport_plane2 = 1
+		transport_plane3 = 1 #Y9
+
+		Air_UAV1 = 1 #2005
+
+		modern_carrier_0 = 1
+		modern_carrier_1 = 1
+		modern_carrier_2 = 1 #Type 001 aircraft carrier
+		modern_carrier_3 = 1
+
+		cruiser_1 = 1
+		cruiser_2 = 1
+		missile_cruiser_1 = 1
+		missile_cruiser_4 = 1
+
+		missile_destroyer_2 = 1
+		missile_destroyer_3 = 1 #Type 052C destroyer, Type 052D Luyang III-Class
+
+		missile_corvette_1 = 1
+		missile_corvette_2 = 1 #Type 056 corvette, Type 056A Jiangdao-Class
+
+		missile_frigate_2 = 1
+		missile_frigate_3 = 1 #Type 054A frigate Jiangkai II class,
+
+		submarine_1 = 1
+
+		missile_submarine_2 = 1 #Jin-class
+		missile_submarine_3 = 1 #093B-class
+
+		attack_submarine_2 = 1
+		attack_submarine_3 = 1 #Shang-class
+
+		diesel_attack_submarine_2 = 1 #Song-class
+		diesel_attack_submarine_3 = 1 #Kilo-class
+
+		LPD_0 = 1
+		LPD_1 = 1  #Type 071 amphibious transport dock
+
+		LHA_0 = 1
+		LHA_1 = 1 #Type 075 LHA
+
+		modern_landing_craft = 1
+
+		body_armor_2000 = 1
+		camouflage3 = 1
+
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+		computing3 = 1
+		decryption3 = 1
+		encryption3 = 1
+		DNA_fingerprinting = 1
+		internet2 = 1
+	}
+
+	set_popularities = {
+		democratic = 10.0
+		communism = 73.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 2.0
+	}
+	set_politics = {
+
+		ruling_party = communism
+		last_election = "1997.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.02 } #conservatism
+	set_variable = { party_pop_array^2 = 0.03 } #liberalism
+	set_variable = { party_pop_array^3 = 0.05 } #socialism
+	set_variable = { party_pop_array^4 = 0.578 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.025 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.01 } #Conservative
+	set_variable = { party_pop_array^7 = 0.117 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.01 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0.01 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.01 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.12 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.005 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0.1 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.005 } #Monarchist
+	add_to_array = { ruling_party = 4 }
+	add_to_array = { gov_coalition_array = 7 } #Autocracy
+	add_to_array = { gov_coalition_array = 5 } #anarchist_communism
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Xi Jinping"
+		picture = "CHI_Xi_Jinping.dds"
+		expire = "2032.1.1"
+		ideology = Communist-State
+		traits = {
+			engineer
+			emerging_Communist-State
+			rational
+			polished
+		}
+	}
+
+	#Air variants
+	create_equipment_variant = {
+		name = "FC-1 Xiaolong"
+		type = MR_Fighter2
+		upgrades = {
+			strike_gun_upgrade = 0
+			plane_range_upgrade = 3
+			plane_engine_upgrade = 0
+			plane_reliability_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	#Naval variants
+
+	create_equipment_variant = {
+		name = "Type 051C Luzhou-Class"
+		type = missile_destroyer_1
+		upgrades = {
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "C28A-Class"
+		type = missile_corvette_2
+		upgrades = {
+		}
+	}
+	create_equipment_variant = {
+		name = "C13B-Class"
+		type = missile_corvette_2
+		upgrades = {
+		}
+	}
+
+	### Land Variants ###
+
+	create_equipment_variant = {
+		name = "QW-18"
+		type = Anti_Air_1
+		upgrades = {
+			AA_Fire_Control = 2
+			AA_Warhead = 2
+			AA_Weight = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "FN-16"
+		type = Anti_Air_2
+		upgrades = {
+			AA_Fire_Control = 2
+			AA_Warhead = 2
+			AA_Weight = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "ZBD2000"
+		type = IFV_5
+		upgrades = {
+			tank_reliability_upgrade = 0
+			tank_engine_upgrade = 0
+			tank_armor_upgrade = 0
+			tank_gun_upgrade = 0
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Type-96A"
+		type = MBT_3
+		upgrades = {
+			tank_engine_upgrade = 3
+			tank_armor_upgrade = 3
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type-99A"
+		type = MBT_4
+		upgrades = {
+			tank_engine_upgrade = 2
+			tank_armor_upgrade = 2
+			tank_gun_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 62"
+		type = Rec_tank_0
+		upgrades = {
+
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 64"
+		type = Rec_tank_0
+		upgrades = {
+			tank_reliability_upgrade = 0
+			tank_engine_upgrade = 2
+			tank_armor_upgrade = 0
+			tank_gun_upgrade = 0
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "ZTL-09"
+		type = Rec_tank_2
+		upgrades = {
+			tank_reliability_upgrade = 0
+			tank_engine_upgrade = 0
+			tank_armor_upgrade = 1
+			tank_gun_upgrade = 3
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type 63"
+		type = SP_Anti_Air_0
+		upgrades = {
+			SP_AA_Fire_Control = 0
+			SP_AA_Warhead = 0
+			SP_AA_Weight = 0
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "A-100 MRL"
+		type = SP_R_arty_2
+		upgrades = {
+			SP_Arty_Fire_Control = 1
+			SP_Arty_Warhead = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "PLZ-83"
+		type = SP_arty_0
+		upgrades = {
+			SP_Arty_Fire_Control = 0
+			SP_Arty_Warhead = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Type-85"
+		type = SP_arty_1
+		upgrades = {
+			SP_Arty_Fire_Control = 0
+			SP_Arty_Warhead = 0
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "PLC-09"
+		type = SP_arty_1
+		upgrades = {
+			SP_Arty_Fire_Control = 1
+			SP_Arty_Warhead = 0
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "PLZ-45"
+		type = SP_arty_1
+		upgrades = {
+			SP_Arty_Fire_Control = 1
+			SP_Arty_Warhead = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "SH1"
+		type = SP_arty_2
+		upgrades = {
+			SP_Arty_Fire_Control = 1
+			SP_Arty_Warhead = 0
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Type-54"
+		type = artillery_0
+		upgrades = {
+			L_Arty_Fire_Control = 0
+			L_Arty_Warhead = 0
+		}
+		obsolete = yes
+	}
+
+
+
+
+}

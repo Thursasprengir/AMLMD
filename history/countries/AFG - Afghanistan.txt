@@ -1,0 +1,441 @@
+﻿2000.1.1 = {
+	add_ideas = {
+		volunteer_army
+		volunteer_women
+	}
+
+	capital = 411
+	oob = "AFG_2000"
+	set_cosmetic_tag = AFG_NOR
+	set_convoys = 20
+	
+	set_technology = {
+		#British+Soviet Doctrine
+		legacy_doctrines = 1 
+		grand_battleplan = 1 
+		deep_echelon_advance = 1 
+		army_group_operational_freedom = 1
+		massed_artillery = 1
+		
+		infantry_weapons = 1
+		combat_eng_equipment = 1
+		command_control_equipment = 1
+		Early_APC = 1
+		APC_1 = 1
+		IFV_1 = 1
+		MBT_1 = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		Anti_Air_0 = 1
+		artillery_0 = 1
+		SP_arty_0 = 1
+		SP_R_arty_0 = 1
+		util_vehicle_0 = 1
+		camouflage = 1
+		
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		radar = 1
+	}
+	
+	add_ideas = {
+		#pop_050
+		crippling_corruption
+		gdp_1
+		#tax_cost_10
+		multi_ethnic_state_idea
+		sunni
+		youth_radicalization
+		stagnation
+		defence_06
+		edu_02
+		health_02
+		social_01
+		bureau_02
+		police_04
+		#gerrymandering
+		#accountable_press
+		#state_religion
+		The_Ulema
+		international_bankers
+		farmers
+		#hybrid
+	}
+	#Recognition
+	add_to_array = { global.rival_governments = THIS }
+	set_country_flag = rival_government_TAL
+	
+	set_country_flag = recognised_opponent_PAK
+	set_country_flag = recognised_opponent_SAU
+	set_country_flag = recognised_opponent_UAE
+	
+	add_to_variable = {
+		var = AFG.Granted_Recognition
+		value = 185
+	}
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 80 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 0 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 0 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 40 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 30 }
+	add_to_array = { influence_array = PER.id }
+	add_to_array = { influence_array_val = 50 }
+	add_to_array = { influence_array = PAK.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = UZB.id }
+	add_to_array = { influence_array_val = 40 }
+	startup_influence = yes
+
+	set_variable = { var = debt value = 5.5 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = treasury value = 0.2 }
+	set_variable = { var = tax_rate value = 10 }
+	
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1999.9.21"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 37.0 #Western 
+		communism = 6.0 #Emerging
+		fascism = 13.0 #Salafist
+		neutrality = 39.0 #Neutrality
+		nationalist = 5.0 #Nationalist
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0.23 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.05 } #conservatism
+	set_variable = { party_pop_array^2 = 0.09 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0.02 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.04 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0.13 } #Caliphate
+	set_variable = { party_pop_array^12 = 0.32 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.05 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.02 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.01 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.04 } #Monarchist
+	add_to_array = { ruling_party = 12 }
+	add_to_array = { gov_coalition_array = 0 }
+	add_to_array = { gov_coalition_array = 6 }
+	startup_politics = yes
+
+
+	create_country_leader = {
+		name = "Ahmed Shah Massoud"
+		picture = "Ahmad_Shah_Massoud.dds"
+		expire = "2001.9.9"
+		ideology = Neutral_Muslim_Brotherhood
+		traits = {
+			neutrality_Neutral_Muslim_Brotherhood
+			afghanistan_lion_of_panjshir
+		}
+	}
+
+	create_field_marshal = {
+		name = "Mohammad Sharif Yaftali"
+		picture = "generals/Portrait_Mohammad_Yaftali.dds"
+		traits = { old_guard organisational_leader }
+		id = 600
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_field_marshal = {
+		name = "Mohammad Afzal Aman"
+		picture = "generals/Portrait_Mohammad_Afzal_Zaman.dds"
+		traits = { fast_planner }
+		id = 601
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Abdul Wahab Wardak"
+		picture = "generals/Portrait_Abdul_Wahab_Wardak.dds"
+		traits = { logistics_wizard }
+		id = 602
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Murad Ali Murad"
+		picture = "generals/Portrait_Murad_Ali_Murad.dds"
+		traits = { panzer_leader }
+		id = 603
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Dawood Shah Wafadar"
+		picture = "generals/Portrait_Dawood_Shah_Wafadar.dds"
+		traits = { commando hill_fighter }
+		id = 604
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Mohammad Zaman Waziri"
+		picture = "generals/Portrait_Mohammad_Waziri.dds"
+		traits = { trait_engineer }
+		id = 605
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Taj Mohammad Jahid"
+		picture = "generals/Portrait_Taj_Mohammad_Jahid.dds"
+		traits = { fortress_buster }
+		id = 606
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Sayed Malook"
+		picture = "generals/Portrait_Sayed_Malook.dds"
+		traits = { hill_fighter }
+		id = 607
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Dawlat Waziri"
+		picture = "generals/Portrait_Dawlat_Waziri.dds"
+		traits = { trickster }
+		id = 608
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Roshan Safi"
+		picture = "generals/Portrait_Roshan_Safi.dds"
+		traits = { ranger }
+		id = 609
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Aminullah Karim"
+		picture = "generals/Portrait_Aminullah_Karim.dds"
+		traits = { trickster trait_engineer }
+		id = 610
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Mohammad Sharif Yaftali"
+		picture = "admirals/Portrait_Mohammad_Yaftali.dds"
+		traits = {  }
+		id = 611
+	}	
+}
+
+2001.1.1 = {
+	kill_country_leader = yes
+}
+
+2017.1.1 = {
+	capital = 414
+	oob = "AFG_2017"
+	drop_cosmetic_tag = yes
+	
+	
+	remove_ideas = {
+		#tax_cost_10
+	}
+	
+	#Recognition
+	remove_from_array = { global.rival_governments = THIS }
+	clr_country_flag = rival_government_@TAL
+	
+	clr_country_flag = recognised_opponent_PAK
+	clr_country_flag = recognised_opponent_SAU
+	clr_country_flag = recognised_opponent_UAE
+	
+	add_ideas = {
+		volunteer_army
+		volunteer_women
+		Resolute_Support_Mission
+		Major_Non_NATO_Ally
+		sco_observer
+		USA_usaid #https://explorer.usaid.gov/aid-dashboard.html
+		#tax_cost_07
+	}
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 101 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 71 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 40 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 20 }
+	add_to_array = { influence_array = PER.id }
+	add_to_array = { influence_array_val = 20 }
+	add_to_array = { influence_array = PAK.id }
+	add_to_array = { influence_array_val = 50 }
+	startup_influence = yes
+
+	
+	set_country_flag = Major_Non_NATO_Ally
+	set_country_flag = Major_Importer_US_Arms
+	set_country_flag = positive_international_bankers
+	set_country_flag = negative_farmers
+	
+	set_variable = { var = debt value = 2 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = treasury value = 7.5 }
+	set_variable = { var = tax_rate value = 6 }
+	
+	#set_variable = { var = size_modifier value = 0.08 } #1 CIC
+	#initial_money_setup = yes
+	
+	#Nat focus
+	
+	
+	set_technology = { 
+		
+		body_armor_1980 = 1
+		
+		night_vision_1 = 1
+		SP_Anti_Air_0 = 1
+		camouflage2 = 1
+		camouflage3 = 1
+		internet1 = 1 	#1G
+	}
+
+	set_popularities = {
+		democratic = 58.0
+		communism = 11.0
+		fascism = 12.0
+		neutrality = 14.0
+		nationalist = 5.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2014.4.5"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0.49 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.07 } #conservatism
+	set_variable = { party_pop_array^2 = 0.02 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0.01 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.05 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0.05 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0.04 } #Kingdom
+	set_variable = { party_pop_array^11 = 0.08 } #Caliphate
+	set_variable = { party_pop_array^12 = 0.09 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.03 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.01 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0.01 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.05 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+	add_to_array = { ruling_party = 0 }
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Mohammad Ashraf Ghani Ahmadzai"
+		picture = "mohammad_ashraf_ghani_ahmadzai.dds"
+		ideology = Western_Autocracy
+		traits = {
+			western_Western_Autocracy
+		}
+	}
+	create_corps_commander = {
+		name = "Khatol Mohammad Zai"
+		picture = "generals/Gen_Khatol_Mohammad_Zai.dds"
+		traits = { trickster trait_engineer }
+		id = 612
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+}
