@@ -8500,7 +8500,7 @@
 8499;104;19;248;sea;true;ocean;0
 8500;104;20;236;sea;false;ocean;0
 8501;104;21;244;sea;false;ocean;0
-8502;104;23;232;sea;false;ocean;0
+8502;104;23;232;land;true;plains;10
 8503;104;24;240;sea;false;ocean;0
 8504;104;25;248;sea;false;ocean;0
 8505;104;26;236;sea;false;ocean;0

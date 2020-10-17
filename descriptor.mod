@@ -9,4 +9,4 @@ tags={
 	"Technologies"
 }
 name="AML + Millennium Dawn"
-supported_version="1.9.1"
+supported_version="1.9.3"
